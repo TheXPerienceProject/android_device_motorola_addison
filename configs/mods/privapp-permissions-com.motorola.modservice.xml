@@ -8,5 +8,6 @@
         <permission name="android.permission.MANAGE_USERS" />
         <permission name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS" />
         <permission name="android.permission.CONNECTIVITY_INTERNAL" />
+		<permission name="com.motorola.mod.permission.MOD_SERVICE" />
     </privapp-permissions>
 </permissions>
