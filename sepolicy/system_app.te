@@ -1,3 +1,4 @@
 allow system_app sysfs_mmi_fp:file rw_file_perms;
 allow system_app sysfs_mmi_fp:dir search;
+allow system_app mods_service:service_manager { add find };
 binder_call(system_app, fingerprintd)
