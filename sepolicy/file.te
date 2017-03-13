@@ -21,3 +21,6 @@ type sysfs_mmi_fp, fs_type, sysfs_type;
 type sysfs_mmi_laser, fs_type, sysfs_type;
 type sysfs_mmi_touch, fs_type, sysfs_type;
 type sysfs_wcnsscore, fs_type, sysfs_type;
+
+# Greybus
+type sysfs_greybus, fs_type, sysfs_type, mlstrustedobject;
