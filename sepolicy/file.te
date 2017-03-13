@@ -24,3 +24,8 @@ type sysfs_wcnsscore, fs_type, sysfs_type;
 
 # Greybus
 type sysfs_greybus, fs_type, sysfs_type, mlstrustedobject;
+type gbfirmware_file, file_type, data_file_type, mlstrustedobject;
+
+# adspd
+type adspd_file, file_type, data_file_type;
+
