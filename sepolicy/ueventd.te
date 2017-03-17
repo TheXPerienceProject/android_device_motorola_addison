@@ -4,3 +4,9 @@ allow ueventd sysfs_mmi_fp:file w_file_perms;
 allow ueventd sysfs_mmi_touch:file w_file_perms;
 allow ueventd unlabeled:dir search;
 allow ueventd unlabeled:file { getattr open read };
+
+allow ueventd sysfs_mmi_touch:dir search;
+allow ueventd self:netlink_kobject_uevent_socket { read };
+allow ueventd sysfs_mods_camd:file rw_file_perms;
+allow ueventd sysfs_mods_camd:dir rw_dir_perms;
+
