@@ -8,6 +8,7 @@ allow mods_camd video_device:chr_file rw_file_perms;
 allow mods_camd self:netlink_kobject_uevent_socket { bind create read setopt };
 allow mods_camd sysfs_mods_camd:file rw_file_perms;
 allow mods_camd sysfs_mods_camd:dir rw_dir_perms;
+<<<<<<< HEAD
 allow mods_camd sysfs:file { getattr read write };
 allow mods_camd sysfs:file { getattr open read write };
 
@@ -25,3 +26,6 @@ allow mods_camd init:unix_stream_socket connectto;
 allow mods_camd property_socket:sock_file write;
 allow mods_camd surfaceflinger:fd use;
 allow mods_camd camera_prop:property_service set;
+=======
+
+>>>>>>> 658c5aa... griffin: address new mods_camd denials

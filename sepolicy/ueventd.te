@@ -1,6 +1,12 @@
 allow ueventd camera_socket:chr_file { create setattr };
 allow ueventd device:chr_file { relabelfrom relabelto };
+<<<<<<< HEAD
 allow ueventd sysfs_mmi_fp:file w_file_perms;
+=======
+allow ueventd input_device:chr_file { relabelfrom relabelto };
+allow ueventd video_device:chr_file { relabelfrom relabelto };
+allow ueventd sysfs_greybus:file { open write };
+>>>>>>> 658c5aa... griffin: address new mods_camd denials
 allow ueventd sysfs_mmi_touch:file w_file_perms;
 allow ueventd unlabeled:dir search;
 allow ueventd unlabeled:file { getattr open read };
