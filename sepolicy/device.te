@@ -1,10 +1,15 @@
 type bluetooth_device, dev_type;
 type cid_block_device, dev_type;
 type clogo_block_device, dev_type;
-type greybus_raw_device, dev_type;
+type greybus_raw_device, dev_type, mlstrustedobject;
 type hob_block_device, dev_type;
 type hw_block_device, dev_type;
 type laser_device, dev_type;
 type persist_block_device, dev_type;
+
 type qcril_device, dev_type;
 type radio_config_device, dev_type;
+type logs_block_device, dev_type;
+type mods_camd_device, dev_type, mlstrustedobject;
+type utags_block_device, dev_type;
+
