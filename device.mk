@@ -413,9 +413,6 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.control@1.0 \
     android.hardware.wifi.hostapd@1.0 \
     hostapd \
-    hostapd_default.conf \
-    hostapd.accept \
-    hostapd.deny \
     libqsap_sdk \
     libwpa_client \
     wcnss_service \
@@ -423,6 +420,11 @@ PRODUCT_PACKAGES += \
     wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
+    $(LOCAL_PATH)/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf
 
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8953/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
