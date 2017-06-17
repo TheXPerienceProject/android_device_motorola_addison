@@ -5,5 +5,11 @@ allow system_server socket_device:sock_file write;
 allow system_server sysfs_sensors:file write;
 allow system_server default_android_service:service_manager find;
 
-qmux_socket(system_server);
+allow system_server kernel:process setsched;
+allow system_server persist_file:dir { read write };
+allow system_server rild:binder transfer;
+allow system_server sysfs_mods_camd:dir { rw_dir_perms };
+allow system_server sysfs_mods_camd:file { rw_file_perms };
+allow system_server unlabeled:file unlink;
 
+qmux_socket(system_server);
