@@ -89,6 +89,9 @@ sys.mod.platformsdkversion=205
 # NFC
 ro.hardware.nfc_nci=addison
 
+# Time services
+persist.delta_time.enable=true
+
 # Radio
 persist.data.qmi.adb_logmask=0
 persist.radio.apn_delay=5000
