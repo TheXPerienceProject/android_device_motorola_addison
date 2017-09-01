@@ -53,7 +53,7 @@
 
 # Greybus (Mods)
 /sys/bus/greybus(/.*)?                     u:object_r:sysfs_greybus:s0
-/sys/class/i2c-adapter/i2c-7/7-002d/enable                     u:object_r:sysfs_greybus:s0
+/sys/class/i2c-adapter/i2c-2/2-002d/enable                     u:object_r:sysfs_greybus:s0
 /sys/class/power_supply/usb/usb_priority                     u:object_r:sysfs_greybus:s0
 /sys/devices/soc/soc:muc_svc@0(/.*)?                     u:object_r:sysfs_greybus:s0
 /sys/devices/platform/mods_ap(/.*)?                     u:object_r:sysfs_greybus:s0
