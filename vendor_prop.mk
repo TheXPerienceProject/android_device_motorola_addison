@@ -44,6 +44,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 RODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.hw.binder.size_kbyte=1024
 
+#Set AudioFlinger client heap size
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.af.client_heap_size_kbyte=7168
+
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.path.for.pcm.voip=false
 
