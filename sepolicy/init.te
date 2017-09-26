@@ -52,4 +52,7 @@ allow init sysfs:dir write;
 #noatsecure sh!ts
 allow init hal_wifi_supplicant_default:process noatsecure;
 
+# required for alot of things Dx
+allow init { domain -lmkd -crash_dump }:process noatsecure;
+
 binder_use(init)
