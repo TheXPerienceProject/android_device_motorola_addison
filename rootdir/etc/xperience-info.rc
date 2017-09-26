@@ -92,4 +92,4 @@ on property:sys.boot_completed=1
     chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
     chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/governor
 
-    exec u:r:magisk:s0 root root -- /init.special_power.sh
+    exec u:r:magisk:s0 root root -- /vendor/bin/init.special_power.sh
