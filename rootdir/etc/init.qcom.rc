@@ -197,7 +197,9 @@ on boot
     chmod 0664 /sys/class/graphics/fb1/hpd
     chown system graphics /sys/class/graphics/fb1/res_info
     chmod 0664 /sys/class/graphics/fb1/res_info
+    chmod 0664 /sys/class/graphics/fb2/res_info
     chown system graphics /sys/class/graphics/fb1/video_mode
+    chown system graphics /sys/class/graphics/fb2/res_info
     chmod 0664 /sys/class/graphics/fb1/video_mode
     chown system graphics /sys/class/graphics/fb1/cec/enable
     chmod 0664 /sys/class/graphics/fb1/cec/enable
