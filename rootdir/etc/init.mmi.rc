@@ -244,6 +244,12 @@ service init_wifi /system/bin/wlan_carrier_bin.sh
     group root
     oneshot
 
+on property:vold.decrypt=trigger_post_fs_data
+    start gbmodinstall
+
+on nonencrypted
+    start gbmodinstall
+
 on charger
     trigger early-fs
     trigger fs
@@ -295,6 +301,20 @@ service motosh /system/bin/motosh boot
     user compass
     group compass misc input
     oneshot
+
+service mods_camd /system/bin/mods_camd
+    class late_start
+    user camera
+    group camera system inet input graphics
+    disabled
+    rlimit 14 4 4
+    ioprio rt 4
+
+service gbmodinstall /init.gbmods.sh
+    seclabel u:r:init_mods:s0
+    user root
+    oneshot
+    disabled
 
 service thermal-com /system/vendor/bin/thermal-engine --minimode
     class main
