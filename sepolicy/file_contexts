@@ -9,6 +9,7 @@
 /system/bin/init\.mmi\.boot\.sh                          u:object_r:mmi_boot_exec:s0
 /system/bin/init\.mmi\.laser\.sh                         u:object_r:mmi_laser_exec:s0
 /system/bin/init\.mmi\.touch\.sh                         u:object_r:mmi_touch_sh_exec:s0
+/system/bin/init\.gbmods\.sh                             u:object_r:gbmodinstall_exec:s0
 /system/bin/motosh                                       u:object_r:sensor_hub_exec:s0
 /system/bin/init\.qcom\.ril\.sh                          u:object_r:qti_init_shell_exec:s0
 /system/bin/batt_health                                     u:object_r:batt_health_exec:s0

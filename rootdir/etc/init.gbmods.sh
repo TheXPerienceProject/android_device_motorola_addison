@@ -4,6 +4,7 @@
 # Please don't remove the author file i/e modifique the same
 # Thanks to Davtse for the help doing this work.
 # date: 12 oct 2017 19:21:09
+# Fixes 26 oct 2017 16:47:37
 
 debug=$(getprop ro.boot.gbdebug 2> /dev/null)
 bootmode=$(getprop ro.bootmode 2> /dev/null)
@@ -16,6 +17,9 @@ fi
 
 #Load the Greybus main driver 
 insmod /system/lib/modules/greybus.ko
+
+#Load the Mods Main Driver
+insmod /system/lib/modules/gb-mods.ko
 
 # Only support PTP and BATTERY in charge-only mode
 if [ "$bootmode" == "charger" ]; then
