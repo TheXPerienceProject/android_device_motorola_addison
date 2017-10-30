@@ -1,3 +1,0 @@
-allow sysinit self:capability sys_module;
-allow sysinit system_file:system module_load;
-allow sysinit ctl_mods_camd_prop:property_service set;
