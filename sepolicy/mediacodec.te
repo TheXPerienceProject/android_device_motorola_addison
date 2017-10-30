@@ -1,1 +1,2 @@
 allow mediacodec firmware_file:file r_file_perms;
+allow mediacodec socket_device:sock_file write;
