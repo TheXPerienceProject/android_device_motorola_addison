@@ -70,6 +70,9 @@ ro.sf.lcd_density=480
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# Mods Platform
+sys.mod.platformsdkversion=200
+
 # IMS
 persist.radio.jbims=1
 persist.radio.RATE_ADAPT_ENABLE=1
