@@ -1,0 +1,6 @@
+allow shell sysfs:file getattr;
+allow shell sysfs:lnk_file getattr;
+allow shell sysfs_greybus:dir { open read search };
+allow shell sysfs_greybus:file getattr;
+allow shell sysfs_greybus:lnk_file { getattr read };
+
