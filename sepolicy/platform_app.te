@@ -15,3 +15,7 @@ allow platform_app sysfs_mods_camd:dir rw_dir_perms;
 allow platform_app gbfirmware_file:dir create_dir_perms;
 allow platform_app gbfirmware_file:file create_file_perms;
 allow platform_app sysfs_usb_supply:dir search;
+allow platform_app firmware_file:dir search;
+allow platform_app firmware_file:file { open read };
+allow platform_app gbfirmware_file:lnk_file read;
+
