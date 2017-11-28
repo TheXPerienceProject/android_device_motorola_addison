@@ -8,8 +8,9 @@ allow gbmodinstall init:unix_stream_socket connectto;
 allow gbmodinstall property_socket:sock_file write;
 allow gbmodinstall self:capability sys_module;
 allow gbmodinstall shell_exec:file rx_file_perms;
-allow gbmodinstall system_file:file execute_no_trans;
+allow gbmodinstall system_file:file { read open execute_no_trans };
 allow gbmodinstall system_file:system module_load;
+allow gbmodinstall system_file:dir { read open };
 allow gbmodinstall toolbox_exec:file rx_file_perms;
 
 
