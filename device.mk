@@ -209,7 +209,8 @@ PRODUCT_COPY_FILES += \
 
 #MODS
 PRODUCT_PACKAGES += \
-    libiio
+    libiio \
+    ModFmwkProxyService
 
 # NFC
 PRODUCT_COPY_FILES += \
