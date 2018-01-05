@@ -101,10 +101,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
-    libshim_buffer \
-    libshim_camera \
-    libshim_just \
-    Camera2
+    Snap
 #    camera.msm8953 \
 
 # Camera HIDL HAL
