@@ -250,6 +250,7 @@ vendor/lib/libsdmutils.so
 vendor/lib/libtinyxml2_1.so
 vendor/lib/vendor.display.color@1.0_vendor.so
 vendor/lib/vendor.display.config@1.0_vendor.so
+vendor/lib/vendor.display.postproc@1.0_vendor.so
 
 # DRM
 # bin/qseecomd
