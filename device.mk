@@ -104,7 +104,7 @@ PRODUCT_PACKAGES += \
     libshim_buffer \
     libshim_camera \
     libshim_just \
-    Snap
+    Camera2
 #    camera.msm8953 \
 
 # Camera HIDL HAL
@@ -340,4 +340,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, vendor/xperience/config/common_full_phone.mk)
