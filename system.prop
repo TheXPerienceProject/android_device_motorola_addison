@@ -77,8 +77,8 @@ persist.radio.VT_ENABLE=1
 persist.radio.VT_HYBRID_ENABLE=1
 persist.radio.VT_USE_MDM_TIME=0
 
-# Media
-media.aac_51_output_enabled=true
+# NFC
+ro.hardware.nfc_nci=addison
 
 # Radio
 persist.data.qmi.adb_logmask=0
