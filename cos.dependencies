@@ -1,0 +1,22 @@
+[
+ {
+   "repository": "android_external_bson",
+   "target_path": "external/bson"
+ },
+ {
+   "repository": "android_device_qcom_common",
+   "target_path": "device/qcom/common"
+ },
+ {
+   "repository": "android_packages_resources_devicesettings",
+   "target_path": "packages/resources/devicesettings"
+ },
+ {
+   "repository": "android_external_libiio",
+   "target_path": "external/libiio"
+ },
+   {
+   "repository": "android_hardware_moto_sensors",
+   "target_path": "hardware/moto/sensors"
+ }
+]
