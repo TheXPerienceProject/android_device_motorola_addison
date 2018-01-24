@@ -1,5 +1,7 @@
 allow hal_fingerprint_default fingerprintd_data_file:sock_file { unlink };
 allow hal_fingerprint_default sysfs_mmi_fp:dir { search open read };
 allow hal_fingerprint_default sysfs_mmi_fp:file { open read write };
+allow hal_fingerprint_default sysfs_greybus:dir { search open read };
+allow hal_fingerprint_default sysfs_greybus:file { open read write };
 allow hal_fingerprint_default tee_device:chr_file { ioctl open read write };
 allow hal_fingerprint_default unlabeled:file { getattr open read };
