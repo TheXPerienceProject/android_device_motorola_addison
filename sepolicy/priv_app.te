@@ -8,6 +8,7 @@ allow priv_app input_device:dir search;
 allow priv_app mods_service:service_manager find;
 allow priv_app proc_modules:file rw_file_perms;
 allow priv_app proc_interrupts:dir { read open };
+allow priv_app proc_interrupts:file { read open };
 
 allow priv_app sysfs_batt_mods:dir rw_dir_perms;
 allow priv_app sysfs_batt_mods:file rw_file_perms;

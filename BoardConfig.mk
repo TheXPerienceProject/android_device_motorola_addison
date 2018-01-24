@@ -133,6 +133,8 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
 #MODS
 BOARD_HAS_GREYBUS_INTERFACE := true
+#Enable support to mods 2nd Gen
+CONFIG_MODS_2ND_GEN := y
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true

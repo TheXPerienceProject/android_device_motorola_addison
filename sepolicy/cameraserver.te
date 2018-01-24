@@ -8,4 +8,4 @@ allow cameraserver sysfs_mods_camd:file rw_file_perms;
 allow cameraserver sysfs_mods_camd:dir rw_dir_perms;
 allow cameraserver mods_service:service_manager find;
 allow cameraserver socket_device:sock_file write;
-
+allow cameraserver init:unix_dgram_socket { sendto};

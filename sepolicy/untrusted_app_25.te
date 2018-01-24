@@ -6,6 +6,7 @@ allow untrusted_app_25 backup_data_file:dir getattr;
 allow untrusted_app_25 block_device:dir { open read };
 allow untrusted_app_25 bluetooth_data_file:dir getattr;
 allow untrusted_app_25 bootchart_data_file:dir getattr;
+allow untrusted_app_25 camera_prop:file { open getattr };
 allow untrusted_app_25 cnd_data_file:dir getattr;
 allow untrusted_app_25 device:dir { open read };
 allow untrusted_app_25 drm_data_file:dir getattr;
