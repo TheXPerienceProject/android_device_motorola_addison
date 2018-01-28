@@ -20,3 +20,5 @@ allow mm-qcamerad sysfs_mods_camd:dir rw_dir_perms;
 
 #unix_socket_connect(mm-qcamerad, mpctl, perfd);
 
+allow mm-qcamerad system_data_file:dir read;
+set_prop(mm-qcamerad, debug_prop);
