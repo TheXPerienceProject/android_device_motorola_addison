@@ -255,18 +255,28 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     init.mmi.touch.sh \
     wlan_carrier_bin.sh \
     init.qcom.ril.sh
 
 PRODUCT_PACKAGES += \
+=======
+>>>>>>> d3687ec... rootdir: Move device specific ramdisk to vendor and setup system early mount
     fstab.qcom \
     init.mmi.boot.sh \
     init.mmi.laser.sh \
+    init.mmi.touch.sh \
     init.mmi.rc \
     init.mmi.usb.rc \
     init.qcom.rc \
-    ueventd.qcom.rc
+    init.qcom.ril.sh \
+    ueventd.rc \
+    wlan_carrier_bin.sh
+
+#Ramdisk motomods
+PRODUCT_PACKAGES += \
+    init.gbmods.sh
 
 # RIL
 PRODUCT_PACKAGES += \
