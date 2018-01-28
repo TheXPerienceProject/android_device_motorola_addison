@@ -6,6 +6,7 @@ allow mm-qcamerad camera_socket:chr_file rw_file_perms;
 allow mm-qcamerad camera_socket:sock_file { create unlink write };
 allow mm-qcamerad laser_device:chr_file rw_file_perms;
 allow mm-qcamerad persist_file:file r_file_perms;
+
 allow mm-qcamerad sysfs_leds:dir search;
 allow mm-qcamerad sysfs_leds:lnk_file r_file_perms;
 allow mm-qcamerad system_data_file:dir rw_dir_perms;
@@ -20,5 +21,6 @@ allow mm-qcamerad sysfs_mods_camd:dir rw_dir_perms;
 
 #unix_socket_connect(mm-qcamerad, mpctl, perfd);
 
+allow mm-qcamerad sysfs_graphics:file r_file_perms;
 allow mm-qcamerad system_data_file:dir read;
 set_prop(mm-qcamerad, debug_prop);
