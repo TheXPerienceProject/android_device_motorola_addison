@@ -225,7 +225,8 @@ PRODUCT_COPY_FILES += \
 #MODS
 PRODUCT_PACKAGES += \
     libiio \
-    ModFmwkProxyService
+    ModFmwkProxyService \
+    ModPermsFix
 
 #Moto mods permissions
 PRODUCT_COPY_FILES += \
