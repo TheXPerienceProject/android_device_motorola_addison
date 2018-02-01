@@ -100,9 +100,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libbson \
-    Snap
-#    camera.msm8953 \
+    libbson
 
 # Camera HIDL HAL
 PRODUCT_PACKAGES += \
