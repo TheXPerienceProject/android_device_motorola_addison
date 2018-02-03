@@ -87,6 +87,12 @@ on boot
     chown system drmrpc /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
     chown system drmrpc /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
 
+	# HAX for mods 
+	chmod 0660 /sys/devices/soc/soc:muc_svc@0/mods_interfaces
+	chmod 0660 /sys/devices/soc/soc:muc_svc@0/mods_interfaces/3
+	chmod root oem_5020 /sys/devices/soc/soc:muc_svc@0/mods_interfaces
+	chmod root oem_5020 /sys/devices/soc/soc:muc_svc@0/mods_interfaces/3
+
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state

@@ -17,6 +17,16 @@ ifneq ($(filter addison,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
+MODS_LIBS := libmodhw.so
+MODS_SYMLINKS := $(addprefix $(TARGET_OUT)/ModFmwkProxyService/lib/arm64/,$(notdir $(MODS_LIBS)))
+$(MODS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "MODS lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/lib64/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(MODS_SYMLINKS)
+
 FIRMWARE_ADSP_IMAGES := \
     adsp.b00 adsp.b01 adsp.b02 adsp.b03 adsp.b04 adsp.b05 adsp.b06 \
     adsp.b07 adsp.b08 adsp.b09 adsp.b10 adsp.b11 adsp.b12 adsp.b13 \

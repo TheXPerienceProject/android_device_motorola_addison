@@ -24,7 +24,6 @@ import java.nio.ByteBuffer;
 import java.util.UUID;
 
 public class IntentReceiver extends BroadcastReceiver {
-    private static final boolean DEBUG;
     static final ComponentName MOD_SERVICE_NAME = new ComponentName("com.motorola.modservice", "com.motorola.modservice.ModManagerService");
     private static PowerManager mPowerManager;
     private static WakeLock mScreenOffWakeLock;
@@ -77,9 +76,7 @@ public class IntentReceiver extends BroadcastReceiver {
                 }
             }).start();
         } else if (UserHandle.myUserId() != 0) {
-            if (DEBUG) {
                 Log.w("fwkintentreceiver", "Non-primary user, ignoring " + action);
-            }
         } else {
             if ("com.motorola.mod.action.SERVICE_STARTED".equals(action)) {
                 boolean bind = false;
