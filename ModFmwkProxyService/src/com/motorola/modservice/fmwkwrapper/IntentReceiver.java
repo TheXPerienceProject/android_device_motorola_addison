@@ -202,12 +202,12 @@ public class IntentReceiver extends BroadcastReceiver {
     }
 
     private static void invalidateMediaProfile() {
-        IActivityManager am = ActivityManagerNative.getDefault();
+        /*IActivityManager am = ActivityManagerNative.getDefault();
         try {
             Log.i("fwkintentreceiver", "Camera Mod detached, killing apps with stale camera profile data");
             am.killMediaProfile();
         } catch (RemoteException e) {
-        }
+        }*/
     }
 
     private static String encodeIDs(int vid, int pid, ParcelUuid puid) {

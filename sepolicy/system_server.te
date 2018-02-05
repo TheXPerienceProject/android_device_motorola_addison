@@ -15,5 +15,7 @@ allow system_server unlabeled:file unlink;
 allow system_server display_misc_file:dir rw_dir_perms;
 allow system_server display_misc_file:file rw_file_perms;
 
+allow system_server init:unix_stream_socket { read write };
+
 qmux_socket(system_server);
 
