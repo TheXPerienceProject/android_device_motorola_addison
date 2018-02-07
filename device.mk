@@ -302,6 +302,11 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     telephony-ext
 
+# TextClassifier
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1 \
+    textclassifier.langid
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-addison.conf:system/etc/thermal-engine-addison.conf
