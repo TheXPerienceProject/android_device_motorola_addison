@@ -212,6 +212,13 @@ PRODUCT_PACKAGES += \
     libiio \
     ModFmwkProxyService
 
+#Moto mods permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/mods/com.motorola.aov.xml:system/etc/permissions/com.motorola.aov.xml \
+    $(LOCAL_PATH)/configs/mods/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml \
+    $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.modservice.xml:system/etc/permissions/privapp-permissions-com.motorola.modservice.xml \
+    $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.projectormod.xml:system/etc/permissions/privapp-permissions-com.motorola.projectormod.xml
+
 # NFC
 PRODUCT_COPY_FILES += \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
