@@ -251,6 +251,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
 
+# Powerhint configuration file
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.xml:system/etc/powerhint.xml
+
 # Post intallation script
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/post_install.sh:install/bin/post_install.sh
