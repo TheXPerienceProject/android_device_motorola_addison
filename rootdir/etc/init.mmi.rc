@@ -296,21 +296,6 @@ service motosh /vendor/bin/motosh boot
     group compass misc input
     oneshot
 
-service mods_camd /system/bin/mods_camd
-    class late_start
-    user camera
-    group camera system inet input graphics
-    disabled
-    rlimit 14 4 4
-    ioprio rt 4
-    disabled
-
-service gbmodinstall /system/bin/init.gbmods.sh
-#    seclabel u:r:init_mods:s0
-    class core
-    user root
-    oneshot
-
 service thermal-com /vendor/bin/thermal-engine --minimode
     class main
     user root

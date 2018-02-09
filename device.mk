@@ -265,7 +265,8 @@ PRODUCT_PACKAGES += \
 
 #Ramdisk motomods
 PRODUCT_PACKAGES += \
-    init.gbmods.sh
+    init.gbmods.sh \
+	init.mods.rc
 
 # RIL
 PRODUCT_PACKAGES += \
