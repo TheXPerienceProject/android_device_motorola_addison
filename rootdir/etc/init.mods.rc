@@ -4,6 +4,9 @@ on nonencrypted
 on property:vold.decrypt=trigger_post_fs_data
     start gbmodinstall
 
+on property:sys.boot_completed=1
+    start gbmodinstall
+
 service mods_camd /vendor/bin/mods_camd
     class late_start
     user camera
