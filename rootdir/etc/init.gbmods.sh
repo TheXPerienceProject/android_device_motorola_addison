@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 # Original author: Motorola Mobility LLC
 # Modified author: Klozz Jesús (TeamMEX@XDA-Developers)
 # Please don't remove the author file i/e modifique the same
