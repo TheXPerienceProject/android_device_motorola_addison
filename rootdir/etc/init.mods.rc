@@ -1,10 +1,10 @@
+#Moto mods script support
+# By klozz Jesús aka TeamMEX@xda-developers
+
 on nonencrypted
     start gbmodinstall
 
 on property:vold.decrypt=trigger_post_fs_data
-    start gbmodinstall
-
-on property:sys.boot_completed=1
     start gbmodinstall
 
 service mods_camd /vendor/bin/mods_camd
