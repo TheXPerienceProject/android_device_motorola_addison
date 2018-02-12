@@ -101,14 +101,6 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
-    libshim_buffer \
-    libshim_camera \
-    libshim_just \
-    Snap
-#    camera.msm8953 \
-
-# Camera HIDL HAL
-PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl
@@ -170,10 +162,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0
 
-# IPA Manager
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -206,6 +196,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
+#MODS
+PRODUCT_PACKAGES += \
+    libiio
+
 # NFC
 PRODUCT_COPY_FILES += \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
@@ -236,9 +230,9 @@ PRODUCT_PACKAGES += \
     libOmxVidcCommon \
     libstagefrighthw
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.1-service-qti
+# Powerhint configuration file
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.xml:system/etc/powerhint.xml
 
 # Post intallation script
 PRODUCT_COPY_FILES += \
@@ -246,18 +240,16 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.mmi.touch.sh \
-    wlan_carrier_bin.sh \
-    init.qcom.ril.sh
-
-PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.boot.sh \
     init.mmi.laser.sh \
+    init.mmi.touch.sh \
     init.mmi.rc \
     init.mmi.usb.rc \
     init.qcom.rc \
-    ueventd.qcom.rc
+    init.qcom.ril.sh \
+    ueventd.rc \
+    wlan_carrier_bin.sh
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -269,22 +261,26 @@ PRODUCT_PACKAGES += \
 
 # Seccomp
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
+    $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(LOCAL_PATH)/seccomp_policy/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensorservice_32 \
+    android.hardware.sensors@1.0-impl \
+    sensorservice_32
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
-
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Telephony packages
 PRODUCT_PACKAGES += \
     ims-ext-common \
     telephony-ext
+
+# TextClassifier
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1 \
+    textclassifier.langid
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -292,6 +288,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
@@ -306,34 +303,21 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    hostapd \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
-PRODUCT_PACKAGES += \
-    p2p_supplicant_overlay.conf \
-    wpa_supplicant_overlay.conf
-
-PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    hostapd \
     libqsap_sdk \
     libwpa_client \
     wcnss_service \
     wificond \
-    wifilogd
-
-# Wifi Symlinks
-PRODUCT_PACKAGES += \
-    WCNSS_qcom_cfg.ini \
-    WCNSS_qcom_wlan_nv.bin \
-    WCNSS_qcom_wlan_nv_Argentina.bin \
-    WCNSS_qcom_wlan_nv_Brazil.bin \
-    WCNSS_qcom_wlan_nv_India.bin \
-    WCNSS_wlan_dictionary.dat
+    wifilogd \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    kernel/motorola/msm8953/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+    kernel/motorola/msm8953/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 

@@ -40,7 +40,7 @@ ro.qualcomm.bt.hci_transport=smd
 camera.disable_zsl_mode=1
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720
-persist.camera.HAL3.enabled=1
+#persist.camera.HAL3.enabled=1
 vidc.dec.downscalar_width=1920
 vidc.dec.downscalar_height=1088
 vidc.dec.disable.split.cpu=1
@@ -77,8 +77,8 @@ persist.radio.VT_ENABLE=1
 persist.radio.VT_HYBRID_ENABLE=1
 persist.radio.VT_USE_MDM_TIME=0
 
-# Media
-media.aac_51_output_enabled=true
+# NFC
+ro.hardware.nfc_nci=addison
 
 # Radio
 persist.data.qmi.adb_logmask=0
@@ -98,8 +98,4 @@ persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 
 # Sensors
-ro.hardware.sensors=addison
 system_init.startsensorservice=0
-
-# Vendor Extension
-ro.vendor.extension_library=libqti-perfd-client.so

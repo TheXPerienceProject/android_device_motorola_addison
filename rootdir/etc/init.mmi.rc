@@ -1,9 +1,33 @@
 # Moto USB configuration
-import init.mmi.usb.rc
+import /vendor/etc/init/hw/init.mmi.usb.rc
 
 on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
     write /proc/sys/kernel/poweroff_cmd "/system/bin/reboot -p"
+
+    # STML4 driver parameter permissions
+    chown root oem_5004 /sys/module/motosh/parameters/irq_disable
+    chmod 0660 /sys/module/motosh/parameters/irq_disable
+
+    # STML4 device permissions
+    chown system compass /dev/motosh
+    chmod 0660 /dev/motosh
+    chown system compass /dev/motosh_as
+    chmod 0660 /dev/motosh_as
+    chown system compass /dev/motosh_ms
+    chmod 0660 /dev/motosh_ms
+    chown system compass /sys/devices/virtual/motosh/motosh_as/timestamp_time_ns
+    chmod 0440 /sys/devices/virtual/motosh/motosh_as/timestamp_time_ns
+    chown system compass /sys/devices/virtual/motosh/motosh_as/rv_6axis_update_rate
+    chmod 0660 /sys/devices/virtual/motosh/motosh_as/rv_6axis_update_rate
+    chown system compass /sys/devices/virtual/motosh/motosh_as/rv_9axis_update_rate
+    chmod 0660 /sys/devices/virtual/motosh/motosh_as/rv_9axis_update_rate
+    chown system compass /sys/devices/virtual/motosh/motosh_as/game_rv_update_rate
+    chmod 0660 /sys/devices/virtual/motosh/motosh_as/game_rv_update_rate
+    chown system compass /sys/devices/virtual/motosh/motosh_as/gravity_update_rate
+    chmod 0660 /sys/devices/virtual/motosh/motosh_as/gravity_update_rate
+    chown system compass /sys/devices/virtual/motosh/motosh_as/linear_accel_update_rate
+    chmod 0660 /sys/devices/virtual/motosh/motosh_as/linear_accel_update_rate
 
 on init
     chown system log /sys/fs/pstore/console-ramoops-0
@@ -14,8 +38,8 @@ on init
     chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
 
     # Setup kernel dropbox permissions so that dropboxd can utilize it
-    chown root oem_2950 /sys/kernel/dropbox/event
-    chown root oem_2950 /sys/kernel/dropbox/data
+    chown root diag /sys/kernel/dropbox/event
+    chown root diag /sys/kernel/dropbox/data
 
 on fs
     # use /persist as phony PDS partition
@@ -108,7 +132,7 @@ on post-fs-data
     mkdir /data/misc/sensorhub 0770 system compass
 
     # Setup folder for native to transfer data to NativeDropBoxAgent
-    mkdir /data/system/dropbox-add 0730 system oem_2950
+    mkdir /data/system/dropbox-add 0730 system diag
 
     # Create directory for cutback
     mkdir /data/misc/cutback 0770 radio wifi
@@ -142,7 +166,7 @@ on post-fs-data
     mkdir /data/hardware_revisions 0755 system system
 
     #Create directory for adspd
-    mkdir /data/adspd 0770 audio oem_2950
+    mkdir /data/adspd 0770 audio diag
 
     # Setup folder for camera dump subsystem
     mkdir /data/camera_dump 0750 media media
@@ -210,35 +234,11 @@ on boot
    chown system oem_5004 /sys/bus/spi/devices/spi8.0/irq_cnt
    chmod 0440 /sys/bus/spi/devices/spi8.0/irq_cnt
 
-   # STML4 driver parameter permissions
-   chown root oem_5004 /sys/module/motosh/parameters/irq_disable
-   chmod 0660 /sys/module/motosh/parameters/irq_disable
-
-   #STML4 device permissions
-   chown system compass /dev/motosh
-   chmod 0660 /dev/motosh
-   chown compass compass /dev/motosh_as
-   chmod 0660 /dev/motosh_as
-   chown compass compass /dev/motosh_ms
-   chmod 0660 /dev/motosh_ms
-   chown compass compass /sys/devices/virtual/motosh/motosh_as/timestamp_time_ns
-   chmod 0440 /sys/devices/virtual/motosh/motosh_as/timestamp_time_ns
-   chown compass compass /sys/devices/virtual/motosh/motosh_as/rv_6axis_update_rate
-   chmod 0660 /sys/devices/virtual/motosh/motosh_as/rv_6axis_update_rate
-   chown compass compass /sys/devices/virtual/motosh/motosh_as/rv_9axis_update_rate
-   chmod 0660 /sys/devices/virtual/motosh/motosh_as/rv_9axis_update_rate
-   chown compass compass /sys/devices/virtual/motosh/motosh_as/game_rv_update_rate
-   chmod 0660 /sys/devices/virtual/motosh/motosh_as/game_rv_update_rate
-   chown compass compass /sys/devices/virtual/motosh/motosh_as/gravity_update_rate
-   chmod 0660 /sys/devices/virtual/motosh/motosh_as/gravity_update_rate
-   chown compass compass /sys/devices/virtual/motosh/motosh_as/linear_accel_update_rate
-   chmod 0660 /sys/devices/virtual/motosh/motosh_as/linear_accel_update_rate
-
    # Quiet binder logs
    write /sys/module/binder/parameters/debug_mask 0x5
 
 # Pass carrier to wlan
-service init_wifi /system/bin/wlan_carrier_bin.sh
+service init_wifi /vendor/bin/wlan_carrier_bin.sh
     class main
     user root
     group root
@@ -270,33 +270,33 @@ service adspd /system/bin/adspd
    class main
    socket adspdsock stream 0660 system audio
    user audio
-   group audio input oem_2950
+   group audio input diag
 
-service mmi-boot-sh /system/bin/init.mmi.boot.sh
+service mmi-boot-sh /vendor/bin/init.mmi.boot.sh
     class core
     user root
     group root radio
     oneshot
 
-service mmi-laser-sh /system/bin/init.mmi.laser.sh
+service mmi-laser-sh /vendor/bin/init.mmi.laser.sh
     class core
     user root
     group root oem_5004
     oneshot
 
-service mmi-touch-sh /system/bin/init.mmi.touch.sh
+service mmi-touch-sh /vendor/bin/init.mmi.touch.sh
     class core
     user root
     oneshot
 
 # Start Sensor daemon
-service motosh /system/bin/motosh boot
+service motosh /vendor/bin/motosh boot
     class late_start
     user compass
     group compass misc input
     oneshot
 
-service thermal-com /system/vendor/bin/thermal-engine --minimode
+service thermal-com /vendor/bin/thermal-engine --minimode
     class main
     user root
     disabled
@@ -315,4 +315,4 @@ on property:sys.wifi.tethering=false
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
-    swapon_all fstab.qcom
+    swapon_all /vendor/etc/fstab.qcom
