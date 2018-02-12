@@ -208,13 +208,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libiio
 
-#Moto mods permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/mods/com.motorola.aov.xml:system/etc/permissions/com.motorola.aov.xml \
-    $(LOCAL_PATH)/configs/mods/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml \
-    $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.modservice.xml:system/etc/permissions/privapp-permissions-com.motorola.modservice.xml \
-    $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.projectormod.xml:system/etc/permissions/privapp-permissions-com.motorola.projectormod.xml
-
 # NFC
 PRODUCT_COPY_FILES += \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
@@ -255,14 +248,6 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
-    init.mmi.touch.sh \
-    wlan_carrier_bin.sh \
-    init.qcom.ril.sh
-
-PRODUCT_PACKAGES += \
-=======
->>>>>>> d3687ec... rootdir: Move device specific ramdisk to vendor and setup system early mount
     fstab.qcom \
     init.mmi.boot.sh \
     init.mmi.laser.sh \
@@ -273,10 +258,6 @@ PRODUCT_PACKAGES += \
     init.qcom.ril.sh \
     ueventd.rc \
     wlan_carrier_bin.sh
-
-#Ramdisk motomods
-PRODUCT_PACKAGES += \
-    init.gbmods.sh
 
 # RIL
 PRODUCT_PACKAGES += \
