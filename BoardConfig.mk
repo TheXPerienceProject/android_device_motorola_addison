@@ -120,6 +120,10 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+#Manifest
+DEVICE_MANIFEST_FILE := device/motorola/addison/manifest.xml
+DEVICE_MATRIX_FILE := device/motorola/addison/compatibility_matrix.xml
+
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
