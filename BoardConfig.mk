@@ -22,6 +22,13 @@ BOARD_VENDOR := motorola-qcom
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+# Symbols required for motorola blobs
+TARGET_LD_SHIM_LIBS := \
+    /system/bin/adspd|libshim_adsp.so \
+    /system/lib64/libandroid.so|libshim_ril.so \
+    /system/lib64/libmdmcutback.so|libshim_ril.so \
+    /system/vendor/lib64/libizat_core.so|libshims_get_process_name.so
+
 # AIDs and CAPS
 TARGET_FS_CONFIG_GEN := \
     $(DEVICE_PATH)/fs_config/mot_aids.txt \
