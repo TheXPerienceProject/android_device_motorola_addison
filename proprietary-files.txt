@@ -453,6 +453,16 @@ vendor/lib/libcneqmiutils.so
 vendor/lib/libwms.so
 vendor/lib/libwqe.so
 
+#MotoMODS
+-app/InstaShare/InstaShare.apk
+-app/MotCameraMod/MotCameraMod.apk
+-app/MotoModStore/MotoModStore.apk
+-priv-app/ModService/ModService.apk
+-priv-app/MotGameExp/MotGameExp.apk
+-priv-app/ProjectorApp/ProjectorApp.apk
+etc/permissions/com.motorola.mod.protocols.xml
+etc/permissions/com.motorola.mod.xml
+
 # SCVE
 vendor/lib/libscveBlobDescriptor.so
 vendor/lib/libscveBlobDescriptor_stub.so
