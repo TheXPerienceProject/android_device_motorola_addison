@@ -26,8 +26,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 TARGET_LD_SHIM_LIBS := \
     /system/bin/adspd|libshim_adsp.so \
     /system/lib64/libandroid.so|libshim_ril.so \
-    /system/lib64/libmdmcutback.so|libshim_ril.so \
-    /system/vendor/lib64/libizat_core.so|libshims_get_process_name.so
+    /system/lib64/libmdmcutback.so|libshim_ril.so
 
 # AIDs and CAPS
 TARGET_FS_CONFIG_GEN := \
