@@ -13,7 +13,12 @@ allow init init:netlink_socket { read write };
 allow init ipacm_socket:sock_file rw_file_perms;
 allow init self:netlink_socket { bind create };
 allow init self:netlink_xfrm_socket { bind create };
+allow init self:netlink_route_socket nlmsg_write;
 allow init modem_efs_partition_device:blk_file write;
+allow init netd:unix_stream_socket connectto;
+allow init netd_socket:sock_file write;
+allow init platform_app:binder { call transfer };
+
 allow init property_socket:sock_file write;
 allow init qdsp_device:chr_file ioctl;
 allow init rmnet_device:chr_file write;
