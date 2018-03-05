@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define LOG_TAG "ThermalHAL-8998"
+#define LOG_TAG "ThermalHAL-8953”
 #include <utils/Log.h>
 
 #include <hardware/hardware.h>
