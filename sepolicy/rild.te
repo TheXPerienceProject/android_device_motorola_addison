@@ -12,3 +12,5 @@ allow rild sysfs_greybus:dir search;
 allow rild sysfs_greybus:file rw_file_perms;
 allow rild default_android_service:service_manager find;
 allow rild system_file:file execute_no_trans;
+
+allow rild system_data_file:dir read;
