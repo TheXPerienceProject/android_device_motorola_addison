@@ -35,8 +35,6 @@ on early-init
     mkdir /system 0777 root root
     symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
-    chown root system /dev/kmsg
-    chmod 0620 /dev/kmsg
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -57,7 +55,6 @@ on fs
     restorecon_recursive   /dsp
 
 on init
-
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
     # Set permissions for persist partition
@@ -72,6 +69,9 @@ on init
 
 on init && property:ro.boot.hardware.sku=*
     setprop ro.product.model ${ro.boot.hardware.sku}
+
+on property:ro.hw.revision=*
+    setprop ro.boot.hardware.revision ${ro.hw.revision}
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -150,9 +150,6 @@ on boot
 
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
-
-    #Allow acces to read cmdile to telephony 
-    chmod 0644 /proc/cmdline
 
     setprop wifi.interface wlan0
 
@@ -312,12 +309,9 @@ on post-fs-data
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
 
     #Create directories for Location services
-    mkdir /data/misc/location 0770 gps gps
-    mkdir /data/misc/location/mq 0770 gps gps
-    mkdir /data/misc/location/xtwifi 0770 gps gps
-    mkdir /data/misc/location/gpsone_d 0770 system gps
-    mkdir /data/misc/location/quipc 0770 gps system
-    mkdir /data/misc/location/gsiff 0770 gps gps
+    mkdir /data/vendor/location 0770 gps gps
+    mkdir /data/vendor/location/mq 0770 gps gps
+    mkdir /data/vendor/location/xtwifi 0770 gps gps
 
     #Create directory from IMS services
     mkdir /data/shared 0755
@@ -424,7 +418,7 @@ service cnd /system/vendor/bin/cnd
     class late_start
     socket cnd stream 660 root inet
 
-service wcnss-service /system/bin/wcnss_service
+service wcnss-service /vendor/bin/wcnss_service
     class main
     user system
     group system wifi radio
@@ -558,7 +552,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
 service loc_launcher /system/vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet diag oem_2950 wifi
+    group gps inet oem_2950 wifi
 
 on charger
     wait /dev/block/bootdevice/by-name/system
@@ -571,10 +565,6 @@ on charger
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
     setprop sys.io.scheduler bfq
-
-on property:init.svc.surfaceflinger=restarting
-    stop hwcomposer-2-1
-    start hwcomposer-2-1
 
     # scheduler settings
     write /proc/sys/kernel/sched_window_stats_policy 3

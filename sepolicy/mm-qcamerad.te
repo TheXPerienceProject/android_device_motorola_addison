@@ -1,12 +1,12 @@
-type_transition mm-qcamerad system_data_file:sock_file camera_socket "cam_socket1";
-type_transition mm-qcamerad system_data_file:sock_file camera_socket "cam_socket2";
-type_transition mm-qcamerad system_data_file:sock_file camera_socket "cam_socket3";
-
-allow mm-qcamerad camera_socket:chr_file rw_file_perms;
-allow mm-qcamerad camera_socket:sock_file { create unlink write };
 allow mm-qcamerad laser_device:chr_file rw_file_perms;
 allow mm-qcamerad persist_file:file r_file_perms;
+allow mm-qcamerad sysfs_graphics:file r_file_perms;
+allow mm-qcamerad system_data_file:dir read;
+set_prop(mm-qcamerad, debug_prop);
 
+allow mm-qcamerad sysfs_mods_camd:file rw_file_perms;
+allow mm-qcamerad sysfs_mods_camd:dir rw_dir_perms;
+allow mm-qcamerad laser_device:chr_file { ioctl open read write };
 allow mm-qcamerad sysfs_leds:dir search;
 allow mm-qcamerad sysfs_leds:lnk_file r_file_perms;
 allow mm-qcamerad system_data_file:dir rw_dir_perms;
@@ -15,12 +15,3 @@ allow mm-qcamerad init:unix_stream_socket connectto;
 allow mm-qcamerad persist_file:dir { getattr open read search  };
 allow mm-qcamerad persist_file:file { read open getattr };
 allow mm-qcamerad property_socket:sock_file write;
-allow mm-qcamerad laser_device:chr_file { ioctl open read write };
-allow mm-qcamerad sysfs_mods_camd:file rw_file_perms;
-allow mm-qcamerad sysfs_mods_camd:dir rw_dir_perms;
-
-#unix_socket_connect(mm-qcamerad, mpctl, perfd);
-
-allow mm-qcamerad sysfs_graphics:file r_file_perms;
-allow mm-qcamerad system_data_file:dir read;
-set_prop(mm-qcamerad, debug_prop);
