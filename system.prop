@@ -27,6 +27,9 @@ ro.qc.sdk.audio.ssr=false
 
 use.voice.path.for.pcm.voip=false
 
+ro.config.vc_call_vol_steps=8
+ro.config.media_vol_steps=25
+
 # Bluetooth
 bluetooth.hfp.client=1
 qcom.bluetooth.soc=smd
@@ -70,15 +73,15 @@ ro.sf.lcd_density=480
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# Mods Platform
-sys.mod.platformsdkversion=205
-
 # IMS
 persist.radio.jbims=1
 persist.radio.RATE_ADAPT_ENABLE=1
 persist.radio.VT_ENABLE=1
 persist.radio.VT_HYBRID_ENABLE=1
 persist.radio.VT_USE_MDM_TIME=0
+
+# Mods Platform
+sys.mod.platformsdkversion=205
 
 # NFC
 ro.hardware.nfc_nci=addison
@@ -102,3 +105,4 @@ persist.data.mode=concurrent
 
 # Sensors
 system_init.startsensorservice=0
+ro.hardware.sensors=addison

@@ -1,5 +1,5 @@
 allow system_server debugfs:dir r_dir_perms;
-allow system_server qti_debugfs:file r_file_perms;
+
 allow system_server sensors_device:chr_file { ioctl open read };
 allow system_server socket_device:sock_file write;
 allow system_server sysfs_sensors:file write;
@@ -16,6 +16,3 @@ allow system_server display_misc_file:dir rw_dir_perms;
 allow system_server display_misc_file:file rw_file_perms;
 
 allow system_server init:unix_stream_socket { read write };
-
-qmux_socket(system_server);
-

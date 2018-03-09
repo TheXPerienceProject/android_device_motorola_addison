@@ -1,8 +1,11 @@
-allow init audio_device:chr_file rw_file_perms;
-allow init cameraserver:fd use;
+allow init audio_device:chr_file { write ioctl };
+allow init input_device:chr_file ioctl;
+allow init sensors_device:chr_file { write ioctl };
+allow init tee_device:chr_file { write ioctl };
+
 allow init debugfs:file write;
-allow init diag_device:chr_file rw_file_perms;
 allow init firmware_file:dir mounton;
+
 allow init graphics_device:chr_file { read open write ioctl };
 allow init hal_graphics_allocator_default:fd use;
 allow init input_device:chr_file r_file_perms;
@@ -35,6 +38,5 @@ allow init system_server:unix_stream_socket { read write };
 allow init ion_device:chr_file { ioctl read write };
 allow init rpmb_device:blk_file write;
 allow init uio_device:chr_file write;
-
 
 binder_use(init)

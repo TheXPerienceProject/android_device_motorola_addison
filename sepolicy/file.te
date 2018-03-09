@@ -1,11 +1,5 @@
-# debugfs
-type debugfs_ion, fs_type, debugfs_type;
-
 # FSG
 type fsg_file, fs_type, contextmount_type;
-
-# procfs
-type proc_wcnss_service, fs_type;
 
 # RIL
 type netmgr_data_file, file_type, data_file_type;
@@ -15,7 +9,6 @@ type adspd_socket, file_type;
 type cutback_socket, file_type;
 
 # sysfs
-#type sysfs_sensors, fs_type, sysfs_type;
 type sysfs_adsp, fs_type, sysfs_type;
 type sysfs_mmi_fp, fs_type, sysfs_type;
 type sysfs_mmi_laser, fs_type, sysfs_type;
@@ -29,7 +22,3 @@ type gbfirmware_file, file_type, data_file_type, mlstrustedobject;
 type sysfs_mods_camd, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_v4l2_openmode, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_batt_mods, fs_type, sysfs_type, mlstrustedobject;
-
-# adspd
-type adspd_file, file_type, data_file_type;
-
