@@ -1,5 +1,4 @@
 allow untrusted_app_25 adb_data_file:dir getattr;
-allow untrusted_app_25 adspd_file:dir getattr;
 allow untrusted_app_25 apk_private_data_file:dir getattr;
 allow untrusted_app_25 asec_image_file:dir getattr;
 allow untrusted_app_25 backup_data_file:dir getattr;
