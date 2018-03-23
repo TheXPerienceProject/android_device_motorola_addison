@@ -317,9 +317,6 @@ PRODUCT_PACKAGES += \
     sensorhub.msm8953 \
     sensors.msm8953
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
 # Telephony packages
 PRODUCT_PACKAGES += \
     telephony-ext \
