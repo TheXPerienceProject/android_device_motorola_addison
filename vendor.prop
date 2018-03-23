@@ -103,10 +103,6 @@ ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 
-# Sensors
-system_init.startsensorservice=0
-ro.hardware.sensors=addison
-
 #usb
 sys.usb.ffs.max_write=524288
 sys.usb.ffs.max_read=524288
