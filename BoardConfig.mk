@@ -152,6 +152,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Release Tools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+#SDCLANG
+TARGET_USE_SDCLANG := true
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
