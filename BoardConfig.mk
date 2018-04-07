@@ -111,8 +111,8 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
-# exfat
-TARGET_EXFAT_DRIVER := exfat
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := sdfat
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
