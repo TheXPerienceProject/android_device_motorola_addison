@@ -164,9 +164,10 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libgnsspps \
+    android.hardware.gnss@1.0-impl-qti \
+    libcurl \
     libgnss \
-    android.hardware.gnss@1.0-impl-qti
+    libgnsspps
 
 # HIDL
 PRODUCT_PACKAGES += \
