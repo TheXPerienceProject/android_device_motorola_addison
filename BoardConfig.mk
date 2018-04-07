@@ -138,6 +138,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
+# Properties
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
