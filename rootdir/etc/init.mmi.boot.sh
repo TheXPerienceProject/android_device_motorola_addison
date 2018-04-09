@@ -14,17 +14,17 @@ notice()
 
 start_copying_prebuilt_qcril_db()
 {
-    if [ -f /vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
-        cp /vendor/qcril.db /data/misc/radio/qcril.db
-        chown -h radio.radio /data/misc/radio/qcril.db
+    if [ -f /vendor/radio/qcril_database/qcril.db -a ! -f /data/vendor/radio/qcril.db ]; then
+        cp /vendor/radio/qcril_database/qcril.db /data/vendor/radio/qcril.db
+        chown -h radio.radio /data/vendor/radio/qcril.db
     else
         # [MOTO] if qcril.db's owner is not radio (e.g. root),
         # reset it for the recovery
-        qcril_db_owner=`stat -c %U /data/misc/radio/qcril.db`
+        qcril_db_owner=`stat -c %U /data/vendor/radio/qcril.db`
         echo "qcril.db's owner is $qcril_db_owner"
         if [ $qcril_db_owner != "radio" ]; then
             echo "reset owner to radio for qcril.db"
-            chown -h radio.radio /data/misc/radio/qcril.db
+            chown -h radio.radio/data/vendor/radio/qcril.db
         fi
     fi
 }
@@ -66,6 +66,7 @@ fi
 #
 # Copy qcril.db if needed for RIL
 #
-start_copying_prebuilt_qcril_db
-echo 1 > /data/misc/radio/db_check_done
+tart_copying_prebuilt_qcril_db
+echo 1 > /data/vendor/radio/db_check_done
+
 
