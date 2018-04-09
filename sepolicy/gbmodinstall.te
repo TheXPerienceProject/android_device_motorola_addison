@@ -1,6 +1,6 @@
 #=============Greybus mods install=====================
 type gbmodinstall, domain;
-type gbmodinstall_exec, exec_type, file_type;
+type gbmodinstall_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(gbmodinstall)
 
 allow gbmodinstall ctl_mods_camd_prop:property_service set;

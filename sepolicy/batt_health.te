@@ -1,6 +1,6 @@
-type batt_health, domain;
+type batt_health, domain, coredomain;
 type batt_health_data_file, file_type, data_file_type;
-type batt_health_exec, exec_type, file_type;
+type batt_health_exec, exec_type, file_type, vendor_file_type;
 type sysfs_batt_health, fs_type, sysfs_type;
 init_daemon_domain(batt_health);
 
