@@ -558,7 +558,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.
 service loc_launcher /vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet diag wifi
+    group gps inet oem_2950 wifi
 
 on charger
     wait /dev/block/bootdevice/by-name/system
