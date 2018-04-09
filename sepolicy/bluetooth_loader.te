@@ -1,6 +1,6 @@
 # Bluetooth executables and scripts
 type bluetooth_loader, domain;
-type bluetooth_loader_exec, exec_type, file_type;
+type bluetooth_loader_exec, exec_type, file_type, vendor_file_type;
 
 # Started by init
 init_daemon_domain(bluetooth_loader)
