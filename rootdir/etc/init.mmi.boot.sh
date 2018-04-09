@@ -1,6 +1,6 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 
-PATH=/sbin:/system/sbin:/system/bin:/system/xbin
+PATH=/sbin:/system/sbin:/system/bin:/system/xbin:/vendor/bin
 export PATH
 
 scriptname=${0##*/}
@@ -14,8 +14,8 @@ notice()
 
 start_copying_prebuilt_qcril_db()
 {
-    if [ -f /system/vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
-        cp /system/vendor/qcril.db /data/misc/radio/qcril.db
+    if [ -f /vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
+        cp /vendor/qcril.db /data/misc/radio/qcril.db
         chown -h radio.radio /data/misc/radio/qcril.db
     else
         # [MOTO] if qcril.db's owner is not radio (e.g. root),
@@ -30,7 +30,7 @@ start_copying_prebuilt_qcril_db()
 }
 
 # We take this from cpuinfo because hex "letters" are lowercase there
-set -A cinfo `cat /proc/cpuinfo | /system/bin/grep Revision`
+set -A cinfo `cat /proc/cpuinfo | /vendor/bin/grep Revision`
 hw=${cinfo[2]#?}
 
 # Now "cook" the value so it can be matched against devtree names

@@ -121,7 +121,7 @@ on boot
     chmod 0660 /data/misc/radio/copy_complete
 
     # copy prebuilt qcril.db files always
-    copy /system/vendor/qcril.db /data/misc/radio/qcril_prebuilt.db
+    copy /vendor/qcril.db /data/misc/radio/qcril_prebuilt.db
     chown radio radio /data/misc/radio/qcril_prebuilt.db
     chmod 0660 /data/misc/radio/qcril_prebuilt.db
     # File flags for prebuilt ril db file
@@ -387,7 +387,7 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-service thermal-engine /system/vendor/bin/thermal-engine
+service thermal-engine /vendor/bin/thermal-engine
    class main
    user root
    socket thermal-send-client stream 0666 system system
@@ -396,7 +396,7 @@ service thermal-engine /system/vendor/bin/thermal-engine
    socket thermal-send-rule stream 0660 system system
    group root
 
-service time_daemon /system/vendor/bin/time_daemon
+service time_daemon /vendor/bin/time_daemon
    class main
    user root
    group root
@@ -410,12 +410,12 @@ on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
 #start camera server as daemon
-service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
 
-service cnd /system/vendor/bin/cnd
+service cnd /vendor/bin/cnd
     class late_start
     socket cnd stream 660 root inet
 
@@ -500,7 +500,7 @@ service netmgrd /system/bin/netmgrd
     user root
     group root wifi wakelock radio inet
 
-service qti /system/vendor/bin/qti
+service qti /vendor/bin/qti
     class main
     user radio
     group radio oem_2950 usb
@@ -545,12 +545,12 @@ service rild2-wrapper /vendor/etc/init.qcom.ril.sh
     group root
     oneshot
 
-service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service msm_irqbalance /system/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class core
     user root
     group root
 
-service loc_launcher /system/vendor/bin/loc_launcher
+service loc_launcher /vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
