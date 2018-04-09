@@ -403,6 +403,7 @@ vendor/etc/data/dsi_config.xml|c85722f90588edd3288b953b0ab97c81edeabfa9
 vendor/etc/data/netmgr_config.xml|d99ed385820913bcc8612ad76cb6b5d25ec54981
 vendor/lib/libmdmdetect.so|314923af39e2e137342b7d4ba2f9657c6bd9913c
 vendor/lib/libqcmaputils.so|7d1bae45e9ee4e0ade47d3218e96f0ae5ed4e3b5
+vendor/lib/libxml.so|29d4d88136cb3435039ba5f3df883d28829d74f0
 vendor/lib/vendor.qti.hardware.radio.am@1.0_vendor.so|0b24b04251cb35fd2647cd48d4e3f264818fa544
 vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so|de92409aa65356ae9c416996f3f3c3bfb507315a
 vendor/lib/vendor.qti.hardware.radio.lpa@1.0_vendor.so|0faa871194a85098ec0cac6d726ee8afc4bed1a8
