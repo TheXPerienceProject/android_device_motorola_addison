@@ -13,3 +13,5 @@ ro.sf.lcd_inverted         u:object_r:moto_init_prop:s0
 ro.mot.hw.                 u:object_r:moto_init_prop:s0
 ro.mot.iccid               u:object_r:moto_init_prop:s0
 ro.mot.cust_md5            u:object_r:moto_init_prop:s0
+net.lte.ims.data.enabled   u:object_r:qcom_ims_prop:s0
+oem.device.imeicache       u:object_r:diag_prop:s0
