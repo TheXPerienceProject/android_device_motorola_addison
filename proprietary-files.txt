@@ -388,7 +388,11 @@ vendor/lib/libqmiservices.so|acc51cfc0ef6da7d568c53260e65d8b94fb1d51d
 vendor/lib/libsmemlog.so|3e1470571a6afeb8547f356607f93c906f2972fd
 
 # RIL - from tissot - OPR1.170623.026
+-app/datastatusnotification/datastatusnotification.apk
+-app/SimSettings/SimSettings.apk
+-app/radioconfig/radioconfig.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk|7d7104c26c7c1e9487d9c41d48f0e0348135cb61
+etc/permissions/radioconfig.xml
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
 -framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
@@ -401,10 +405,21 @@ vendor/bin/rmt_storage|5b821f0aa673febf158892a6c8ec97a35817f876
 vendor/bin/tftp_server|121601c941fb17ee6a5d91fc9ee3e47da6bb03d1
 vendor/etc/data/dsi_config.xml|c85722f90588edd3288b953b0ab97c81edeabfa9
 vendor/etc/data/netmgr_config.xml|d99ed385820913bcc8612ad76cb6b5d25ec54981
+vendor/lib/libconfigdb.so
+vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so|314923af39e2e137342b7d4ba2f9657c6bd9913c
+vendor/lib/libnetmgr.so
 vendor/lib/libqcmaputils.so|7d1bae45e9ee4e0ade47d3218e96f0ae5ed4e3b5
+vendor/lib/libril-qc-ltedirectdisc.so
+vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qc-radioconfig.so
+vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/librilqmiservices.so
+vendor/lib/libsettings.so
+vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so|29d4d88136cb3435039ba5f3df883d28829d74f0
 vendor/lib/vendor.qti.hardware.radio.am@1.0_vendor.so|0b24b04251cb35fd2647cd48d4e3f264818fa544
+vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so|de92409aa65356ae9c416996f3f3c3bfb507315a
 vendor/lib/vendor.qti.hardware.radio.lpa@1.0_vendor.so|0faa871194a85098ec0cac6d726ee8afc4bed1a8
 vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so|f4643e96db8391633803c013b0e678e49d3d149b
