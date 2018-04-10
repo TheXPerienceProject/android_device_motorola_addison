@@ -152,6 +152,12 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE BLOCK_SUSPEND NET_ADMIN
 
+[system/bin/cnd]
+mode: 0755
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: NET_BIND_SERVICE BLOCK_SUSPEND NET_ADMIN
+
 [system/vendor/bin/slim_daemon]
 mode: 0755
 user:  AID_GPS
@@ -163,6 +169,24 @@ mode: 0755
 user:  AID_GPS
 group: AID_GPS
 caps: NET_BIND_SERVICE BLOCK_SUSPEND
+
+[vendor/bin/hw/rild]
+mode: 0755
+user: AID_RADIO
+group: AID_RADIO
+caps: BLOCK_SUSPEND NET_ADMIN NET_RAW
+
+[system/vendor/bin/hw/rild]
+mode: 0755
+user: AID_RADIO
+group: AID_RADIO
+caps: BLOCK_SUSPEND NET_ADMIN NET_RAW
+
+[system/bin/hw/rild]
+mode: 0755
+user: AID_RADIO
+group: AID_RADIO
+caps: BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 [firmware/]
 mode: 0771

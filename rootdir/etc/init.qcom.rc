@@ -281,6 +281,11 @@ on post-fs-data
     #create netmgr log dir
     mkdir /data/misc/netmgr 0770 radio radio
     chmod 0770 /data/misc/netmgr
+    mkdir /data/vendor/netmgr 0770 radio radio
+    chmod 0770 /data/vendor/netmgr
+
+    # Create directory for radio
+    mkdir /data/vendor/radio 0770 system radio
 
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
@@ -439,6 +444,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
 
 service cnd /vendor/bin/cnd
     class late_start
+	group system wifi inet radio wakelock net_admin
     socket cnd stream 660 root inet
 
 service wcnss-service /vendor/bin/wcnss_service
@@ -525,7 +531,7 @@ service netmgrd /vendor/bin/netmgrd
 service qti /vendor/bin/qti
     class main
     user radio
-    group radio oem_2950 diag usb
+    group radio oem_2950 oem_2901 diag usb net_admin
 
 on property:ro.use_data_netmgrd=false
     # netmgr not supported on specific target
@@ -557,8 +563,11 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
 
 service ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
+    socket rild2 stream 660 root radio
+    socket rild-debug2 stream 660 radio system
     user radio
-    group radio cache inet misc audio log readproc wakelock
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service rild2-wrapper /vendor/etc/init.qcom.ril.sh
