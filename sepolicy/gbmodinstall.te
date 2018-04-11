@@ -12,7 +12,9 @@ allow gbmodinstall system_file:file { read open execute_no_trans };
 allow gbmodinstall system_file:system module_load;
 allow gbmodinstall system_file:dir { read open };
 allow gbmodinstall vendor_toolbox_exec:file rx_file_perms;
-
+allow gbmodinstall vendor_file:system module_load;
+allow gbmodinstall vendor_file:dir { read open };
+allow gbmodinstall vendor_file:file { read open execute_no_trans };
 
 # Logs to /dev/kmsg
 allow gbmodinstall kmsg_device:chr_file w_file_perms;
