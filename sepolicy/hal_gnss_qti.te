@@ -1,4 +1,4 @@
-binder_call(hal_gnss_qti, servicemanager);
+#binder_call(hal_gnss_qti, servicemanager);
 
 # Most HALs are not allowed to use network sockets. Qcom library
 # libqdi is used across multiple processes which are clients of
