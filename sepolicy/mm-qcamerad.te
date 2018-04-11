@@ -15,3 +15,7 @@ allow mm-qcamerad init:unix_stream_socket connectto;
 allow mm-qcamerad persist_file:dir { getattr open read search  };
 allow mm-qcamerad persist_file:file { read open getattr };
 allow mm-qcamerad property_socket:sock_file write;
+allow mm-qcamerad unlabeled:file { rw_file_perms };
+allow mm-qcamerad wcnss_prop:file { open getattr };
+allow mm-qcamerad wififtmd_prop:file { open getattr };
+allow mm-qcamerad spcomlib_prop:file { open getattr };
