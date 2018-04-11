@@ -2,6 +2,9 @@
 # system.prop for addison
 #
 
+# Navigation bar In some GSI nav bar isn't enabled so force it
+qemu.hw.mainkeys=0
+
 ro.build.version.qcom=LA.UM.6.6.r1-04400-89xx.0
 
 # Audio
