@@ -12,8 +12,5 @@ allow rild system_data_file:dir read;
 allow rild diag_prop:property_service set;
 allow rild vendor_file:file { r_file_perms ioctl };
 
-binder_use(rild)
-binder_call(rild, per_mgr)
-
 set_prop(rild, system_radio_prop)
 get_prop(rild, diag_prop);
