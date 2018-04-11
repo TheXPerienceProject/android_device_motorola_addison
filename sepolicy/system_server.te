@@ -18,3 +18,5 @@ allow system_server init:unix_stream_socket { read write };
 allow system_server sensors_device:chr_file r_file_perms;
 # use MSM ipc router ioctls
 allow system_server self:socket ioctl;
+# laser
+allow system_server sysfs_mmi_laser:file write;
