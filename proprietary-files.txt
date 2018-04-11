@@ -265,8 +265,8 @@ vendor/lib/libssd.so
 vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 
 # Fingerprint
-lib/libcom_fingerprints_service.so
-lib/lib_fpc_tac_shared.so
+lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
+lib/lib_fpc_tac_shared.so:vendor/lib/lib_fpc_tac_shared.so
 vendor/lib/hw/fingerprint.msm8953.so
 
 # GPS
