@@ -1,7 +1,7 @@
 allow rild persist_file:dir search;
 allow rild persist_file:file rw_file_perms;
 allow rild system_data_file:dir w_dir_perms;
-allow rild system_data_file:sock_file create_file_perms;
+# allow rild system_data_file:sock_file create_file_perms;
 
 # allow rild to access radio data file
 allow rild radio_data_file:dir rw_dir_perms;
@@ -10,7 +10,6 @@ allow rild radio_data_file:file create_file_perms;
 #greybus
 allow rild sysfs_greybus:dir search;
 allow rild sysfs_greybus:file rw_file_perms;
-allow rild default_android_service:service_manager find;
 allow rild system_file:file execute_no_trans;
 
 allow rild system_data_file:dir read;
@@ -23,4 +22,3 @@ binder_call(rild, per_mgr)
 
 set_prop(rild, system_radio_prop)
 get_prop(rild, diag_prop);
-allow rild audioserver_service:service_manager find;
