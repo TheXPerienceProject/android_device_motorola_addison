@@ -29,11 +29,14 @@ TARGET_SCREEN_HEIGHT := 1920
 PRODUCT_DEVICE := addison
 PRODUCT_NAME := xpe_addison
 PRODUCT_BRAND := motorola
+BOARD_VENDOR := motorola
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=motorola/addison/addison:7.1.1/NPNS26.118-22-1/1:user/release-keys \
-    PRIVATE_BUILD_DESC="addison-user 7.1.1 NPNS26.118-22-1 1 release-keys" \
+    PRIVATE_BUILD_DESC="addison-user 8.0.0 OPN27.76-12-2 4 release-keys" \
     PRODUCT_NAME="Moto Z Play"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := "motorola/addison/addison:8.0.0/OPN27.76-12-2/4:user/release-keys"
