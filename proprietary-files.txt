@@ -29,9 +29,9 @@ vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 
 # Audio firmware
-etc/firmware/marley-dsp1-ultrasound.wmfw
-etc/firmware/marley-dsp2-aov-frontend.wmfw
-etc/firmware/marley-dsp3-aov-control.wmfw
+etc/firmware/marley-dsp1-ultrasound.wmfw:vendor/firmware/marley-dsp1-ultrasound.wmfw
+etc/firmware/marley-dsp2-aov-frontend.wmfw:vendor/firmware/marley-dsp2-aov-frontend.wmfw
+etc/firmware/marley-dsp3-aov-control.wmfw:vendor/firmware/marley-dsp3-aov-control.wmfw
 
 # Bluetooth
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -485,8 +485,8 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Touchscreen
-etc/firmware/synaptics-s3508-16082601-255c40-addison.tdat
-etc/firmware/synaptics-s3508sga-16082601-255c40-addison.tdat
+etc/firmware/synaptics-s3508-16082601-255c40-addison.tdat:vendor/firmware/synaptics-s3508-16082601-255c40-addison.tdat
+etc/firmware/synaptics-s3508sga-16082601-255c40-addison.tdat:vendor/firmware/synaptics-s3508sga-16082601-255c40-addison.tdat
 
 # WCNSS
 vendor/etc/wifi/WCNSS_qcom_wlan_nv.bin:vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
