@@ -509,3 +509,7 @@ vendor/etc/wifi/WCNSS_wlan_dictionary.dat:vendor/firmware/wlan/prima/WCNSS_wlan_
 -priv-app/ProjectorApp/ProjectorApp.apk
 etc/permissions/com.motorola.mod.protocols.xml
 etc/permissions/com.motorola.mod.xml
+
+# TUI
+lib/vendor.qti.hardware.tui_comm@1.0.so
+vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
