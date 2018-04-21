@@ -54,6 +54,7 @@
         <version>2.4</version>
         <interface>
             <name>ICameraProvider</name>
+            <instance>legacy/0</instance>
             <instance>mods_camera/0</instance>
         </interface>
     </hal>
@@ -82,12 +83,12 @@
         <interface>
             <name>ICryptoFactory</name>
             <instance>default</instance>
-			<instance>widevine</instance>
+            <instance>widevine</instance>
         </interface>
         <interface>
             <name>IDrmFactory</name>
             <instance>default</instance>
-			<instance>widevine</instance>
+            <instance>widevine</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -298,8 +299,12 @@
     </hal>
     <hal format="hidl">
         <name>motorola.hardware.camera.provider</name>
-        <transport arch="32">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>2.4</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>legacy/0</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>motorola.hardware.mods_camera.provider</name>
@@ -437,4 +442,16 @@
             <instance>uimRemoteServer1</instance>
         </interface>
     </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.tui_comm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITuiComm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <sepolicy>
+        <version>0.0</version>
+    </sepolicy>
 </manifest>
