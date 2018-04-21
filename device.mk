@@ -226,11 +226,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libiio \
     ModFmwkProxyService
+
 #Moto mods permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mods/com.motorola.aov.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.aov.xml \
     $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.modservice.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-com.motorola.modservice.xml \
-    $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.projectormod.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-com.motorola.projectormod.xml
+    $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.projectormod.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-com.motorola.projectormod.xml \
+    $(LOCAL_PATH)/configs/mods/com.motorola.aov.xml:system/etc/permissions/com.motorola.aov.xml \
+    $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.modservice.xml:system/etc/permissions/privapp-permissions-com.motorola.modservice.xml \
+    $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.projectormod.xml:system/etc/permissions/privapp-permissions-com.motorola.projectormod.xml
 
 #NET
 PRODUCT_PACKAGES += \
