@@ -59,21 +59,9 @@ public class IntentReceiver extends BroadcastReceiver {
         }
     }
 
-    static {
-        boolean z;
-        if (Build.USER.equals(Build.TYPE)) {
-            z = false;
-        } else {
-            z = true;
-        }
-        DEBUG = z;
-    }
-
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
-        if (DEBUG) {
             Log.i("fwkintentreceiver", "Received intent: " + intent.toUri(0));
-        }
         if ("com.motorola.modservice.BATTERY_MODE".equals(action)) {
             final String mode = Integer.toString(intent.getIntExtra("mode", 0));
             new Thread(new Runnable() {
