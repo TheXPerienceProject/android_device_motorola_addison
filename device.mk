@@ -361,7 +361,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator HAL
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service.marlin
+    android.hardware.vibrator@1.0-service.addison
 
 PRODUCT_PACKAGES += \
     vndk-sp
