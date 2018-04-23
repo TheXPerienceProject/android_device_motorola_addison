@@ -399,17 +399,13 @@ etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
 -framework/qcrilhook.jar|cb56e114f8f8ecf1c7ea5f35107bafc6bf49a194
 -framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|f313f243661c8e516ecc6a5785e8f0829daedb1c
-lib/libadropbox.so:vendor/lib/libadropbox.so
-lib/libmdmcutback.so:vendor/lib/libmdmcutback.so
-lib/libmotext_inf.so:vendor/lib/libmotext_inf.so
-lib/libqmimotext.so:vendor/lib/libqmimotext.so
-vendor/bin/qmi_motext_hook
 vendor/bin/netmgrd|748b87d905aa6727e812694de559e54b958f3832
 vendor/bin/qti|a67280f22725799c47d78e07570d9e173e6624f1
 vendor/bin/rmt_storage|5b821f0aa673febf158892a6c8ec97a35817f876
 vendor/bin/tftp_server|121601c941fb17ee6a5d91fc9ee3e47da6bb03d1
 vendor/etc/data/dsi_config.xml|c85722f90588edd3288b953b0ab97c81edeabfa9
 vendor/etc/data/netmgr_config.xml|d99ed385820913bcc8612ad76cb6b5d25ec54981
+lib/libadropbox.so:vendor/lib/libadropbox.so
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so|314923af39e2e137342b7d4ba2f9657c6bd9913c
@@ -432,6 +428,12 @@ vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so|e377ab5e3b2f96c4a0a1
 vendor/lib/vendor.qti.hardware.radio.uim@1.0_vendor.so|39b66f09fb9a9a447729e12df94a882a0b3191dd
 vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so|3d10ac1ec3dee08d76efc1a847dfd8099476346f
 vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so|928598ce51822ece88bb0e2bd359b1c9205de149
+
+# Moto Ril
+vendor/bin/qmi_motext_hook
+lib/libmdmcutback.so:vendor/lib/libmdmcutback.so
+lib/libmotext_inf.so:vendor/lib/libmotext_inf.so
+lib/libqmimotext.so:vendor/lib/libqmimotext.so
 
 # CNE
 # bin/cnd
@@ -501,14 +503,15 @@ vendor/etc/wifi/WCNSS_qcom_wlan_nv_India.bin:vendor/firmware/wlan/prima/WCNSS_qc
 vendor/etc/wifi/WCNSS_wlan_dictionary.dat:vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
 
 #MotoMODS
--app/InstaShare/InstaShare.apk
--app/MotCameraMod/MotCameraMod.apk
--app/MotoModStore/MotoModStore.apk
--priv-app/ModService/ModService.apk
--priv-app/MotGameExp/MotGameExp.apk
--priv-app/ProjectorApp/ProjectorApp.apk
+-app/InstaShare/InstaShare.apk:app/InstaShare/InstaShare.apk;PRESIGNED
+-app/MotCameraMod/MotCameraMod.apk:app/MotCameraMod/MotCameraMod.apk;PRESIGNED
+-app/MotoModStore/MotoModStore.apk:app/MotoModStore/MotoModStore.apk;PRESIGNED
+-priv-app/ModService/ModService.apk:priv-app/ModService/ModService.apk;PRESIGNED
+-priv-app/MotGameExp/MotGameExp.apk:priv-app/MotGameExp/MotGameExp.apk;PRESIGNED
+-priv-app/ProjectorApp/ProjectorApp.apk:priv-app/ProjectorApp/ProjectorApp.apk;PRESIGNED
 etc/permissions/com.motorola.mod.protocols.xml
 etc/permissions/com.motorola.mod.xml
+vendor/bin/mods_camd
 
 # TUI
 lib/vendor.qti.hardware.tui_comm@1.0.so
