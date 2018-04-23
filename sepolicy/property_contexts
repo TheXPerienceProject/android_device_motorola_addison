@@ -13,3 +13,8 @@ ro.mot.iccid               u:object_r:moto_init_prop:s0
 ro.mot.cust_md5            u:object_r:moto_init_prop:s0
 net.lte.ims.data.enabled   u:object_r:qcom_ims_prop:s0
 oem.device.imeicache       u:object_r:diag_prop:s0
+persist.data.front.        u:object_r:camera_prop:s0
+persist.data.rear.         u:object_r:camera_prop:s0
+
+# Perfd
+sys.post_boot.             u:object_r:post_boot_prop:s0
