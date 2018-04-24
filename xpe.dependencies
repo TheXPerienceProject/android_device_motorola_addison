@@ -22,6 +22,11 @@
     {
     "repository": "android_hardware_moto_sensors",
     "target_path": "hardware/moto/sensors"
+  },
+  {
+    "remote": "Unicorn",
+    "repository": "proprietary_vendor_motorola",
+    "target_path": "vendor/motorola"
   }
 ]
 
