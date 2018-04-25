@@ -490,7 +490,7 @@ service tftp_server /vendor/bin/tftp_server
 service per_mgr /vendor/bin/pm-service
     class core
     user system
-    group system net_raw
+    group system
     ioprio rt 4
     seclabel u:r:per_mgr:s0
 
