@@ -35,8 +35,8 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="addison-user 8.0.0 OPN27.76-12-2 4 release-keys" \
+    PRIVATE_BUILD_DESC="addison-user 8.0.0 OPN27.76-12-22 24 release-keys" \
     PRODUCT_NAME="Moto Z Play"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "motorola/addison/addison:8.0.0/OPN27.76-12-2/4:user/release-keys"
+BUILD_FINGERPRINT := "motorola/addison/addison:8.0.0/OPN27.76-12-22/24:user/release-keys"
