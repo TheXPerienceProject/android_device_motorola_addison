@@ -77,6 +77,9 @@ persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196610
 ro.sf.lcd_density=480
 
+#property for game detection feature
+debug.enable.gamed=0
+
 # Property to enable display default color mode
 vendor.display.enable_default_color_mode=1
 
