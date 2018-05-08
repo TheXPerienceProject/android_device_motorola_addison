@@ -116,6 +116,9 @@ ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 
+# set max background services
+ro.config.max_starting_bg=8
+
 #usb
 sys.usb.ffs.max_write=524288
 sys.usb.ffs.max_read=524288
