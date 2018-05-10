@@ -95,14 +95,14 @@ PRODUCT_PACKAGES += \
     audiod \
     audio_amplifier.msm8953 \
     audio.a2dp.default \
-    audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
-    tinymix
+    tinymix \
+    libtinycompress
 
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \

@@ -178,7 +178,9 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 # Shim
 TARGET_LD_SHIM_LIBS := \
     /system/lib64/libandroid.so|libshim_ril.so \
-    /system/lib64/libmdmcutback.so|libqsap_shim.so
+    /system/lib64/libmdmcutback.so|libqsap_shim.so \
+    /system/vendor/lib/hw/audio.primary.msm8953.so|vendor/lib/libtinycompress_motorola.so \
+    /system/vendor/lib/hw/audio.primary.msm8953.so|libtinycompress_motorola.so
 
 # Sensors
 BOARD_USES_MOT_SENSOR_HUB := true
