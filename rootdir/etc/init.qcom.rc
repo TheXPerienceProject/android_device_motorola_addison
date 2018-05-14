@@ -539,10 +539,10 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-service charger /charger
+service charger /sbin/charge_only_mode
     class charger
     group log
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -713,12 +713,12 @@ on property:vendor.rild.libpath=*
     setprop rild.libpath ${vendor.rild.libpath}
 
 on charger
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
     load_system_props
     setprop sys.usb.configfs 0
     setprop persist.sys.usb.config mass_storage
     write /sys/class/leds/white/trigger "battery-full"
+    start gbmodinstall
+    start thermal-com
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
