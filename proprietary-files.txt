@@ -392,6 +392,7 @@ vendor/lib/libsmemlog.so|3e1470571a6afeb8547f356607f93c906f2972fd
 etc/permissions/radioconfig.xml
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
+etc/permissions/privapp-permissions-com.qualcomm.qcrilmsgtunnel.xml
 -framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
 -framework/qcrilhook.jar|cb56e114f8f8ecf1c7ea5f35107bafc6bf49a194
 -framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
