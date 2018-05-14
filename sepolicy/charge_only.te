@@ -2,9 +2,6 @@ type charge_only, coredomain, domain;
 type charge_only_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(charge_only)
 
-allow charge_only chargeonly_data_file:dir rw_dir_perms;
-allow charge_only chargeonly_data_file:file rw_file_perms;
-
 # Write to /dev/kmsg
 allow charge_only kmsg_device:chr_file rw_file_perms;
 
