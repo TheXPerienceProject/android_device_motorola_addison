@@ -243,6 +243,7 @@ vendor/lib/vendor.qti.esepowermanager@1.0_vendor.so
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 lib/libsd_sdk_display.so
 lib/libsdm-disp-apis.so
+lib/vendor.display.color@1.0.so
 vendor/lib/libscalar.so
 vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
