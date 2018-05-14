@@ -231,7 +231,6 @@ vendor/firmware/cpp_firmware_v1_10_0.fw
 
 #Charger Moto
 lib/vendor.qti.esepowermanager@1.0.so
-vendor/bin/charge_only_mode
 vendor/bin/hw/vendor.qti.esepowermanager@1.0-service
 vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc
 vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so
