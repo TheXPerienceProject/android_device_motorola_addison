@@ -162,9 +162,6 @@ on boot
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
-    #For bridgemgr daemon to inform the USB driver of the correct transport
-    chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
-
     setprop net.tcp.2g_init_rwnd 10
 
     # Assign TCP buffer thresholds to be ceiling value of technology maximums
@@ -474,6 +471,10 @@ service imsqmidaemon /system/bin/imsqmidaemon
     user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
+
+# Set vendor-ril lib path based on Meta version
+on property:vendor.rild.libpath=*
+    setprop rild.libpath ${vendor.rild.libpath}
 
 service rmt_storage /vendor/bin/rmt_storage
     class core
