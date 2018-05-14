@@ -62,6 +62,7 @@ vendor/lib64/hw/fingerprint.msm8996.so:vendor/lib64/hw/fingerprint.msm8953.so
 etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
 etc/permissions/com.qualcomm.location.xml|e837966b6a1a63430ac7ff648e84b0312cd3a46b
 etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
+etc/permissions/privapp-permissions-com.qualcomm.location.xml
 framework/com.qti.location.sdk.jar|f2e9f1d49201e1bad83008445fdafe9541e9b2bd
 framework/izat.xt.srv.jar|e10f1baf6ae0f70c4a529e5711559cebbc3644c9
 lib64/liblocationservice_jni.so|84fddd9ace2be661d26cad1864281c386b709cb2
