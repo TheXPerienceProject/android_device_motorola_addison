@@ -511,28 +511,6 @@ vendor/etc/wifi/WCNSS_wlan_dictionary.dat:vendor/firmware/wlan/prima/WCNSS_wlan_
 etc/permissions/com.motorola.mod.protocols.xml
 etc/permissions/com.motorola.mod.xml
 vendor/bin/mods_camd
-#audiomodJBL
-lib/libmotaudioutils.so
-lib/libeqservice.so
-lib/motorola.hardware.audio.common@2.0.so
-lib/motorola.hardware.audio.eqservice@1.0.so
-lib/motorola.hardware.audio@2.0.so
-lib/libtinycompress_motorola.so
-vendor/bin/audioflacapp
-vendor/lib/hw/audio.primary.default.so
-vendor/lib/hw/audio.primary.msm8953.so
-vendor/lib/hw/motorola.hardware.audio@2.0-impl.so
-vendor/lib/libaudioalsa.so
-vendor/lib/libaudioparsers.so
-vendor/lib/libmotaudioutils.so
-vendor/lib/libtinycompress_motorola.so
-vendor/lib/mmi_audio.so
-vendor/lib/motorola.hardware.audio.common@2.0_vendor.so
-vendor/lib/motorola.hardware.audio.eqservice@1.0_vendor.so
-vendor/lib/motorola.hardware.audio@2.0_vendor.so
-vendor/lib/libtinyalsa.so:lib/libtinyalsa.so
-vendor/lib64/libtinyalsa.so:lib64/libtinyalsa.so
-vendor/lib/libtinyalsa.so
 
 # TUI
 lib/vendor.qti.hardware.tui_comm@1.0.so

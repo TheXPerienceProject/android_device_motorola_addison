@@ -298,15 +298,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>motorola.hardware.audio</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IMotDevicesFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>motorola.hardware.camera.provider</name>
         <transport>hwbinder</transport>
         <version>2.4</version>
