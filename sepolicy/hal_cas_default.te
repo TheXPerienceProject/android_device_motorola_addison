@@ -1,1 +1,4 @@
 allow hal_cas_default vndbinder_device:chr_file { read write };
+
+# Allow CAS HAL to use vendor-binder service
+vndbinder_use(hal_cas_default);
