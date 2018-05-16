@@ -631,6 +631,11 @@ service tftp_server /vendor/bin/tftp_server
    class core
    user root
 
+service atfwd /vendor/bin/ATFWD-daemon
+    class late_start
+    user system
+    group system radio
+
 service netmgrd /vendor/bin/netmgrd
     class main
     user root
