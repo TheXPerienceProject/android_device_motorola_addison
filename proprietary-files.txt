@@ -54,8 +54,8 @@ lib/libmot-qc-fd-offline.so:vendor/lib/libmot-qc-fd-offline.so
 lib/lib_motsensorlistener.so:vendor/lib/lib_motsensorlistener.so
 lib/lib_mottof.so:vendor/lib/lib_mottof.so
 lib/libmpbase.so:vendor/lib/libmpbase.so
-lib/motorola.hardware.camera.device@1.0.so
-lib/motorola.hardware.camera.provider@2.4.so
+lib/motorola.hardware.camera.device@1.0.so:vendor/lib/motorola.hardware.camera.device@1.0.so
+lib/motorola.hardware.camera.provider@2.4.so:vendor/lib/motorola.hardware.camera.provider@2.4.so
 lib/motorola.hardware.mods_camera.provider@2.4.so:vendor/lib/motorola.hardware.mods_camera.provider@2.4.so
 vendor/bin/hw/motorola.hardware.camera.provider@2.4-service
 vendor/bin/hw/motorola.hardware.mods_camera.provider@2.4-service
