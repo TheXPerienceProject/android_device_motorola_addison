@@ -6,3 +6,6 @@ allow priv_app input_device:dir search;
 allow priv_app proc_modules:file rw_file_perms;
 allow priv_app proc_interrupts:dir { read open };
 allow priv_app proc_interrupts:file { read open };
+allow priv_app unlabeled:dir { search getattr write };
+
+allow priv_app qemu_hw_mainkeys_prop:file { getattr open };

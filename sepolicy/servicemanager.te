@@ -4,3 +4,6 @@ allow servicemanager rild:process getattr;
 allow servicemanager hal_gnss_qti:dir search;
 allow servicemanager hal_gnss_qti:file r_file_perms;
 allow servicemanager hal_gnss_qti:process getattr;
+allow servicemanager hal_camera_default:dir { search };
+allow servicemanager hal_camera_default:file { r_file_perms };
+allow servicemanager hal_camera_default:process { getattr };

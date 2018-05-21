@@ -1,2 +1,2 @@
 allow hal_nfc_default system_data_file:dir add_name;
-allow hal_nfc_default system_data_file:file { read open getattr };
+allow hal_nfc_default system_data_file:file r_file_perms;
