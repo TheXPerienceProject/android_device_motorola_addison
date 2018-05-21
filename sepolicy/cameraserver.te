@@ -9,3 +9,6 @@ allow cameraserver sysfs_mods_camd:dir rw_dir_perms;
 allow cameraserver mods_service:service_manager find;
 allow cameraserver socket_device:sock_file write;
 allow cameraserver init:unix_dgram_socket { sendto};
+
+binder_call(cameraserver, hal_perf_default)
+binder_call(cameraserver, hal_configstore_default)
