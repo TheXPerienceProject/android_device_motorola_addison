@@ -20,3 +20,5 @@ allow platform_app firmware_file:file { open read };
 allow platform_app gbfirmware_file:lnk_file read;
 allow platform_app camera_prop:file { open read getattr };
 allow platform_app init:unix_stream_socket {read write };
+allow platform_app unlabeled:dir rw_dir_perms;
+allow platform_app unlabeled:file rw_file_perms;

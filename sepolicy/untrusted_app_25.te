@@ -1,8 +1,9 @@
 allow untrusted_app_25 adb_data_file:dir getattr;
 allow untrusted_app_25 apk_private_data_file:dir getattr;
 allow untrusted_app_25 asec_image_file:dir getattr;
+# allow untrusted_app_25 audioserver_exec:file getattr; idk why dolby needs this 
 allow untrusted_app_25 backup_data_file:dir getattr;
-allow untrusted_app_25 block_device:dir { open read };
+allow untrusted_app_25 block_device:dir { open read search };
 allow untrusted_app_25 bluetooth_data_file:dir getattr;
 allow untrusted_app_25 bootchart_data_file:dir getattr;
 allow untrusted_app_25 camera_prop:file { open getattr };
@@ -16,6 +17,7 @@ allow untrusted_app_25 firmware_file:file { getattr read };
 allow untrusted_app_25 firmware_file:lnk_file read;
 allow untrusted_app_25 gbfirmware_file:dir getattr;
 allow untrusted_app_25 gbmodinstall_exec:file { read open getattr };
+allow untrusted_app_25 hal_camera_default_exec:file getattr;
 allow untrusted_app_25 hwservice_contexts_file:file getattr;
 allow untrusted_app_25 init_exec:file getattr;
 allow untrusted_app_25 install_data_file:file getattr;
@@ -33,9 +35,11 @@ allow untrusted_app_25 sepolicy_file:file getattr;
 allow untrusted_app_25 service_contexts_file:file getattr;
 allow untrusted_app_25 system_app_data_file:dir getattr;
 allow untrusted_app_25 sysfs:file { getattr open read };
+allow untrusted_app_25 tee_exec:file getattr;
 allow untrusted_app_25 tombstone_data_file:dir getattr;
 allow untrusted_app_25 unlabeled:dir rw_dir_perms;
 allow untrusted_app_25 unlabeled:file rw_file_perms;
+allow untrusted_app_25 unlabeled:filesystem getattr;
 allow untrusted_app_25 vndservice_contexts_file:file getattr;
 allow untrusted_app_25 vendor_file:file r_file_perms;
 

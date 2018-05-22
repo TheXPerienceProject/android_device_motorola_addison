@@ -16,6 +16,7 @@
 #Binaries for mods
 /(vendor|system/vendor)/bin/init\.gbmods\.sh 				                            u:object_r:gbmodinstall_exec:s0
 /system/bin/batt_health                                    				 				u:object_r:batt_health_exec:s0
+/vendor/bin/thermal-engine  															u:object_r:thermal-engine_exec:s0
 
 #binder to fix camera daemon
 /dev/binder(/.*)?                                                                       u:object_r:binder_device:s0
