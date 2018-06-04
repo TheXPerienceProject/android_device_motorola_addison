@@ -95,7 +95,7 @@ on boot
     chown system drmrpc /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
     chown system drmrpc /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
 
-	# HAX for mods 
+	# HAX for mods
 	chmod 0660 /sys/devices/soc/soc:muc_svc@0/mods_interfaces
 	chmod 0660 /sys/devices/soc/soc:muc_svc@0/mods_interfaces/3
 	chmod root oem_5020 /sys/devices/soc/soc:muc_svc@0/mods_interfaces

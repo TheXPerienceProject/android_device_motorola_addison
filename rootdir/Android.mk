@@ -111,3 +111,12 @@ LOCAL_SRC_FILES       := sbin/charge_only_mode
 LOCAL_MODULE_TAGS     := optional
 LOCAL_MODULE_CLASS    := EXECUTABLES
 include $(BUILD_PREBUILT)
+
+#XPerienceScript
+include $(CLEAR_VARS)
+LOCAL_MODULE          := xperience.sh
+LOCAL_MODULE_PATH     := $(TARGET_ROOT_OUT)
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/xperience.sh
+include $(BUILD_PREBUILT)

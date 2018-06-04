@@ -1,6 +1,6 @@
 # Moto USB configuration
 import /vendor/etc/init/hw/init.mmi.usb.rc
-# Moto Mod enable script by klozz Jesús aka TeamMEX@XDA-Developers
+# Moto Mod enable script by klozz Jesï¿½s aka TeamMEX@XDA-Developers
 import /vendor/etc/init/hw/init.mods.rc
 
 on early-boot
@@ -195,7 +195,7 @@ on post-fs-data
     # SD card encryption metadata
     mkdir /data/misc/sds 0750 root root
 
-    # Required by FingerPrint Cards (FPC) via init so we don't need to give qseecomd or fingerprintd permissions to create them
+    # Required by FingerPrint Cards (FPC) via init so we dont need to give qseecomd or fingerprintd permissions to create them
     mkdir /data/fpc 0700 system system
     mkdir /data/.fps 0770 system input
 
@@ -379,3 +379,10 @@ on property:sys.wifi.tethering=false
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
+
+# Execute XPerience Optimization
+service xperience /xperience.sh
+    class core
+    user root
+    group root
+    oneshot
