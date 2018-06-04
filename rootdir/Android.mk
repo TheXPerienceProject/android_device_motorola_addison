@@ -114,9 +114,9 @@ include $(BUILD_PREBUILT)
 
 #XPerienceScript
 include $(CLEAR_VARS)
-LOCAL_MODULE          := xperience.sh
-LOCAL_MODULE_PATH     := $(TARGET_ROOT_OUT)
+LOCAL_MODULE       := xperience-info
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/xperience.sh
+LOCAL_SRC_FILES    := etc/xperience-info.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
 include $(BUILD_PREBUILT)
