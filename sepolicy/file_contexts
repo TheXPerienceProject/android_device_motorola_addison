@@ -95,7 +95,6 @@
 /dev/motosh                                              								u:object_r:sensors_device:s0
 /dev/motosh_as                                           								u:object_r:sensors_device:s0
 /dev/motosh_ms                                           								u:object_r:sensors_device:s0
-/sys/devices/virtual/motosh/motosh_as/linear_accel_update_rate			       			u:object_r:sysfs_sensors:s0
 
 # Sockets
 /dev/socket/adspdsock                                    								u:object_r:adspd_socket:s0
