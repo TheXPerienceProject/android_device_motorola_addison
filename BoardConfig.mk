@@ -176,11 +176,6 @@ TARGET_USE_SDCLANG := true
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# Shim
-TARGET_LD_SHIM_LIBS := \
-    /system/lib64/libandroid.so|libshim_ril.so \
-    /system/lib64/libmdmcutback.so|libqsap_shim.so
-
 # Sensors
 BOARD_USES_MOT_SENSOR_HUB := true
 MOT_AP_SENSOR_HW_REARPROX := true
