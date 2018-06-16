@@ -4,6 +4,7 @@ genfscon sysfs /devices/soc/78b7000.i2c/i2c-3/3-0020                  u:object_r
 genfscon sysfs /devices/soc/7af8000.spi/spi_master/spi8/spi8.0        u:object_r:sysfs_mmi_fp:s0
 genfscon sysfs /devices/virtual/motosh/motosh_as/tabletop_mode        u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/virtual/timed_output/vibrator/voltage_level   u:object_r:sysfs_vibrator:s0
+genfscon sysfs /sys/devices/virtual/motosh/motosh_as/linear_accel_update_rate			 	u:object_r:sysfs_sensors:s0
 genfscon sysfs /kernel/range                                          u:object_r:sysfs_mmi_laser:s0
 genfscon sysfs /module/wcnsscore/parameters                           u:object_r:sysfs_wcnsscore:s0
 
