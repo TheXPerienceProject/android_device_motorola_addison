@@ -226,8 +226,7 @@ PRODUCT_COPY_FILES += \
 
 #MODS
 PRODUCT_PACKAGES += \
-    libiio \
-    ModPermsFix
+    libiio
 
 #Moto mods permissions
 PRODUCT_COPY_FILES += \
