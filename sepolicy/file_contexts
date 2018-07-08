@@ -94,6 +94,7 @@
 /dev/motosh                                              								u:object_r:sensors_device:s0
 /dev/motosh_as                                           								u:object_r:sensors_device:s0
 /dev/motosh_ms                                           								u:object_r:sensors_device:s0
+/data/misc/sensorhub(/.*)?                                 						        u:object_r:sensors_data_file:s0
 
 # Sockets
 /dev/socket/adspdsock                                    								u:object_r:adspd_socket:s0
