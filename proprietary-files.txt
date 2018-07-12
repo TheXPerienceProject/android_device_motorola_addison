@@ -240,12 +240,11 @@ vendor/lib/vendor.qti.esepowermanager@1.0_vendor.so
 -framework/com.qti.snapdragon.sdk.display.jar
 -vendor/app/colorservice/colorservice.apk
 etc/permissions/com.qti.snapdragon.sdk.display.xml
-lib/libsd_sdk_display.so
-lib/libsdm-disp-apis.so
 lib/vendor.display.color@1.0.so
-vendor/lib/libscalar.so
+vendor/lib/libsd_sdk_display.so
 vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
+vendor/lib/libsdm-disp-apis.so
 vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libsdmextension.so
 vendor/lib/libtinyxml2_1.so
