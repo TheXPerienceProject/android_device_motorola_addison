@@ -325,6 +325,11 @@ vendor/firmware/a530v3_seq.fw2
 etc/permissions/qti_permissions.xml
 lib/libimscamera_jni.so
 lib/libimsmedia_jni.so
+lib/lib-imscamera.so
+lib/lib-imsvideocodec.so
+lib/lib-imsvtextutils.so
+lib/lib-imsvtutils.so
+lib/librcc.so
 lib/vendor.qti.imsrtpservice@1.0.so
 # vendor/bin/imsdatadaemon
 # vendor/bin/imsqmidaemon
