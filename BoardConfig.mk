@@ -165,6 +165,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 #Ril
 TARGET_RIL_VARIANT := caf
 
+# Root
+BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist 
+
 #SDCLANG
 TARGET_USE_SDCLANG := true
 
