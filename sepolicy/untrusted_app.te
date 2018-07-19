@@ -12,5 +12,6 @@ allow untrusted_app sysfs_usb_supply:dir search;
 allow untrusted_app sysfs_usb_supply:file { open getattr read };
 allow untrusted_app storage_stub_file:dir getattr;
 allow untrusted_app fsg_file:dir read;
+allow untrusted_app thermal-engine_exec:file x_file_perms;
 
 get_prop(untrusted_app, camera_prop);

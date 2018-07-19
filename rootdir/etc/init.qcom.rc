@@ -523,10 +523,9 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-service charger /sbin/charge_only_mode
-    class charger
-    group log
-    seclabel u:r:charger:s0
+service charger /vendor/bin/charge_only_mode
+    user root
+    group graphics system input
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
