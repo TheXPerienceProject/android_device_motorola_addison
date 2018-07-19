@@ -352,7 +352,7 @@ service motosh /vendor/bin/motosh boot
     group compass misc input
     oneshot
 
-service charge_only_mode /sbin/charge_only_mode
+service charge_only_mode /vendor/bin/charge_only_mode
     user root
     group graphics system input
     disabled
