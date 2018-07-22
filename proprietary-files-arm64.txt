@@ -156,6 +156,12 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 # Ipacm
 vendor/bin/ipacm-diag
 
+# Machine Learning
+-vendor/etc/lm/ReferenceFeature.xml
+vendor/lib64/liblearningmodule.so
+vendor/lib64/libmeters.so
+vendor/lib64/libreffeature.so
+
 # Media
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
