@@ -1,0 +1,3 @@
+allow shell sysfs:file getattr;
+allow shell sysfs:lnk_file getattr;
+allow shell thermal-engine_exec:file r_file_perms;
