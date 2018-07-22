@@ -153,6 +153,9 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
+# Ipacm
+vendor/bin/ipacm-diag
+
 # Media
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so

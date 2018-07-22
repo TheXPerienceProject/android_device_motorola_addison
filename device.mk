@@ -182,6 +182,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager
 
+# IPA Manager
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
