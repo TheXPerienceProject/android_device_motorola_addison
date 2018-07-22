@@ -355,7 +355,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-addison.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-addison.conf
+    $(LOCAL_PATH)/configs/thermal-engine-addison.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-addison.conf \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
