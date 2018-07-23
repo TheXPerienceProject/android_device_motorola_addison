@@ -3,5 +3,5 @@ allow hal_sensors_default sysfs_vibrator:file rw_file_perms;
 allow hal_sensors_default system_data_file:file r_file_perms;
 allow hal_sensors_default sysfs_mmi_laser:dir search;
 allow hal_sensors_default sysfs_mmi_laser:file { read open write };
-allow hal_sensors_default sensors_data_file:dir r_dir_perms;
+allow hal_sensors_default sensors_data_file:dir rw_dir_perms;
 allow hal_sensors_default sensors_data_file:file rw_file_perms;
