@@ -1,3 +1,4 @@
+
 # Proprietary files for addison
 
 # ADSP
@@ -365,6 +366,10 @@ vendor/firmware/libpn548ad_fw.so
 vendor/bin/pm-proxy|e12c72d05c764a2c45b2a5d4d1886519cba3fb16
 vendor/bin/pm-service|83fac998bf8f651f2f0cd2385f6e1b7c3eefe5ea
 vendor/lib/libperipheral_client.so|0dabab6dc68748c2b0d3a97a5708ee555b3d5650
+
+# Perf - From marlin (EAS)
+vendor/bin/perfd|eab0886407e0af773cd7b410320599a7bfa3c0d0
+vendor/lib/libqti-perfd-client.so|545267369af43680d6c4bbb236e6f6afe1d75acc
 
 # Qualcomm framework from tissot - OPR1.170623.026
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a

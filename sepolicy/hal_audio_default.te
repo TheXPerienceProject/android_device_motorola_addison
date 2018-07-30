@@ -2,3 +2,8 @@ allow hal_audio_default sysfs:dir { open read };
 allow hal_audio_default persist_file:file { read open getattr };
 allow hal_audio_default persist_file:dir search;
 allow hal_audio_default binder_device:chr_file { read write };
+
+# communicate with perfd
+allow hal_audio perfd:unix_stream_socket connectto;
+allow hal_audio perfd_data_file:dir search;
+allow hal_audio perfd_data_file:sock_file write;
