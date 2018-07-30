@@ -175,6 +175,9 @@ vendor/lib64/libOmxWmaDec.so
 # Peripheral manager - from tissot - OPR1.170623.026
 vendor/lib64/libperipheral_client.so|d6db5efd4667ae3e831403f4e313fa38a5ae7bc8
 
+# Perf - From marlin (EAS)
+vendor/lib64/libqti-perfd-client.so|b001cfdc7f748a53f3063cf521ac4310baaf893a
+
 # Qualcomm framework
 lib64/libdiag_system.so|1f44b1dabe2c680f66c412ef2de4118670f2414a
 lib64/libqmi_cci_system.so|e7deb5686e8173da5f4d7887a86d90d589400a17

@@ -274,6 +274,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# Power HAL
+PRODUCT_COPY_FILES += \
+     android.hardware.power@1.0-service.addison
+
 # Perf configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/gamedwhitelist.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/gamedwhitelist.xml \
