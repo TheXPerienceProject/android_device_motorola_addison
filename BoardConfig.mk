@@ -57,7 +57,7 @@ TARGET_OTA_ASSERT_DEVICE := addison,addison_retail
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237
-BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 vmalloc=350M
+BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 vmalloc=350M loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
@@ -144,6 +144,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 #Manifest
 DEVICE_MANIFEST_FILE := device/motorola/addison/manifest.xml
 DEVICE_MATRIX_FILE := device/motorola/addison/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := device/motorola/addison/framework_manifest.xml
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
