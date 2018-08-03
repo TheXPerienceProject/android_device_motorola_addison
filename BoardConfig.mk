@@ -170,6 +170,7 @@ TARGET_RIL_VARIANT := caf
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
+BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 
 #SDCLANG
 TARGET_USE_SDCLANG := true
