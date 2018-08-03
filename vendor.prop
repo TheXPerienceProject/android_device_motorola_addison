@@ -87,6 +87,9 @@ ro.sf.hwc_set_default_colormode=true
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+#Property to enable IO cgroups
+ro.vendor.iocgrp.config=1
+
 # Mods Platform
 sys.mod.platformsdkversion=205
 
