@@ -127,7 +127,7 @@ int sysfs_read(char *path, char *s, int num_bytes)
     char buf[80];
     int count;
     int ret = 0;
-    int fd = open(path, O_RDONLY);
+    int fd = open(path, O_RDONLY | O_CLOEXEC);
 
     if (fd < 0) {
         strerror_r(errno, buf, sizeof(buf));
