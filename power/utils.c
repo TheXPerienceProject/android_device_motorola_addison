@@ -55,6 +55,7 @@ char scaling_gov_path[4][80] ={
     "sys/devices/system/cpu/cpu3/cpufreq/scaling_governor"
 };
 
+#define PERF_HAL_PATH "libqti-perfd-client.so"
 static void *qcopt_handle;
 static int (*perf_lock_acq)(unsigned long handle, int duration,
     int list[], int numArgs);
@@ -73,6 +74,14 @@ static void *get_qcopt_handle()
         handle = dlopen(qcopt_lib_path, RTLD_NOW);
         if (!handle) {
             ALOGE("Unable to open %s: %s\n", qcopt_lib_path,
+                    dlerror());
+        }
+    }
+
+    if (!handle) {
+        handle = dlopen(PERF_HAL_PATH, RTLD_NOW);
+        if (!handle) {
+            ALOGE("Unable to open %s: %s\n", PERF_HAL_PATH,
                     dlerror());
         }
     }
