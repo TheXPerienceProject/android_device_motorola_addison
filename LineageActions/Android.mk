@@ -5,6 +5,7 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
+LOCAL_SDK_VERSION := 27
 LOCAL_PACKAGE_NAME := LineageActions
 LOCAL_CERTIFICATE := platform
 LOCAL_PROPRIETARY_MODULE := true
