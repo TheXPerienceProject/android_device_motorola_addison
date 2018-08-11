@@ -186,6 +186,11 @@ TARGET_USE_SDCLANG := true
 #include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
+# Shim
+TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib/libmot_gpu_mapper.so|libgpu_mapper_shim.so \
+    /system/lib/libjustshoot.so|libjustshoot_shim.so
+
 # Sensors
 BOARD_USES_MOT_SENSOR_HUB := true
 MOT_AP_SENSOR_HW_REARPROX := true
