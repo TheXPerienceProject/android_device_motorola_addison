@@ -112,10 +112,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.mod.platformsdkversion=205
 
-# NFC
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.nfc_nci=addison
-
 #Enforce apps
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=enforce
