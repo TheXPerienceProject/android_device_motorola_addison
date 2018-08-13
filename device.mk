@@ -187,7 +187,7 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager
 
 # IPA Manager
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
