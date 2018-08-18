@@ -709,14 +709,14 @@ service vendor.per_mgr /vendor/bin/pm-service
     user system
     group system
     ioprio rt 4
-    seclabel u:r:per_mgr:s0
+    #seclabel u:r:per_mgr:s0
 
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
     group system
     disabled
-    seclabel u:r:per_mgr:s0
+    #seclabel u:r:per_mgr:s0
 
 on property:init.svc.per_mgr=running
     start vendor.per_proxy
@@ -743,7 +743,7 @@ service vendor.netmgrd /vendor/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet diag
-    seclabel u:r:netmgrd:s0
+    #seclabel u:r:netmgrd:s0
 
 service ipacm-diag /vendor/bin/ipacm-diag
     class main
