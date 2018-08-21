@@ -160,6 +160,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.max_starting_bg=8 \
     persist.radio.sar_sensor=1
 
+#sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.sensor.hw.binder.size=8
+
 #usb
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.ffs.max_write=524288 \
