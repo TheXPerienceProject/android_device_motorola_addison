@@ -215,7 +215,7 @@ PRODUCT_PACKAGES += \
     lights.msm8953
 
 # LineageActions
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     LineageActions
 
 # Media
