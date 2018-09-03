@@ -203,6 +203,7 @@
         <item>wlan0</item>
         <item>wigig0</item>
         <item>softap0</item>
+        <item>"wlan1"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
