@@ -89,6 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
+    gralloc.gfx_ubwc_disable=0 \
     persist.demo.hdmirotationlock=false \
     persist.hwc.mdpcomp.enable=true \
     ro.opengles.version=196610 \
