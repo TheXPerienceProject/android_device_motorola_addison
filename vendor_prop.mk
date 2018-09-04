@@ -142,7 +142,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.eri64_as_home=1 \
     persist.vendor.radio.force_get_pref=1 \
     persist.vendor.radio.is_wps_enabled=true \
-    persist.vendor.radio.jbims=1 \
     persist.vendor.radio.mt_sms_ack=30 \
     persist.vendor.radio.no_wait_for_card=1 \
     persist.vendor.radio.oem_ind_to_both=0 \
