@@ -167,7 +167,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #sensors
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.sensor.hw.binder.size=8
-    vendor.mediacodec.binder.size=1
+    vendor.mediacodec.binder.size=6
 
 #usb
 PRODUCT_PROPERTY_OVERRIDES += \
