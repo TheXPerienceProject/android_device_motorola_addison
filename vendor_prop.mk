@@ -113,6 +113,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.mod.platformsdkversion=205
 
+#Media codec binder
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.mediacodec.binder.size=6
+
 #Enforce apps
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=enforce
