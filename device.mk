@@ -327,7 +327,9 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.ril.sh \
     ueventd.rc \
-    wlan_carrier_bin.sh
+    wlan_carrier_bin.sh \
+    xperience-info \
+    init.xperience.postboot.sh
 
 # RCS
 PRODUCT_PACKAGES += \
