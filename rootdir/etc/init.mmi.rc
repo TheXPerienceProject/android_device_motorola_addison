@@ -347,6 +347,11 @@ service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
     user root
     oneshot
 
+service vendor.xperience-post-boot /vendor/bin/init.xperience.postboot.sh
+    class late_start
+    user root
+    disabled
+
 # Start Sensor daemon
 service vendor.motosh /vendor/bin/motosh boot
     class late_start
@@ -379,4 +384,5 @@ on property:sys.wifi.tethering=false
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
-	trigger enable-low-power
+    trigger enable-low-power
+    start vendor.xperience-post-boot

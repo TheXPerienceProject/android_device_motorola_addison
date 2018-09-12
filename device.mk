@@ -337,7 +337,8 @@ PRODUCT_PACKAGES += \
     init.qcom.ril.sh \
     ueventd.rc \
     wlan_carrier_bin.sh \
-    xperience-info
+    xperience-info \
+    init.xperience.postboot.sh
 
 #Ramdisk motomods
 #PRODUCT_PACKAGES += \
