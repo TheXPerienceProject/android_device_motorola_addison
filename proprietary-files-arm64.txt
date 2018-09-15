@@ -31,14 +31,16 @@ vendor/bin/hw/vendor.display.color@1.0-service
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libscalar.so
 vendor/lib64/libsd_sdk_display.so
+vendor/lib64/vendor.display.color@1.0_vendor.so
+vendor/lib64/vendor.display.postproc@1.0_vendor.so
+
+# Graphics (SDM) - from LA.UM.7.2.r1-03600-sdm660.0
 vendor/lib64/libsdm-disp-apis.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
-vendor/lib64/vendor.display.color@1.0_vendor.so
-vendor/lib64/vendor.display.postproc@1.0_vendor.so
 
 # DRM
 lib64/vendor.qti.hardware.qteeconnector@1.0.so
