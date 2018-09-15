@@ -247,15 +247,18 @@ vendor/lib/vendor.qti.esepowermanager@1.0_vendor.so
 -vendor/app/colorservice/colorservice.apk
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 lib/vendor.display.color@1.0.so
+vendor/lib/libscalar.so
 vendor/lib/libsd_sdk_display.so
+vendor/lib/vendor.display.color@1.0_vendor.so
+vendor/lib/vendor.display.postproc@1.0_vendor.so
+
+# Graphics (SDM) - from LA.UM.7.2.r1-03600-sdm660.0
 vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
 vendor/lib/libsdm-disp-apis.so
 vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libsdmextension.so
 vendor/lib/libtinyxml2_1.so
-vendor/lib/vendor.display.color@1.0_vendor.so
-vendor/lib/vendor.display.postproc@1.0_vendor.so
 
 # DRM
 lib/vendor.qti.hardware.qteeconnector@1.0.so
