@@ -19,7 +19,7 @@ allow system_server sensors_device:chr_file r_file_perms;
 allow system_server self:socket ioctl;
 # laser
 allow system_server sysfs_mmi_laser:file write;
-allow system_server vendor_file:file { read getattr execute };
+allow system_server vendor_file:file { read getattr };
 # typeattribute system_server vendor_executes_system_violators; solo si keylayout necesita execute
 allow system_server vendor_keylayout_file:file { read open getattr };
 allow system_server vendor_keylayout_file:dir search;

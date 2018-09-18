@@ -5,5 +5,3 @@ allow hal_audio_default binder_device:chr_file { read write };
 
 # communicate with perfd
 allow hal_audio perfd:unix_stream_socket connectto;
-allow hal_audio perfd_data_file:dir search;
-allow hal_audio perfd_data_file:sock_file write;

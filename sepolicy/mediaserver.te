@@ -1,3 +1,2 @@
-r_dir_file(mediaserver, persist_file)
 
 allow mediaserver unlabeled:file { read getattr};

@@ -1,4 +1,3 @@
-allow vold persist_file:dir r_file_perms;
 allow vold unlabeled:filesystem { mount unmount };
 allow vold unlabeled:dir rw_dir_perms;
 allow vold unlabeled:file rw_file_perms;
