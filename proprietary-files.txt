@@ -255,7 +255,7 @@ vendor/lib/vendor.display.postproc@1.0_vendor.so
 # Graphics (SDM) - from LA.UM.7.2.r1-03600-sdm660.0
 vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
-vendor/lib/libsdm-disp-apis.so
+lib/libsdm-disp-apis.so
 vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libsdmextension.so
 vendor/lib/libtinyxml2_1.so
