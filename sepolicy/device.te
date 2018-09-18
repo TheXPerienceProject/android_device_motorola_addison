@@ -1,5 +1,4 @@
 type laser_device, dev_type;
-type persist_block_device, dev_type;
 
 #mods
 type greybus_raw_device, dev_type, mlstrustedobject;
