@@ -27,7 +27,6 @@ allow untrusted_app_25 ota_data_file:dir getattr;
 allow untrusted_app_25 ota_package_file:dir getattr;
 allow untrusted_app_25 persist_file:dir getattr;
 allow untrusted_app_25 property_data_file:dir getattr;
-allow untrusted_app_25 qemu_hw_mainkeys_prop:file { getattr open read };
 allow untrusted_app_25 radio_data_file:dir getattr;
 allow untrusted_app_25 rootfs:dir { open read };
 allow untrusted_app_25 seapp_contexts_file:file getattr;
