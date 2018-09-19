@@ -3,11 +3,13 @@
     <privapp-permissions package="com.motorola.modservice">
 
         <!-- System defined permissions -->
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED" />
         <permission name="android.permission.INTERACT_ACROSS_USERS" />
         <permission name="android.permission.MANAGE_USB" />
         <permission name="android.permission.MANAGE_USERS" />
         <permission name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS" />
         <permission name="android.permission.CONNECTIVITY_INTERNAL" />
-		<permission name="com.motorola.mod.permission.MOD_SERVICE" />
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="com.motorola.mod.permission.MOD_SERVICE" />
     </privapp-permissions>
 </permissions>
