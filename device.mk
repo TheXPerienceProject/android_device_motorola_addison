@@ -186,6 +186,13 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager-V1.0-java
 
+#Health
+PRODUCT_PACKAGES += \
+   android.hardware.health@1.0-impl\
+   android.hardware.health@1.0-convert \
+   android.hardware.health@2.0-impl \
+   android.hardware.health@1.0-service
+
 # IMS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager
