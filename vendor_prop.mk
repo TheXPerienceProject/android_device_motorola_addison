@@ -89,6 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false \
     persist.hwc.mdpcomp.enable=true \
     ro.opengles.version=196610 \
+    vendor.display.perf_hint_window=50 \
     ro.sf.lcd_density=480
 
 #property for game detection feature
@@ -173,4 +174,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.empty_app_percent=50 \
     ro.vendor.qti.sys.fw.trim_empty_percent=100 \
     ro.vendor.qti.sys.fw.trim_cache_percent=100 \
-    ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
+    ro.vendor.qti.sys.fw.trim_enable_memory=2147483648 \
+    ro.vendor.qti.sys.fw.bg_apps_limit=60
+
