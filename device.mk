@@ -120,7 +120,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-		libgpu_mapper_shim \
+    libgpu_mapper_shim \
     libjustshoot_shim \
     MotCamera
 
@@ -365,6 +365,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 PRODUCT_PACKAGES += \
+    thermal.msm8953 \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 
