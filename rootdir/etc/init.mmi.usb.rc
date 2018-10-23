@@ -432,3 +432,7 @@ on property:sys.usb.tethering=true
 
 on property:sys.usb.tethering=false
     write /sys/class/net/rmnet_data0/queues/rx-0/rps_cpus ${sys.rmnet_vnd.rps_mask}
+
+on property:sys.usb.config=rndis
+    setprop sys.usb.config rndis,${persist.sys.usb.config.extra}
+
