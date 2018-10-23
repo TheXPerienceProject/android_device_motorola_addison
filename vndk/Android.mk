@@ -1,9 +1,12 @@
+ifeq ($(BOARD_VNDK_VERSION),)
+$(warning ************* BOARD VNDK is not enabled - compiling vndk-sp ***************************)
 VNDK_SP_LIBRARIES := \
     android.hardware.graphics.allocator@2.0 \
     android.hardware.graphics.common@1.0 \
     android.hardware.graphics.mapper@2.0 \
     android.hardware.renderscript@1.0 \
     android.hidl.memory@1.0 \
+    android.hidl.base@1.0 \
     libRSCpuRef \
     libRSDriver \
     libRS_internal \
@@ -24,7 +27,10 @@ VNDK_SP_LIBRARIES := \
     liblzma \
     libpng \
     libunwind \
+    libunwindstack\
     libutils \
+    libutilscallstack \
+    libdexfile \
     libz
 
 EXTRA_VENDOR_LIBRARIES := \
@@ -87,3 +93,4 @@ LOCAL_REQUIRED_MODULES := \
     $(addsuffix .vndk-sp-ext-gen,$(VNDK_SP_EXT_LIBRARIES)) \
     $(addsuffix .vndk-ext-gen,$(EXTRA_VENDOR_LIBRARIES))
 include $(BUILD_PHONY_PACKAGE)
+endif
