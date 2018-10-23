@@ -501,7 +501,7 @@ vendor/etc/firmware/sensorhubfw.bin
 
 # Thermal
 # vendor/bin/thermal-engine
-vendor/lib/hw/thermal.msm8953.so
+#vendor/lib/hw/thermal.msm8953.so
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
