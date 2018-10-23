@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_addison.mk
-		$(LOCAL_DIR)/xperience.mk
+    $(LOCAL_DIR)/aosp_addison.mk \
+    $(LOCAL_DIR)/xperience.mk
