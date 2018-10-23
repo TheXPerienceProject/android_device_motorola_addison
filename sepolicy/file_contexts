@@ -119,9 +119,9 @@ system/etc/firmware/music_detector.sound_model                                  
 
 # CPU tunable for EAS
 /sys/devices/system/cpu/cpu[0-7]/cpufreq/schedutil(/.*)?            u:object_r:sysfs_devices_system_cpu:s0
+/sys/devices/system/cpu/cpu[0-7]/cpufreq/schedalessa(/.*)?            u:object_r:sysfs_devices_system_cpu:s0
 
 # perfd
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service.addison         u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/perfd                                   u:object_r:perfd_exec:s0
 /data/misc/perfd(/.*)?                                              u:object_r:perfd_data_file:s0
 /data/system/perfd(/.*)?                                            u:object_r:perfd_data_file:s0
