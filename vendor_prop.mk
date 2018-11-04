@@ -39,6 +39,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Enable offload audio video playback by default
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.video=true
+#Enable h/w memory tuning
+RODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.audio.hw.binder.size_kbyte=1024
 
 PRODUCT_PROPERTY_OVERRIDES += \
     use.voice.path.for.pcm.voip=false
