@@ -13,8 +13,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
-    audio.offload.buffer.size.kb=64 \
-    audio.offload.gapless.enabled=true \
+    vendor.audio.offload.buffer.size.kb=64 \
+    vendor.audio.offload.gapless.enabled=true \
     audio.offload.pcm.16bit.enable=true \
     audio.offload.pcm.24bit.enable=true
 
@@ -29,9 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.mode=endfire \
-    persist.audio.fluence.speaker=true \
-    persist.audio.fluence.voicecall=true \
-    ro.qc.sdk.audio.fluencetype=none \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicerec=false \
+    ro.vendor.audio.sdk.fluencetype=none \
     ro.qc.sdk.audio.ssr=false
 #Minimum duration for offload playback in secs
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -41,10 +42,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.video=true
 #Enable h/w memory tuning
 RODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.audio.hw.binder.size_kbyte=1024
+    persist.vendor.audio.hw.binder.size_kbyte=1024
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    use.voice.path.for.pcm.voip=false
+    vendor.voice.path.for.pcm.voip=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.vc_call_vol_steps=8 \
