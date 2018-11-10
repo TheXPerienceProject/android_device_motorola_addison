@@ -203,7 +203,6 @@ TARGET_USE_SDCLANG := true
 
 # Shim
 TARGET_LD_SHIM_LIBS := \
-    /vendor/lib/libmot_gpu_mapper.so|libgpu_mapper_shim.so \
     /vendor/lib/libjustshoot.so|libjustshoot_shim.so \
     /vendor/lib64/vendor.qti.gnss@1.0_vendor.so|libgnss_shim.so \
     /system/lib64/vendor.qti.gnss@1.0.so|libgnss_shim.so
