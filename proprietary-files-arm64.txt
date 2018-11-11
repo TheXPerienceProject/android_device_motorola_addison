@@ -281,10 +281,9 @@ vendor/bin/thermal-engine
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services - from bardock-pro - OPM1.171019.011
--vendor/app/TimeService/TimeService.apk|5055619766db32fe499cda86b892c9f3081219c5
-vendor/bin/time_daemon|8ea7d65a65c1d50afc6553ad52848b454c62563d
-vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
+# Time services - from deen PPK29.68-16-3
+vendor/bin/time_daemon|e7f801aeb814ac2760b0bfa57a3261e0c415a16d
+vendor/lib64/libtime_genoff.so|63bc574e88ccea12fcb8872a229e407f12307083
 
 #TUI
 lib64/vendor.qti.hardware.tui_comm@1.0.so
