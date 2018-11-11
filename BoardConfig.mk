@@ -209,8 +209,6 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 # Shim
 TARGET_LD_SHIM_LIBS := \
     /vendor/lib/libjustshoot.so|libjustshoot_shim.so \
-    /vendor/lib64/vendor.qti.gnss@1.0_vendor.so|libgnss_shim.so \
-    /system/lib64/vendor.qti.gnss@1.0.so|libgnss_shim.so
 
 # Sensors
 BOARD_USES_MOT_SENSOR_HUB := true

@@ -189,7 +189,6 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libgnss_shim \
     android.hardware.gnss@1.0-impl-qti \
     libcurl \
     libgnss \
