@@ -19,13 +19,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.pcm.24bit.enable=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.calfile0=/etc/acdbdata/Bluetooth_cal.acdb \
-    persist.audio.calfile1=/etc/acdbdata/General_cal.acdb \
-    persist.audio.calfile2=/etc/acdbdata/Global_cal.acdb \
-    persist.audio.calfile4=/etc/acdbdata/Hdmi_cal.acdb \
-    persist.audio.calfile3=/etc/acdbdata/Handset_cal.acdb \
-    persist.audio.calfile5=/etc/acdbdata/Headset_cal.acdb \
-    persist.audio.calfile6=/etc/acdbdata/Speaker_cal.acdb
+    persist.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb \
+    persist.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb \
+    persist.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb \
+    persist.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb \
+    persist.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb \
+    persist.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb \
+    persist.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.mode=endfire \
