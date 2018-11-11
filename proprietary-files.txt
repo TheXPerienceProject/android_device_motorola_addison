@@ -292,6 +292,20 @@ lib/lib_fpc_tac_shared.so:vendor/lib/lib_fpc_tac_shared.so
 vendor/lib/hw/fingerprint.msm8953.so
 
 # GPS
+-framework/com.qti.location.sdk.jar
+-framework/izat.xt.srv.jar
+lib/liblocationservice_jni.so
+lib/libxt_native.so
+lib/vendor.qti.gnss@1.0.so
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk
+# vendor/bin/hw/vendor.qti.gnss@1.0-service
+# vendor/bin/loc_launcher
+# vendor/bin/slim_daemon
+# vendor/bin/xtwifi-client
+# vendor/bin/xtwifi-inet-agent
+# vendor/bin/xtra-daemon
+# vendor/etc/init/vendor.qti.gnss@1.0-service.rc
+vendor/etc/cacert_location.pem
 vendor/etc/flp.conf
 vendor/etc/gps.conf
 vendor/etc/izat.conf
