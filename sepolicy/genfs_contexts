@@ -9,15 +9,14 @@ genfscon proc /sys/kernel/sched_migration_fixup      u:object_r:proc_kernel_sche
 genfscon proc /sys/kernel/sched_small_task           u:object_r:proc_kernel_sched:s0
 genfscon proc /sys/kernel/sched_spill_nr_run         u:object_r:proc_kernel_sched:s0
 genfscon proc /sys/kernel/sched_upmigrate            u:object_r:proc_kernel_sched:s0
-genfscon proc /sys/kernel/sched_cfs_boost            u:object_r:device_proc_kernel_sched:s0
-genfscon proc /sys/kernel/sched_rr_timeslice_ms      u:object_r:device_proc_kernel_sched:s0
+genfscon proc /sys/kernel/sched_cfs_boost            u:object_r:proc_kernel_sched:s0
+genfscon proc /sys/kernel/sched_rr_timeslice_ms      u:object_r:proc_kernel_sched:s0
 
 #IRQ
 genfscon proc /irq                                   u:object_r:proc_irq:s0
 genfscon proc /irq/166/smp_affinity                  u:object_r:proc_irq:s0
 genfscon proc /irq/179/smp_affinity                  u:object_r:proc_irq:s0
 genfscon proc /irq/186/smp_affinity                  u:object_r:proc_irq:s0
-
 
 # sysfs
 genfscon sysfs /devices/soc/1b00000.qcom,msm-cam/video4linux/video0   u:object_r:sysfs_mods_camd:s0
@@ -33,8 +32,8 @@ genfscon sysfs /module/wcnsscore/parameters                           u:object_r
 genfscon debugfs /rmt_storage              u:object_r:debugfs_rmt_storage:s0
 
 #Battery
-genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply                u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/battery/status                 u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply              u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply        u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/msm-bcl-20/power_supply                u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/msm-bcl-19/power_supply                u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/c200000.qcom,lpass/subsys1/            u:object_r:sysfs_batteryinfo:s0
