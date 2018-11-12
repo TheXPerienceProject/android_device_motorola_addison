@@ -1,0 +1,17 @@
+typeattribute vendor_init data_between_core_and_vendor_violators;
+
+allow vendor_init {
+    camera_data_file
+    cnd_data_file
+    media_rw_data_file
+    bluetooth_data_file
+    system_data_file
+    wifi_data_file
+    wpa_socket
+    dhcp_data_file
+    time_data_file
+    nfc_data_file
+    tombstone_data_file
+}:dir create_dir_perms;
+
+allow vendor_init media_rw_data_file:file { getattr relabelfrom };

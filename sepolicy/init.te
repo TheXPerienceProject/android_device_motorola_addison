@@ -10,6 +10,7 @@ allow init firmware_file:dir mounton;
 
 allow init graphics_device:chr_file { read open write ioctl };
 allow init hal_graphics_allocator_default:fd use;
+allow init hwservicemanager:binder { call transfer };
 allow init input_device:chr_file r_file_perms;
 allow init init:netlink_socket { read write };
 allow init ipacm_socket:sock_file rw_file_perms;
@@ -31,6 +32,7 @@ allow init self:netlink_route_socket { bind create getattr nlmsg_read read setop
 allow init self:rawip_socket { create getopt setopt };
 allow init self:socket create_socket_perms_no_ioctl;
 allow init self:udp_socket ioctl;
+allow init servicemanager:binder { call transfer };
 allow init socket_device:sock_file { create setattr unlink };
 allow init sensors_device:chr_file rw_file_perms;
 allow init ssd_device:blk_file write;

@@ -32,6 +32,9 @@
 /sys/devices(/platform)?/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw(/.*)?				u:object_r:sysfs_devfreq:s0
 /sys/devices(/platform)?/soc/[a-z0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)?		u:object_r:sysfs_graphics:s0
 
+# HALs
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.0-service\.widevine         u:object_r:hal_drm_widevine_exec:s0
+
 #lights
 /sys/devices/soc/leds-atc-20/leds/white/brightness                                      u:object_r:sysfs_leds:s0
 
