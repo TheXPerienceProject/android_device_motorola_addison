@@ -433,11 +433,3 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-
-#for internal debug we can remove this
-PRODUCT_PROPERTY_OVERRIDES += \
-   ro.secure=0 \
-   ro.adb.secure=0 \
-   ro.debuggable=1 \
-   persist.service.adb.enable=1 \
-   security.perf_harden=0
