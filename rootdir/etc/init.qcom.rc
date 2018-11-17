@@ -220,13 +220,6 @@ on post-fs-data
     mkdir /data/connectivity 0771 system system
     chown system system /data/connectivity
 
-    # Create directory used by audio subsystem
-    mkdir /data/vendor/misc/audio 0770 audio audio
-
-    # Create directory for audio delta files
-    mkdir /data/vendor/misc/audio/acdbdata 0770 media audio
-    mkdir /data/vendor/misc/audio/acdbdata/delta 0770 media audio
-
     # Create directory used by display clients
     mkdir /data/misc/display 0770 system graphics
 	mkdir /data/vendor/misc/display 0770 system graphics
