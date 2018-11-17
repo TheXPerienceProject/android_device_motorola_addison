@@ -1,4 +1,5 @@
 # Binaries
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.0-service\.widevine            u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service.addison         u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.provider@2\.4-service        u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor)/bin/hw/motorola\.hardware\.mods_camera\.provider@2\.4-service   u:object_r:hal_camera_default_exec:s0
@@ -26,10 +27,6 @@
 
 /persist/battery(/.*)?                                   u:object_r:persist_battery_file:s0
 
-# Fingerprint
-/data/\.fps(/.*)?                                                                       u:object_r:fingerprintd_data_file:s0
-/data/fpc(/.*)?                                                                         u:object_r:fingerprintd_data_file:s0
-
 #Graphics & CPU
 /sys/devices/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model                          u:object_r:sysfs_kgsl:s0
 /sys/devices(/platform)?/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw(/.*)?				u:object_r:sysfs_devfreq:s0
@@ -48,8 +45,12 @@
 /dev/block/platform/soc/7824900.sdhci/by-name/frp                                       u:object_r:frp_block_device:s0
 /dev/block/platform/soc/7824900.sdhci/by-name/persist                                   u:object_r:persist_block_device:s0
 
-# RIL
-/data/misc/cutback(/.*)?                                 u:object_r:cutback_data_file:s0
+# data
+/data/\.fps(/.*)?                                                                       u:object_r:fingerprintd_data_file:s0
+/data/fpc(/.*)?                                                                         u:object_r:fingerprintd_data_file:s0
+/data/connectivity(/.*)?                                                                u:object_r:cnd_legacy_data_file:s0
+/data/misc/cutback(/.*)?                                                                u:object_r:cutback_data_file:s0
+/data/vendor/misc/audio(/.*)?                                                           u:object_r:vendor_audio_data_file:s0
 
 # Sensors
 /dev/laser                                              								u:object_r:laser_device:s0

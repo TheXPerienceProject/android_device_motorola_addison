@@ -2,8 +2,11 @@ typeattribute vendor_init data_between_core_and_vendor_violators;
 
 allow vendor_init {
     camera_data_file
+    cnd_legacy_data_file
     cnd_data_file
-    media_rw_data_file
+    cutbakc_data_file
+    media_rw_data_fie
+    fingerprintd_data_file
     bluetooth_data_file
     system_data_file
     wifi_data_file
@@ -15,3 +18,7 @@ allow vendor_init {
 }:dir create_dir_perms;
 
 allow vendor_init media_rw_data_file:file { getattr relabelfrom };
+
+allow vendor_init {
+  media_rw_data_file
+}:file { create getattr open read write setattr relabelfrom unlink };
