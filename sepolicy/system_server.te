@@ -29,3 +29,5 @@ allow system_server vendor_keylayout_file:dir search;
 
 allow system_server sysfs_vibrator:file read;
 allow system_server vendor_camera_prop:file { open read };
+
+binder_call(system_server, mm-qcamerad)
