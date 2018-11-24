@@ -1,10 +1,12 @@
 cc_binary {
-    name: "android.hardware.health@2.0-service.Addison",
-    init_rc: ["android.hardware.health@2.0-service.Addison.rc"],
+    name: "android.hardware.health@2.0-service.addison",
+    init_rc: ["android.hardware.health@2.0-service.addison.rc"],
     proprietary: true,
     relative_install_path: "hw",
     srcs: [
         "HealthServiceDefault.cpp",
+        "CycleCountBackupRestore.cpp",
+        "LearnedCapacityBackupRestore.cpp"
     ],
      cflags: [
         "-Wall",
@@ -30,4 +32,6 @@ cc_binary {
     overrides: [
         "healthd",
     ],
+    //Add health headers
+    header_libs: ["libhealthd_headers"],
 }

@@ -31,3 +31,7 @@ type sysfs_power_management, sysfs_type, fs_type;
 
 #sensors
 type sensors_data_file, file_type, data_file_type;
+
+#Battery
+type persist_battery_file, file_type;
+

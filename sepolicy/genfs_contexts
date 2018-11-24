@@ -34,9 +34,10 @@ genfscon debugfs /rmt_storage              u:object_r:debugfs_rmt_storage:s0
 #Battery
 genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply              u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/        u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/battery/charge_rate     u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/battery/     u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/soc/msm-bcl-20/power_supply                u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/battery/charge_rate     u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/battery/system_temp_level u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/qpnp-fg-18                             u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/msm-bcl-19/power_supply                u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/c200000.qcom,lpass/subsys1/            u:object_r:sysfs_batteryinfo:s0
-
+genfscon sysfs /devices/soc/78b6000.i2c/i2c-2/2-0022/power_supply/usbc/type     u:object_r:sysfs_batteryinfo:s0
