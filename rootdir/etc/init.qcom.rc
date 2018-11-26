@@ -671,8 +671,9 @@ on property:vold.decrypt=trigger_restart_framework
     start vendor.wcnss-service
     start vendor.wifi_hal_legacy
 
-on nonencrypted
+on property:ro.crypto.state=unencrypted
     stop vendor.wifi_hal_legacy
+    start vendor.wcnss-service
     start vendor.wifi_hal_legacy
 
 service vendor.wcnss-service /vendor/bin/wcnss_service
