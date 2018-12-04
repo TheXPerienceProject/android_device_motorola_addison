@@ -189,6 +189,11 @@ TARGET_RIL_VARIANT := caf
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 
+#Runtime Resource Overlays
+ifneq ($(PRODUCT_ENFORCE_RRO_TARGETS),)
+    JAVA_SDK_ENFORCEMENT_ERROR := false
+endif
+
 #SDCLANG
 TARGET_USE_SDCLANG := true
 
