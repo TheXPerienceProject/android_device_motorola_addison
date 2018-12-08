@@ -335,6 +335,7 @@ vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
 
 # IMS
+-app/ims/ims.apk|c8680c85ad787bf55206cee8332c057e
 etc/permissions/qti_permissions.xml
 lib/libimscamera_jni.so
 lib/libimsmedia_jni.so
@@ -344,7 +345,6 @@ lib/lib-imsvtextutils.so
 lib/lib-imsvtutils.so
 lib/librcc.so
 lib/vendor.qti.imsrtpservice@1.0.so
--priv-app/ims/ims.apk|eef47c0b6f250e7f96e7155d84274b1c83940d8f
 # vendor/bin/imsdatadaemon
 # vendor/bin/imsqmidaemon
 # vendor/bin/ims_rtp_daemon
@@ -428,7 +428,7 @@ etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
 etc/permissions/privapp-permissions-com.qualcomm.qcrilmsgtunnel.xml
 -framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
 -framework/qcrilhook.jar|cb56e114f8f8ecf1c7ea5f35107bafc6bf49a194
--framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
+-framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|f313f243661c8e516ecc6a5785e8f0829daedb1c
 vendor/bin/ATFWD-daemon #from motorola Stock
 vendor/bin/netmgrd|748b87d905aa6727e812694de559e54b958f3832
