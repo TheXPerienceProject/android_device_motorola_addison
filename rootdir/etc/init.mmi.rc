@@ -150,9 +150,6 @@ on post-fs-data
     # Create directory for cutback
     mkdir /data/misc/cutback 0770 radio wifi
 
-    # Create greybus firmware folder
-    mkdir /data/gbfirmware 0770 oem_5020 oem_5020
-
     # Required by FingerPrint Cards (FPC) via init so we dont need to give qseecomd or fingerprintd permissions to create them
     mkdir /data/fpc 0700 system system
     mkdir /data/.fps 0770 system input

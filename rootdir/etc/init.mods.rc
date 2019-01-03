@@ -1,6 +1,17 @@
 #Moto mods script support
 # By klozz Jesús aka TeamMEX@xda-developers
 
+on boot
+	# HAX for mods
+	chmod 0660 /sys/devices/soc/soc:muc_svc@0/mods_interfaces
+	chmod 0660 /sys/devices/soc/soc:muc_svc@0/mods_interfaces/3
+	chmod root oem_5020 /sys/devices/soc/soc:muc_svc@0/mods_interfaces
+	chmod root oem_5020 /sys/devices/soc/soc:muc_svc@0/mods_interfaces/3
+
+on post-fs-data
+    # Create greybus firmware folder
+    mkdir /data/gbfirmware 0770 oem_5020 oem_5020
+
 on nonencrypted
     start vendor.gbmodinstall
 
