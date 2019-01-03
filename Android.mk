@@ -21,7 +21,7 @@ LOCAL_PATH := $(call my-dir)
 $(shell mkdir -p $(TARGET_OUT_VENDOR)/lib/dsp)
 
 MODS_LIBS := libmodhw.so
-MODS_SYMLINKS := $(addprefix $(TARGET_OUT)/ModFmwkProxyService/lib/arm64/,$(notdir $(MODS_LIBS)))
+MODS_SYMLINKS := $(addprefix $(TARGET_OUT)/priv-app/ModFmwkProxyService/lib/arm64/,$(notdir $(MODS_LIBS)))
 $(MODS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "MODS lib link: $@"
 	@mkdir -p $(dir $@)
