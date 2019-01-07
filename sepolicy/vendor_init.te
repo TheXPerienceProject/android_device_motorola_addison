@@ -4,8 +4,7 @@ allow vendor_init {
     camera_data_file
     cnd_legacy_data_file
     cnd_data_file
-    cutbakc_data_file
-    media_rw_data_fie
+    cutback_data_file
     fingerprintd_data_file
     bluetooth_data_file
     system_data_file
