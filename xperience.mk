@@ -25,6 +25,10 @@ $(call inherit-product, vendor/xperience/config/common_full_phone.mk)
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
+#CAF prop CAF includes
+include device/qcom/common/common.mk
+DISABLE_EAP_PROXY := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := addison
 PRODUCT_NAME := xperience_addison
