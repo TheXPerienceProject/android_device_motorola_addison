@@ -14,6 +14,7 @@
 /(vendor|system/vendor)/bin/charge_only_mode											u:object_r:charge_only_exec:s0
 /(vendor|system/vendor)/lib(64)?/libchromatix.*											u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.0-service\.addison          u:object_r:hal_health_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.addison           u:object_r:hal_light_default_exec:s0
 
 /system/bin/batt_health                                    				 				u:object_r:batt_health_exec:s0
 
