@@ -1,0 +1,8 @@
+on boot
+    # White light
+    chown system system /sys/class/leds/white/brightness
+
+service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.addison
+    class hal
+    user system
+    group system
