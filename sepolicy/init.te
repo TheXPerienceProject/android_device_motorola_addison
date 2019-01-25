@@ -46,4 +46,6 @@ allow init ion_device:chr_file { ioctl read write };
 allow init rpmb_device:blk_file write;
 allow init uio_device:chr_file write;
 
+allow init sysfs:dir write;
+
 binder_use(init)
