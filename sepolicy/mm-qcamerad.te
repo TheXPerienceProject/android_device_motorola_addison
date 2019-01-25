@@ -28,3 +28,5 @@ allow mm-qcamerad property_socket:sock_file write;
 allow mm-qcamerad unlabeled:file { rw_file_perms };
 allow mm-qcamerad wcnss_prop:file { open getattr };
 allow mm-qcamerad spcomlib_prop:file { open getattr };
+
+allow mm-qcamerad binder_device:chr_file { read write open };

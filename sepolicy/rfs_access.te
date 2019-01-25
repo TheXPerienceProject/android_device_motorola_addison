@@ -2,3 +2,7 @@ allow rfs_access self:capability net_raw;
 allow rfs_access fsg_file:dir search;
 allow rfs_access fsg_file:file r_file_perms;
 allow rfs_access fsg_file:lnk_file read;
+
+#rfs links
+allow rfs_access unlabeled:dir search;
+allow rfs_access unlabeled:lnk_file { open read };
