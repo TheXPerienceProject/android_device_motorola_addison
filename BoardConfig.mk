@@ -189,6 +189,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Release Tools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# RIL
+TARGET_USES_OLD_MNC_FORMAT := true
+
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
