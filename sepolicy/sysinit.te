@@ -1,1 +1,0 @@
-allow sysinit vendor_file:file getattr;
