@@ -17,6 +17,7 @@ VNDK_SP_LIBRARIES := \
     libc++ \
     libcompiler_rt \
     libcutils \
+    libdrm \
     libft2 \
     libhardware \
     libhidlbase \
@@ -31,17 +32,16 @@ VNDK_SP_LIBRARIES := \
     libutils \
     libutilscallstack \
     libdexfile \
+    libsensor \
     libz
 
 EXTRA_VENDOR_LIBRARIES := \
     android.hardware.nfc@1.0 \
     android.hidl.memory@1.0 \
     android.hidl.base@1.0 \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.1 \
-    vendor.display.config@1.2 \
-    vendor.display.config@1.3 \
-    vendor.display.config@1.4 \
+    vendor.display.config@1.7 \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.nxp.nxpese@1.0 \
     vendor.xperience.power@1.0
 
 #-------------------------------------------------------------------------------
