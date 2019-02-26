@@ -27,6 +27,10 @@ allow system_server vendor_keylayout_file:dir search;
 allow system_server sysfs_vibrator:file read;
 allow system_server vendor_camera_prop:file { open read };
 
-allow system_server sysfs_battery_supply:file read;
+#"/sys/devices/soc/qpnp-smbcharger-17/power_supply/battery/charge_rate"
+allow system_server sysfs_battery_supply:file { open getattr read };
+
+#sys/devices/soc/qpnp-rtc-8/rtc/rtc0/hctosys
+allow system_server sysfs:file { read open getattr };
 
 binder_call(system_server, mm-qcamerad)
