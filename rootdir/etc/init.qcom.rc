@@ -282,7 +282,7 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
 
-service vendor.charger /sbin/charge_only_mode
+service charger /vendor/bin/charge_only_mode
     class charger
     group log
     seclabel u:r:charger:s0
