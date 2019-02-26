@@ -426,7 +426,7 @@ on property:ro.use_data_netmgrd=false
     stop vendor.netmgrd
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
-    -O/data/vendor/wifi/wpa/sockets -dd \
+    -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 -dd \
     -g@android:vendor_wpa_wlan0
     #   we will start as root and wpa_supplicant will switch to user wifi
     #   after setting up the capabilities required for WEXT
@@ -436,6 +436,25 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     interface android.hardware.wifi.supplicant@1.1::ISupplicant default
     class main
     socket vendor_wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+
+# FST Manager with hostapd (softap) - all settings inside ini file
+service fstman /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini -a 1
+    user wifi
+    group wifi
+    capabilities NET_ADMIN NET_RAW
+    class main
+    disabled
+    oneshot
+
+# FST Manager with supplicant - connect to supplicant socket
+service fstman_wlan0 /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini \
+    -a 0 @android:vendor_wpa_wlan0
+    user wifi
+    group wifi
+    capabilities NET_ADMIN NET_RAW
+    class main
     disabled
     oneshot
 
