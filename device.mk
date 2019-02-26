@@ -67,7 +67,8 @@ PRODUCT_COPY_FILES += \
 
 # Motorola Camera permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.cameraone.xml
+    $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.cameraone.xml \
+    $(LOCAL_PATH)/configs/android.xperience.camera.full-raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.xperience.camera.full-raw.xml
 
 # Screen density
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
