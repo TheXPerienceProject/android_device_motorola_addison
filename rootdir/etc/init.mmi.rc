@@ -252,6 +252,7 @@ on moto-charger
     trigger firmware_mounts_complete
     start vendor.charge_only_mode
     start vendor.thermal-com
+    start gbmodinstall
 
 on property:ro.boot.dualsim=true
    setprop persist.radio.multisim.config dsds
@@ -289,6 +290,7 @@ service vendor.charge_only_mode /vendor/bin/charge_only_mode
     user root
     group graphics system input
     disabled
+    seclabel u:r:charger:s0
 
 service vendor.thermal-com /vendor/bin/thermal-engine --minimode
     class main
