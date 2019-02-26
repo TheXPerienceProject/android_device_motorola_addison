@@ -5,4 +5,5 @@ allow rfs_access fsg_file:lnk_file read;
 
 #rfs links
 allow rfs_access unlabeled:dir search;
+allow rfs_access unlabeled:file { read open getattr };
 allow rfs_access unlabeled:lnk_file { open read };
