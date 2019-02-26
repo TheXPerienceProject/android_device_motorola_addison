@@ -66,8 +66,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.dec.disable.split.cpu=1 \
     vidc.enc.dcvs.extra-buff-count=2 \
     vidc.enc.disable_bframes=1 \
-    vidc.enc.disable_pframes=1
-#persist.camera.HAL3.enabled=1
+    vidc.enc.disable_pframes=1 \
+    persist.camera.HAL3.enabled=1
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
