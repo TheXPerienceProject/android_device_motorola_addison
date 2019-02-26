@@ -422,6 +422,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi.hostapd@1.0 \
     android.hardware.tetheroffload.config@1.0 \
     android.hardware.tetheroffload.control@1.0 \
+    android.hardware.wifi.hostapd@1.0 \
     hostapd \
     libqsap_sdk \
     libwpa_client \
