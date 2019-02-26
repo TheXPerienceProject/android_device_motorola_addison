@@ -117,9 +117,9 @@ vendor/lib/libmmcamera_llvd.so
 vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ov16860_eeprom.so
 vendor/lib/libmmcamera_ov16860_pdaf.so
-vendor/lib/libmmcamera_ov16860.so
+vendor/lib/libmmcamera_ov16860.so|4cd40886e7b71e958051452a26afb1bd13a6775f
 vendor/lib/libmmcamera_ov5693_eeprom.so
-vendor/lib/libmmcamera_ov5693.so
+vendor/lib/libmmcamera_ov5693.so|d29edcbffea35377bcbad102e972c959f9a7a5aa
 vendor/lib/libmmcamera_ovpdaf.so
 vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdafcamif.so
