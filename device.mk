@@ -255,7 +255,7 @@ PRODUCT_PACKAGES += \
     libiio
 
 #Moto mods permissions
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mods/com.motorola.aov.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.aov.xml \
     $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.modservice.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-com.motorola.modservice.xml \
     $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.projectormod.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-com.motorola.projectormod.xml \
@@ -343,7 +343,7 @@ PRODUCT_PACKAGES += \
     init.xperience.postboot.sh
 
 #Ramdisk motomods
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     init.gbmods.sh \
     init.mods.rc
 

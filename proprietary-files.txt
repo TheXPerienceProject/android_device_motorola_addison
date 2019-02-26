@@ -368,16 +368,16 @@ vendor/etc/wifi/WCNSS_qcom_wlan_nv_India.bin:vendor/firmware/wlan/prima/WCNSS_qc
 vendor/etc/wifi/WCNSS_wlan_dictionary.dat:vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
 
 #MotoMODS nash
-#-app/InstaShare/InstaShare.apk:app/InstaShare/InstaShare.apk;PRESIGNED
-#-app/MotCameraMod/MotCameraMod.apk:app/MotCameraMod/MotCameraMod.apk;PRESIGNED
-#-app/MotoModStore/MotoModStore.apk:app/MotoModStore/MotoModStore.apk;PRESIGNED
-#-priv-app/ModService/ModService.apk:priv-app/ModService/ModService.apk;PRESIGNED
-#-priv-app/MotGameExp/MotGameExp.apk:priv-app/MotGameExp/MotGameExp.apk;PRESIGNED
-#-priv-app/ProjectorApp/ProjectorApp.apk:priv-app/ProjectorApp/ProjectorApp.apk;PRESIGNED
-#-priv-app/ModFmwkProxyService/ModFmwkProxyService.apk:priv-app/ModFmwkProxyService/ModFmwkProxyService.apk
-#etc/permissions/com.motorola.mod.protocols.xml
-#etc/permissions/com.motorola.mod.xml
-#vendor/bin/mods_camd
+-app/InstaShare/InstaShare.apk:app/InstaShare/InstaShare.apk;PRESIGNED
+-app/MotCameraMod/MotCameraMod.apk:app/MotCameraMod/MotCameraMod.apk;PRESIGNED
+-app/MotoModStore/MotoModStore.apk:app/MotoModStore/MotoModStore.apk;PRESIGNED
+-priv-app/ModService/ModService.apk:priv-app/ModService/ModService.apk;PRESIGNED
+-priv-app/MotGameExp/MotGameExp.apk:priv-app/MotGameExp/MotGameExp.apk;PRESIGNED
+-priv-app/ProjectorApp/ProjectorApp.apk:priv-app/ProjectorApp/ProjectorApp.apk;PRESIGNED
+-priv-app/ModFmwkProxyService/ModFmwkProxyService.apk:priv-app/ModFmwkProxyService/ModFmwkProxyService.apk
+etc/permissions/com.motorola.mod.protocols.xml
+etc/permissions/com.motorola.mod.xml
+vendor/bin/mods_camd
 
 # TUI
 lib/vendor.qti.hardware.tui_comm@1.0.so
