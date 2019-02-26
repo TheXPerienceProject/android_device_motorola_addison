@@ -22,3 +22,5 @@ allow platform_app camera_prop:file { open read getattr };
 allow platform_app init:unix_stream_socket {read write };
 allow platform_app unlabeled:dir rw_dir_perms;
 allow platform_app unlabeled:file rw_file_perms;
+#com.motorola.modservice: type=1400 audit(0.0:37745): avc: denied { read } for uid=10203 comm=47726579627573204D6F6E69746F72 name="vendor_string"
+allow platform_app sysfs:file { read open getattr };
