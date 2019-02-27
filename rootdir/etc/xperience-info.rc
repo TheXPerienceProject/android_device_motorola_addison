@@ -1,6 +1,25 @@
 # Author: Carlos "Klozz" Jesús
-# (C) The XPerience Project 2018
+# (C) The XPerience Project 2018-2019
 #
+# Add support to Franco Kernel Manager (Profiles)
+
+import /init.performance_profiles.rc
+
+on init
+    write /sys/block/zram0/comp_algorithm lz4
+    write /sys/block/zram0/max_comp_streams 8
+    write /sys/block/zram0/disksize 1G
+
+    write /proc/sys/vm/page-cluster 0
+
+on post-fs
+    exec u:r:magisk:s0 -- /system/bin/mkswap /dev/block/zram0
+    exec u:r:magisk:s0 -- /system/bin/swapon /dev/block/zram0
+
+on property:sys.boot_completed=1
+    # allows Kernel Manager for Franco Kernel  to know this feature is supported
+    setprop fku.profiles 1
+
 on boot
     chown system system /sys/module/cpu_boost/parameters/input_boost_ms
     chown system system /sys/devices/system/cpu/cpufreq/lisi/enable_prediction
@@ -15,9 +34,9 @@ on boot
     chmod 0664 /sys/module/alessa_thermal/parameters/core_limit_temp_degC
     chmod 0664 /sys/module/alessa_thermal/parameters/poll_ms
 
-# Configure input boost only addison support this
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1401600 1:1401600 2:1401600 3:1401600 4:1401600 5:1401600 6:1401600 7:1401600"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 150
+# Configure input boost only addison support this moved to performance_profiles
+#    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1401600 1:1401600 2:1401600 3:1401600 4:1401600 5:1401600 6:1401600 7:1401600"
+#    write /sys/module/cpu_boost/parameters/input_boost_ms 150
 
 # Set Lisi and optimize it 652Mhz
     write /sys/devices/system/cpu/cpu0/online 1
@@ -45,3 +64,32 @@ on boot
     write /sys/module/alessa_thermal/vdd_restriction/enabled 1
     write /sys/module/alessa_thermal/parameters/core_limit_temp_degC 75
     write /sys/module/alessa_thermal/parameters/poll_ms 150
+
+
+on property:sys.boot_completed=1
+    # allows Kernel Manager for Franco Kernel  to know this feature is supported
+    setprop fku.profiles 1
+
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+
+    chmod system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chmod system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chmod system system /sys/class/kgsl/kgsl-3d0/devfreq/governor
+
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/governor
+
+    exec u:r:magisk:s0 root root -- /init.special_power.sh

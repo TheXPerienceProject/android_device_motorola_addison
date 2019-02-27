@@ -206,7 +206,7 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager
 
 # IPA Manager
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
@@ -341,7 +341,9 @@ PRODUCT_PACKAGES += \
     ueventd.rc \
     wlan_carrier_bin.sh \
     xperience-info \
-    init.xperience.postboot.sh
+    init.xperience.postboot.sh \
+    init.special_power.sh \
+    init.performance_profiles.rc
 
 #Ramdisk motomods
 PRODUCT_PACKAGES += \
