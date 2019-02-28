@@ -199,7 +199,7 @@ PRODUCT_PACKAGES += \
 
 #Health
 PRODUCT_PACKAGES += \
-   android.hardware.health@2.0-service.addison
+   android.hardware.health@2.0-service
 
 # IMS
 PRODUCT_PACKAGES += \

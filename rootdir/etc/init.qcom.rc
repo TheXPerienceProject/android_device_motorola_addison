@@ -119,9 +119,6 @@ on boot
     mkdir /persist/time 0770 system system
     mkdir /persist/secnvm 0770 system system
 
-    # for android.hardware.health@2.0-service.addison cycle count backup
-    mkdir /persist/battery 0700 system system
-
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
@@ -227,16 +224,6 @@ on post-fs-data
 
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
-
-    # vendor.health-hal needs to be able to RW
-    chown system system /sys/devices/soc/qpnp-fg-18/cycle_counts_bins
-    # HardwareInfo needs to be able to read CC bins
-    chmod 644 /sys/devices/soc/qpnp-fg-18/cycle_counts_bins
-
-    # dumpstate needs to read, vendor.health-hal needs to be able to RW
-    chown system system /sys/devices/soc/qpnp-fg-18/power_supply/bms/charge_full
-    # HardwareInfo needs to be able to read charge_full
-    chmod 644 /sys/devices/soc/qpnp-fg-18/power_supply/bms/charge_full
 
     #Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
