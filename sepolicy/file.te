@@ -38,10 +38,3 @@ type perfd_data_file, file_type, data_file_type, core_data_file_type;
 type proc_irq, fs_type, proc_type;
 type proc_kernel_sched, fs_type, proc_type;
 type sysfs_power_management, sysfs_type, fs_type;
-
-#sensors
-#type sensors_data_file, file_type, data_file_type;
-
-#Battery
-type persist_battery_file, file_type;
-
