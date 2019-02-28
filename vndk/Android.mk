@@ -36,7 +36,9 @@ VNDK_SP_LIBRARIES := \
     libz
 
 EXTRA_VENDOR_LIBRARIES := \
+    android.frameworks.sensorservice@1.0 \
     android.hardware.nfc@1.0 \
+    android.hardware.wifi.hostapd@1.0 \
     android.hardware.wifi.supplicant@1.0 \
     android.hardware.wifi.supplicant@1.1 \
     android.hidl.memory@1.0 \
