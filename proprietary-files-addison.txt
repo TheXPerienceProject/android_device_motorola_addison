@@ -40,6 +40,7 @@ vendor/lib/hw/camera.msm8953.so
 vendor/lib/hw/libcamera_mods_legacy_hal.so
 vendor/lib/hw/motorola.hardware.camera.provider@2.4-impl.so
 vendor/lib/hw/motorola.hardware.mods_camera.provider@2.4-impl.so
+vendor/lib/android.frameworks.sensorservicX@1.0.so
 vendor/lib/libactuator_mot_lc898212xd.so
 vendor/lib/libbson.so
 vendor/lib/libcamerabgproc-jni.so
@@ -151,9 +152,13 @@ vendor/lib/libtrueportrait.so
 vendor/lib/libts_detected_face_hal.so
 vendor/lib/libts_face_beautify_hal.so
 vendor/lib/libubifocus.so
+vendor/lib/libXtils.so
 vendor/lib/motcamera.device@1.0-impl.so
 vendor/lib/motorola.hardware.camera.device@1.0_vendor.so
 vendor/lib/motorola.hardware.camera.provider@2.4_vendor.so|f48d16e1e3f777a4fb0897ff2f667d98542b15df
+#arm64
+vendor/lib64/android.frameworks.sensorservicX@1.0.so
+vendor/lib64/libXtils.so
 
 # Chromatix
 vendor/lib/libchromatix_ov5693_common.so
