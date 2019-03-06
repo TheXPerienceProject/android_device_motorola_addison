@@ -427,6 +427,9 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.control@1.0 \
     android.hardware.wifi.hostapd@1.0 \
     hostapd \
+    hostapd_default.conf \
+    hostapd.accept \
+    hostapd.deny \
     libqsap_sdk \
     libwpa_client \
     wcnss_service \
