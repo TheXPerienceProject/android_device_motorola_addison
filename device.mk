@@ -459,9 +459,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    $(LOCAL_PATH)/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
-    $(LOCAL_PATH)/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf
+    $(LOCAL_PATH)/wifi/hostapd.accept:$(TARGET_OUT_VENDOR_ETC)/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/wifi/hostapd.deny:$(TARGET_OUT_VENDOR_ETC)/hostapd/hostapd.deny \
+    $(LOCAL_PATH)/wifi/hostapd.conf:$(TARGET_OUT_VENDOR_ETC)/hostapd/hostapd_default.conf
 
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8953/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
