@@ -186,6 +186,8 @@ vendor/lib/libOmxAlacDecSw.so
 vendor/lib/libOmxApeDec.so
 vendor/lib/libOmxApeDecSw.so
 vendor/lib/libOmxWmaDec.so
+#Media wfd
+vendor/lib/libmmosal_proprietary.so
 
 # Peripheral manager - from tissot - OPR1.170623.026
 vendor/bin/pm-proxy|e12c72d05c764a2c45b2a5d4d1886519cba3fb16
