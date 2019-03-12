@@ -176,32 +176,6 @@ vendor/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
 vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
 vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
 
-# IMS
--app/ims/ims.apk|c8680c85ad787bf55206cee8332c057e
-etc/permissions/qti_permissions.xml
-lib/libimscamera_jni.so
-lib/libimsmedia_jni.so
-lib/lib-imscamera.so
-lib/lib-imsvideocodec.so
-lib/lib-imsvtextutils.so
-lib/lib-imsvtutils.so
-lib/librcc.so
-lib/vendor.qti.imsrtpservice@1.0.so
-# vendor/bin/imsdatadaemon
-# vendor/bin/imsqmidaemon
-# vendor/bin/ims_rtp_daemon
-vendor/lib/lib-imsSDP.so
-vendor/lib/lib-imsdpl.so
-vendor/lib/lib-imsqimf.so
-vendor/lib/lib-imsxml.so
-vendor/lib/lib-rtpcommon.so
-vendor/lib/lib-rtpcore.so
-vendor/lib/lib-rtpdaemoninterface.so
-vendor/lib/lib-rtpsl.so
-vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so
-vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so
-vendor/lib/vendor.qti.imsrtpservice@1.0_vendor.so
-
 # Media
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
@@ -232,71 +206,111 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-util.so
 vendor/lib/vendor.qti.hardware.perf@1.0.so
 
-# Qualcomm framework from tissot - OPR1.170623.026
-etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
-lib/libdiag_system.so|f207e0075be87f67ecd7c0c629cb542212884e28
-lib/libqmi_cci_system.so|ca8fd2db052699c80ee50a8919794cb215d7e5a6
-vendor/bin/irsc_util|165f25b36d975a3b2479d672c5181e35ac2c3ffb
-vendor/lib/libdiag.so|f6b0fac8402fffe46638f6e4d5304aa32866e09f
-vendor/lib/libdsi_netctrl.so|7f44ea09dc867fb87fa28a98e6f61d5fb57c050e
-vendor/lib/libdsutils.so|e83597f9091df4d40c53196e12d6bd724f21ce8f
-vendor/lib/libidl.so|9d2d4dda8b4e9b1e8fa2a2dd69923ea3c9ff3549
-vendor/lib/libqcci_legacy.so|99887c4b9ba8377d7e6e8ad771d8b23736304e60
-vendor/lib/libqdi.so|ece1b46b7c761e864f4eb42063feedf3d89e5fa9
-vendor/lib/libqdp.so|fe72300f1bc8efd3fccff769ddaf7d18dac51db3
-vendor/lib/libqmi_cci.so|2b655824f8dd241b15e117c3a562e098467daee2
-vendor/lib/libqmi_client_helper.so|3b0cecb72386b2e915d75a421dd805bf76b3960c
-vendor/lib/libqmi_client_qmux.so|540543c09e5ec48ac08694d78be6931b8728e229
-vendor/lib/libqmi_common_so.so|a15a552631d1f4f74b888fddddb466767667d0ac
-vendor/lib/libqmi_csi.so|a54472f7122e1d9d1961597535d129b2aa30e8ea
-vendor/lib/libqmi_encdec.so|85406a8a91dcbd1972af1d22ebaed6c6677b6f8f
-vendor/lib/libqmi.so|3cddfafd83d60335de7871c082ef87984c2161a7
-vendor/lib/libqmiservices.so|acc51cfc0ef6da7d568c53260e65d8b94fb1d51d
-vendor/lib/libsmemlog.so|3e1470571a6afeb8547f356607f93c906f2972fd
+# QMI
+etc/permissions/qti_libpermissions.xml
+etc/permissions/qti_permissions.xml
+lib/libdiag_system.so
+lib/libqmi_cci_system.so
+vendor/bin/irsc_util
+vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_helper.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
 
-# RIL - from tissot - OPR1.170623.026
--app/datastatusnotification/datastatusnotification.apk
--app/SimSettings/SimSettings.apk
--app/radioconfig/radioconfig.apk
--app/QtiTelephonyService/QtiTelephonyService.apk|7d7104c26c7c1e9487d9c41d48f0e0348135cb61
-etc/permissions/radioconfig.xml
-etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
-etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
-etc/permissions/privapp-permissions-com.qualcomm.qcrilmsgtunnel.xml
--framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
--framework/qcrilhook.jar|cb56e114f8f8ecf1c7ea5f35107bafc6bf49a194
--framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|f313f243661c8e516ecc6a5785e8f0829daedb1c
-vendor/bin/ATFWD-daemon #from motorola Stock
-vendor/bin/netmgrd|748b87d905aa6727e812694de559e54b958f3832
-vendor/bin/qti|a67280f22725799c47d78e07570d9e173e6624f1
-vendor/bin/rmt_storage|5b821f0aa673febf158892a6c8ec97a35817f876
-vendor/bin/tftp_server|121601c941fb17ee6a5d91fc9ee3e47da6bb03d1
-vendor/etc/data/dsi_config.xml|c85722f90588edd3288b953b0ab97c81edeabfa9
-vendor/etc/data/netmgr_config.xml|d99ed385820913bcc8612ad76cb6b5d25ec54981
+# Radio
+-app/QtiTelephonyService/QtiTelephonyService.apk
+etc/permissions/qcrilhook.xml
+etc/permissions/telephonyservice.xml
+framework/QtiTelephonyServicelibrary.jar
+framework/qcrilhook.jar
+framework/qti-telephony-common.jar
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/bin/ATFWD-daemon
+vendor/bin/netmgrd
+vendor/bin/qti
+vendor/bin/rmt_storage
+vendor/bin/tftp_server
+vendor/bin/hw/qcrild
+vendor/etc/data/dsi_config.xml
+vendor/etc/data/netmgr_config.xml
+vendor/etc/init/qcrild.rc|f9c32f5e7a8e7f4a0df1dcce174de169b8d7c060
 vendor/lib/libconfigdb.so
-vendor/lib/liblqe.so
-vendor/lib/libmdmdetect.so|314923af39e2e137342b7d4ba2f9657c6bd9913c
+vendor/lib/libmdmdetect.so
 vendor/lib/libnetmgr.so
-vendor/lib/libqcmaputils.so|7d1bae45e9ee4e0ade47d3218e96f0ae5ed4e3b5
-vendor/lib/libril-qc-ltedirectdisc.so
-vendor/lib/libril-qc-qmi-1.so
-vendor/lib/libril-qc-radioconfig.so
-vendor/lib/libril-qcril-hook-oem.so
-vendor/lib/librilqmiservices.so
-vendor/lib/libsettings.so
-vendor/lib/libsystem_health_mon.so
-vendor/lib/libxml.so|29d4d88136cb3435039ba5f3df883d28829d74f0
-vendor/lib/vendor.qti.hardware.radio.am@1.0_vendor.so|0b24b04251cb35fd2647cd48d4e3f264818fa544
-vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so
-vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so|de92409aa65356ae9c416996f3f3c3bfb507315a
-vendor/lib/vendor.qti.hardware.radio.lpa@1.0_vendor.so|0faa871194a85098ec0cac6d726ee8afc4bed1a8
-vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so|f4643e96db8391633803c013b0e678e49d3d149b
-vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so|e377ab5e3b2f96c4a0a12b7ced1d2441948244b6
-vendor/lib/vendor.qti.hardware.radio.uim@1.0_vendor.so|39b66f09fb9a9a447729e12df94a882a0b3191dd
-vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so|3d10ac1ec3dee08d76efc1a847dfd8099476346f
-vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so|928598ce51822ece88bb0e2bd359b1c9205de149
+vendor/lib/libnetmgr_common.so
+vendor/lib/libnlnetmgr.so
+vendor/lib/libqcmaputils.so
+vendor/lib/libqrtr.so
+vendor/lib/libqsocket.so
+vendor/lib/vendor.qti.hardware.radio.am@1.0.so
+vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so
+vendor/lib/vendor.qti.hardware.radio.ims@1.0.so
+vendor/lib/vendor.qti.hardware.radio.ims@1.1.so
+vendor/lib/vendor.qti.hardware.radio.ims@1.2.so
+vendor/lib/vendor.qti.hardware.radio.ims@1.3.so
+vendor/lib/vendor.qti.hardware.radio.ims@1.4.so
+vendor/lib/vendor.qti.hardware.radio.lpa@1.0.so
+vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so
+vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0.so
+vendor/lib/vendor.qti.hardware.radio.qtiradio@2.0.so
+vendor/lib/vendor.qti.hardware.radio.uim@1.0.so
+vendor/lib/vendor.qti.hardware.radio.uim@1.1.so
+vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
+vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
+vendor/radio/qcril_database/qcril.db
+
+# Radio - IMS
+-priv-app/ims/ims.apk
+lib/com.qualcomm.qti.imscmservice@1.0.so
+lib/com.qualcomm.qti.imscmservice@2.0.so
+lib/com.qualcomm.qti.imscmservice@2.1.so
+lib/lib-imscamera.so
+lib/lib-imsvideocodec.so
+lib/lib-imsvtextutils.so
+lib/lib-imsvtutils.so
+lib/libimscamera_jni.so
+lib/libimsmedia_jni.so
+lib/librcc.so
+lib/vendor.qti.imsrtpservice@1.0.so
+vendor/bin/ims_rtp_daemon
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
+vendor/bin/imsrcsd
+vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
+vendor/lib/com.qualcomm.qti.imscmservice@2.0.so
+vendor/lib/com.qualcomm.qti.imscmservice@2.1.so
+vendor/lib/com.qualcomm.qti.uceservice@2.0.so
+vendor/lib/lib-imsSDP.so
+vendor/lib/lib-imscmservice.so
+vendor/lib/lib-imsdpl.so
+vendor/lib/lib-imsqimf.so
+vendor/lib/lib-imsrcsbaseimpl.so
+vendor/lib/lib-imsrcs-v2.so
+vendor/lib/lib-imsxml.so
+vendor/lib/lib-rtpcommon.so
+vendor/lib/lib-siputility.so
+vendor/lib/lib-uceservice.so
+vendor/lib/vendor.qti.ims.callinfo@1.0.so
+vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so
+vendor/lib/vendor.qti.imsrtpservice@1.0.so
+
+# Moto Ril
+#vendor/bin/ATFWD-daemon #from motorola Stock si es necesario usar el de moto
+vendor/bin/qmi_motext_hook
+lib/libmdmcutback.so:vendor/lib/libmdmcutback.so
+lib/libmotext_inf.so:vendor/lib/libmotext_inf.so
+lib/libqmimotext.so:vendor/lib/libqmimotext.so
 
 # CNE
 # bin/cnd
