@@ -312,3 +312,17 @@ vendor/lib64/libmodmanager.so
 # Time services
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
+
+# Wi-Fi Display
+bin/wfdservice
+etc/init/wfdservice.rc
+etc/wfdconfig.xml
+etc/wfdconfigsink.xml
+-framework/WfdCommon.jar
+lib64/extractors/libmmparser.so
+lib64/libFileMux.so
+lib64/libmmparser_lite.so
+lib64/libmmosal.so
+lib64/libwfdclient.so
+lib64/libwfdnative.so
+vendor/lib64/libwfdhdcpcp.so

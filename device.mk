@@ -321,7 +321,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/whitelistedapps.xml:system/etc/perf/whitelistedapps.xml \
     $(LOCAL_PATH)/configs/perf/whitelistedapps.xml:system/etc/whitelistedapps.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
 
 # Post intallation script
 PRODUCT_COPY_FILES += \
@@ -363,6 +363,8 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
     librmnetctl \
     libqdMetaData.system \
     libxml2
