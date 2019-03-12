@@ -1,4 +1,3 @@
-typeattribute rild data_between_core_and_vendor_violators;
 
 allow rild cutback_data_file:dir rw_dir_perms;
 allow rild cutback_data_file:sock_file create_file_perms;
@@ -26,7 +25,10 @@ get_prop(rild, diag_prop);
 
 allow rild proc:file r_file_perms;
 
+allow rild unlabeled:file read;
+
 # qcril.so needs access to /vendor/radio/qcril_database/qcril.db
 allow rild vendor_file:file { execute_no_trans lock };
 
 r_dir_file(rild, fsg_file)
+set_prop(rild, vendor_radio_prop)

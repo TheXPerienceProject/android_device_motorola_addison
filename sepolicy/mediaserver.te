@@ -1,2 +1,2 @@
-
+allow mediaserver vendor_file:file getattr;
 allow mediaserver unlabeled:file { read getattr};

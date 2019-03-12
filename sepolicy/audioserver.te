@@ -7,3 +7,4 @@ allow audioserver rootfs:lnk_file getattr;
 allow audioserver sysfs_greybus:dir r_dir_perms;
 allow audioserver sysfs_greybus:file rw_file_perms;
 allow audioserver sysfs:dir { open read };
+allow audioserver vendor_file:file getattr;

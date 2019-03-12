@@ -1,3 +1,4 @@
 allow netmgrd kernel:system module_request;
+allow netmgrd unlabeled:file read;
 
 set_prop(netmgrd, vendor_xlat_prop)

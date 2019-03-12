@@ -146,6 +146,8 @@ on post-fs-data
 
     # Create directory for cutback
     mkdir /data/misc/cutback 0770 radio wifi
+    # Create directory for cutback for new path
+    mkdir /data/vendor/misc/cutback 0770 radio wifi
 
     # Required by FingerPrint Cards (FPC) via init so we dont need to give qseecomd or fingerprintd permissions to create them
     mkdir /data/fpc 0700 system system
