@@ -1,2 +1,3 @@
 # Allow module requests
 allow netd self:capability sys_module;
+allow netd vendor_file:file getattr;

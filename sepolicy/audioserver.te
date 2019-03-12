@@ -5,3 +5,4 @@ allow audioserver persist_file:dir search;
 allow audioserver persist_file:file r_file_perms;
 allow audioserver rootfs:lnk_file getattr;
 allow audioserver sysfs:dir { open read };
+allow audioserver vendor_file:file getattr;

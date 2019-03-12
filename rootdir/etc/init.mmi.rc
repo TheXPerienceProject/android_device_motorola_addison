@@ -144,6 +144,8 @@ on post-fs-data
 
     # Create directory for cutback
     mkdir /data/misc/cutback 0770 radio wifi
+    # Create directory for cutback for new path
+    mkdir /data/vendor/misc/cutback 0770 radio wifi
 
     # Create greybus firmware folder
     mkdir /data/gbfirmware 0770 oem_5020 oem_5020
