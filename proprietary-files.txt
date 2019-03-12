@@ -305,12 +305,12 @@ vendor/lib/vendor.qti.ims.callinfo@1.0.so
 vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib/vendor.qti.imsrtpservice@1.0.so
 
-# Moto Ril
+# Moto Ril Deen PPK29.68-16-3
 #vendor/bin/ATFWD-daemon #from motorola Stock si es necesario usar el de moto
 vendor/bin/qmi_motext_hook
-lib/libmdmcutback.so:vendor/lib/libmdmcutback.so
-lib/libmotext_inf.so:vendor/lib/libmotext_inf.so
-lib/libqmimotext.so:vendor/lib/libqmimotext.so
+vendor/lib/libmdmcutback.so
+vendor/lib/libmotext_inf.so
+vendor/lib/libqmimotext.so
 
 # CNE
 # bin/cnd

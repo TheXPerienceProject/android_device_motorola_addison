@@ -259,7 +259,7 @@ vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so
 
-# MOTO RIL
+# MOTO RIL Deen PPK29.68-16-3
 vendor/lib64/libmdmcutback.so
 vendor/lib64/libmotext_inf.so
 vendor/lib64/libqmimotext.so
