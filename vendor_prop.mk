@@ -57,6 +57,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.hal1.packagelist=com.motorola.cameraone \
     camera.disable_zsl_mode=1 \
     camera.display.umax=1920x1080 \
     camera.display.lmax=1280x720 \
