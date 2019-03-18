@@ -25,7 +25,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-<compatibility-matrix version="1.0" type="framework">
+<compatibility-matrix version="1.0" type="framework" level="2">
    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.perf</name>
          <version>1.0</version>
@@ -439,4 +439,62 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            <instance>wifiStats</instance>
        </interface>
    </hal>
+   <!--xperience-->
+    <hal format="hidl" optional="true">
+        <name>vendor.xperience.power</name>
+        <version>1.0</version>
+        <interface>
+            <name>IXPeriencePower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.nxpnfc</name>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>motorola.hardware.mods_camera.provider</name>
+        <version>2.4</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>mods_camera/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>motorola.hardware.camera.provider</name>
+        <version>2.4</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>legacy/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>motorola.hardware.health</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMotHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	<hal format="hidl" optional="true">
+        <name>com.motorola.mod</name>
+        <version>1.0</version>
+        <interface>
+            <name>IModManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.health</name>
+        <version>2.0</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>backup</instance>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
