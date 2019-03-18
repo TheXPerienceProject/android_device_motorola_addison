@@ -149,6 +149,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 DEVICE_MANIFEST_FILE := device/motorola/addison/manifest.xml
 DEVICE_MATRIX_FILE := device/motorola/addison/compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := device/motorola/addison/framework_manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(VENDOR_PATH)/vendor_framework_compatibility_matrix.xml
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
