@@ -1,4 +1,5 @@
 allow netmgrd kernel:system module_request;
 allow netmgrd unlabeled:file read;
+allow netmgrd netutils_wrapper:process noatsecure;
 
 set_prop(netmgrd, vendor_xlat_prop)

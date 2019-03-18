@@ -5,3 +5,6 @@ binder_call(system_app, fingerprintd)
 #MODS
 allow system_app mods_service:service_manager { add find };
 allow system_app init:unix_stream_socket { read write };
+
+#GSI
+allow system_app sysfs_leds:dir search;
