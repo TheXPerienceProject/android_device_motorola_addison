@@ -320,6 +320,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
 lib64/com.motorola.mod@1.0.so
 lib64/libmodhw.so
 vendor/lib64/libmodmanager.so
+vendor/lib64/motorola.hardware.health@1.0.so
 
 # Time services
 vendor/bin/time_daemon
