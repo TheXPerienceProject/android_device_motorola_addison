@@ -7,6 +7,7 @@
 # Fixes 26 oct 2017 16:47:37
 # add posibility to load greybus from vendor  13-jan-2018 08:29:35am
 # Load from vendor only 08-feb-2018
+# add vendor prefix 18-march-2019
 
 debug=$(getprop ro.boot.gbdebug 2> /dev/null)
 bootmode=$(getprop ro.bootmode 2> /dev/null)
@@ -32,7 +33,6 @@ if [ "$bootmode" == "charger" ]; then
     return 0
 fi
 
-#load all the greybus drivers
 gbmods="/vendor/lib/modules/gb-*"
 for mod in $gbmods
 do
@@ -41,4 +41,4 @@ done
 
 #Load the V4l2 driver for the required for the cameramod.
 insmod /vendor/lib/modules/v4l2-hal.ko
-start mods_camd #initialize the Camera mod service.
+start vendor.mods_camd #initialize the Camera mod service.
