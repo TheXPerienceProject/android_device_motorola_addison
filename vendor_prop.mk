@@ -115,7 +115,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Mods Platform
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.mod.platformsdkversion=205
+    sys.mod.platformsdkversion=281
 
 #Media codec binder
 PRODUCT_PROPERTY_OVERRIDES += \
