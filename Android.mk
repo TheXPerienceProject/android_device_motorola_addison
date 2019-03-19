@@ -30,6 +30,15 @@ $(MODS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MODS_SYMLINKS)
 
+MODFMWKPRX_VIB_LIB := libvibratorhw.so
+FMWKPRX_SYMLINKS := $(addprefix $(TARGET_OUT)/priv-app/ModFmwkProxyService/lib/arm64/,$(notdir $(MODFMWKPRX_VIB_LIB)))
+$(FMWKPRX_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "MODS lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/lib64/$(notdir $@) $@
+ALL_DEFAULT_INSTALLED_MODULES += $(FMWKPRX_SYMLINKS)
+
 FIRMWARE_ADSP_IMAGES := \
     adsp.b00 adsp.b01 adsp.b02 adsp.b03 adsp.b04 adsp.b05 adsp.b06 \
     adsp.b07 adsp.b08 adsp.b09 adsp.b10 adsp.b11 adsp.b12 adsp.b13 \

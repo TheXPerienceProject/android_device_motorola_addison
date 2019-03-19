@@ -319,6 +319,8 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
 # charger mod and missing mods blobs - From nash OPX27.109-34
 lib64/com.motorola.mod@1.0.so
 lib64/libmodhw.so
+#needed by ModFmwkProxyService
+lib64/libvibratorhw.so
 vendor/lib64/libmodmanager.so
 vendor/lib64/motorola.hardware.health@1.0.so
 
