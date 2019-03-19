@@ -410,6 +410,8 @@ vendor/etc/wifi/WCNSS_wlan_dictionary.dat:vendor/firmware/wlan/prima/WCNSS_wlan_
 -priv-app/ModFmwkProxyService/ModFmwkProxyService.apk:priv-app/ModFmwkProxyService/ModFmwkProxyService.apk
 etc/permissions/com.motorola.mod.protocols.xml
 etc/permissions/com.motorola.mod.xml
+etc/permissions/com.motorola.mod_config.xml
+etc/permissions/com.motorola.mod_v2.xml
 vendor/bin/mods_camd
 vendor/bin/hw/motorola.hardware.health@1.0-service
 vendor/etc/init/motorola.hardware.health@1.0-service.rc
