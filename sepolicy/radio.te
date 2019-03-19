@@ -1,3 +1,4 @@
 allow radio qmuxd_socket:sock_file write;
 allow radio qcom_ims_prop:file { getattr open read };
 allow radio qcom_ims_prop:property_service set; 
+allow radio hal_iop_hwservice:hwservice_manager find;

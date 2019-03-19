@@ -1,4 +1,7 @@
 motorola.hardware.camera.provider::ICameraProvider          u:object_r:hal_camera_hwservice:s0
 motorola.hardware.mods_camera.provider::ICameraProvider     u:object_r:hal_camera_hwservice:s0
+motorola.hardware.health::IMotHealth                        u:object_r:hal_motorola_health_hwservice:s0
 vendor.nxp.nxpnfc::INxpNfc                                  u:object_r:nxpnfc_hwservice:s0
 vendor.nxp.nxpese::INxpEse                                  u:object_r:nxpese_hwservice:s0
+#stop pls 
+#vendor.qti.hardware.iop::IIop                                u:object_r:hal_iop_hwservice:s0

@@ -33,4 +33,10 @@ allow system_server sysfs_battery_supply:file { open getattr read };
 #sys/devices/soc/qpnp-rtc-8/rtc/rtc0/hctosys
 allow system_server sysfs:file { read open getattr };
 
+allow system_server hal_motorola_health_hwservice:hwservice_manager find;
+allow system_server default_android_hwservice:hwservice_manager find;
+
+# allow system_server to access IOP HAL service
+hal_client_domain(system_server, hal_iop)
+
 binder_call(system_server, mm-qcamerad)

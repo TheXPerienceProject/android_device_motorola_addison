@@ -1,2 +1,5 @@
 type nxpnfc_hwservice, hwservice_manager_type;
 type nxpese_hwservice, hwservice_manager_type;
+
+#Motorola Health
+type hal_motorola_health_hwservice, hwservice_manager_type;
