@@ -164,6 +164,9 @@ on post-fs-data
     # Enable relatime for /storage/emulated/xx/Download
     setfattr /data/media user.relatime /%s/Download:com.motorola.mya 0
 
+    # Create directory used by chargeonlymode
+    mkdir /data/vendor/chargeonly 0750 root log
+
 on boot
    # restore default console_loglevel to KERN_DEBUG
    # restore default_message_loglevel to KERN_WARNING
@@ -195,6 +198,10 @@ on boot
    write /persist/chargeonly/cooldown n
    chown system system /persist/chargeonly/cooldown
    chmod 0660 /persist/chargeonly/cooldown
+   mkdir /mnt/vendor/persist/chargeonly 0770 system system
+   write /mnt/vendor/persist/chargeonly/cooldown n
+   chown system system /mnt/vendor/persist/chargeonly/cooldown
+   chmod 0660 /mnt/vendor/persist/chargeonly/cooldown
 
    # Change ownership and permission for laser_sensor
    chown system system /sys/kernel/range/enable_sar
@@ -289,11 +296,10 @@ service vendor.motosh /vendor/bin/motosh boot
     group compass misc input
     oneshot
 
-service vendor.charge_only_mode /vendor/bin/charge_only_mode
+service vendor.charge_only_mode /sbin/charge_only_mode
     user root
     group graphics system input
     disabled
-    seclabel u:r:charger:s0
 
 service vendor.thermal-com /vendor/bin/thermal-engine --minimode
     class main

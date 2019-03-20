@@ -201,7 +201,6 @@ vendor/lib/libchromatix_ov16860_zsl_video_3a.so
 #Charger Moto
 lib/vendor.qti.esepowermanager@1.0.so
 vendor/bin/hw/vendor.qti.esepowermanager@1.0-service
-vendor/bin/charge_only_mode
 vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc
 vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib/vendor.qti.esepowermanager@1.0_vendor.so
