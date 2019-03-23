@@ -46,3 +46,6 @@ binder_call(system_server, mm-qcamerad)
 
 allow system_server mm-qcamerad:binder call;
 allow system_server crash_dump:process getpgid;
+
+# OTA with encrypted f2fs
+allow system_server ota_package_file:dir getattr;
