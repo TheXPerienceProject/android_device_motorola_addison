@@ -40,6 +40,7 @@ allow init tee_device:chr_file rw_file_perms;
 allow init thermal_device:chr_file ioctl;
 allow init video_device:chr_file { ioctl write };
 allow init wcnss_device:chr_file write;
+allow init sysfs_devices_system_cpu:file write;
 allow init system_server:fd use;
 allow init system_server:binder { call transfer };
 allow init system_server:unix_stream_socket { read write };
