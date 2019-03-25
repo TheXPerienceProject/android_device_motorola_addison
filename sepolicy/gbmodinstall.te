@@ -16,5 +16,7 @@ allow gbmodinstall vendor_file:system module_load;
 allow gbmodinstall vendor_file:dir { read open };
 allow gbmodinstall vendor_file:file { read open execute_no_trans };
 
+allow gbmodinstall gbmodinstall:capability sys_admin;
+
 # Logs to /dev/kmsg
 allow gbmodinstall kmsg_device:chr_file w_file_perms;
