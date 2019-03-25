@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
+    <item name="battery.capacity">3510</item>
     <item name="screen.on">103</item>
     <item name="screen.full">175</item>
     <item name="bluetooth.active">30</item>
