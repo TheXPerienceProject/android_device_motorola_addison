@@ -413,9 +413,9 @@ etc/permissions/com.motorola.mod.xml
 etc/permissions/com.motorola.mod_config.xml
 etc/permissions/com.motorola.mod_v2.xml
 vendor/bin/mods_camd
-vendor/bin/hw/motorola.hardware.health@1.0-service
-vendor/etc/init/motorola.hardware.health@1.0-service.rc
-vendor/lib/motorola.hardware.health@1.0.so
+#vendor/bin/hw/motorola.hardware.health@1.0-service
+#vendor/etc/init/motorola.hardware.health@1.0-service.rc
+#vendor/lib/motorola.hardware.health@1.0.so
 
 # TUI
 lib/vendor.qti.hardware.tui_comm@1.0.so
