@@ -440,7 +440,7 @@ on property:ro.use_data_netmgrd=false
     stop vendor.netmgrd
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
-    -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 -dd \
+    -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 \
     -g@android:vendor_wpa_wlan0
     #   we will start as root and wpa_supplicant will switch to user wifi
     #   after setting up the capabilities required for WEXT
@@ -514,6 +514,7 @@ on charger
     start gbmodinstall
     start thermal-com
     start vendor.charge_only_mode
+    stop bootanim
 
 service vendor.energy-awareness /vendor/bin/energy-awareness
     class main
