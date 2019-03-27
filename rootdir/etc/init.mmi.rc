@@ -263,6 +263,7 @@ on moto-charger
     start vendor.charge_only_mode
     start vendor.thermal-com
     start gbmodinstall
+    stop bootanim
 
 on property:ro.boot.dualsim=true
    setprop persist.radio.multisim.config dsds
