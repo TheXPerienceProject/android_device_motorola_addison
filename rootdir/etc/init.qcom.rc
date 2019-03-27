@@ -280,6 +280,8 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
+    #Start move_wifi_data service.
+    start vendor.move_wifi_data
 
 #service charger /vendor/bin/charge_only_mode
 #    class charger
@@ -449,6 +451,14 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     interface android.hardware.wifi.supplicant@1.1::ISupplicant default
     class main
     socket vendor_wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+
+# Data Migration
+service vendor.move_wifi_data /system/bin/move_wifi_data.sh
+    class main
+    user  wifi
+    group wifi
     disabled
     oneshot
 
