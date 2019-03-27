@@ -281,6 +281,8 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
+    #Start move_wifi_data service.
+    start vendor.move_wifi_data
 
 #service charger /vendor/bin/charge_only_mode
 #    class charger
@@ -469,6 +471,14 @@ service fstman_wlan0 /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini 
     group wifi
     capabilities NET_ADMIN NET_RAW
     class main
+    disabled
+    oneshot
+
+# Data Migration
+service vendor.move_wifi_data /system/bin/move_wifi_data.sh
+    class main
+    user  wifi
+    group wifi
     disabled
     oneshot
 
