@@ -20,3 +20,19 @@ allow priv_app mnt_vendor_file:dir search;
 allow priv_app firmware_file:filesystem getattr;
 allow priv_app sysfs:file read;
 allow priv_app sysfs:dir read;
+
+# pid=21062 comm="CTION_IDLE_MODE" PID  PPID  VSZ   RSS WCHAN  ADDR S NAME
+allow priv_app sepolicy_file:file getattr;
+allow priv_app init_exec:file getattr;
+allow priv_app mnt_vendor_file:file getattr;
+allow priv_app firmware_file:file getattr;
+allow priv_app cgroup:dir read;
+
+# CameraHAL
+allow priv_app hal_camera_default_exec:file getattr;
+allow priv_app tee_exec:file getattr;
+allow priv_app location_exec:file getattr;
+
+#radio
+allow priv_app radio_data_file:dir getattr;
+
