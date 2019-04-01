@@ -28,9 +28,9 @@ sleep 10;
 write /proc/sys/vm/swappiness 100
 #write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,36864,46080"
 
-write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor lisi
-write /sys/devices/system/cpu/cpufreq/lisi/go_hispeed_load 85
-write /sys/devices/system/cpu/cpufreq/lisi/use_sched_load 1
+#write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedalessa
+#write /sys/devices/system/cpu/cpufreq/lisi/go_hispeed_load 85
+#write /sys/devices/system/cpu/cpufreq/lisi/use_sched_load 1
 write /sys/devices/system/cpu/cpufreq/conservative/up_threshold 85
 write /sys/devices/system/cpu/cpufreq/conservative/down_threshold 30
 
