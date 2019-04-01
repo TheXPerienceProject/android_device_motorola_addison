@@ -285,12 +285,6 @@ service vendor.mmi-laser-sh /vendor/bin/init.mmi.laser.sh
     group root oem_5004
     oneshot
 
-service vendor.xperience-post-boot /vendor/bin/init.xperience.postboot.sh
-    class late_start
-    user root
-    group root system wakelock graphics
-    disabled
-
 # Start Sensor daemon
 service vendor.motosh /vendor/bin/motosh boot
     class late_start
@@ -332,4 +326,3 @@ on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
     trigger enable-low-power
-    start vendor.xperience-post-boot
