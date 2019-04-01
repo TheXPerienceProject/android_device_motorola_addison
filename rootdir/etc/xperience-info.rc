@@ -21,49 +21,49 @@ on property:sys.boot_completed=1
     setprop fku.profiles 1
 
 on boot
-    chown system system /sys/module/cpu_boost/parameters/input_boost_ms
-    chown system system /sys/devices/system/cpu/cpufreq/lisi/enable_prediction
-    chown system system /sys/module/alessa_thermal/parameters/enabled
-    chown system system /sys/module/alessa_thermal/vdd_restriction/enabled
-    chown system system/sys/module/alessa_thermal/parameters/core_limit_temp_degC
-    chown system system/sys/module/alessa_thermal/parameters/poll_ms
+#    chown system system /sys/module/cpu_boost/parameters/input_boost_ms
+#    chown system system /sys/devices/system/cpu/cpufreq/lisi/enable_prediction
+#    chown system system /sys/module/alessa_thermal/parameters/enabled
+#    chown system system /sys/module/alessa_thermal/vdd_restriction/enabled
+#    chown system system/sys/module/alessa_thermal/parameters/core_limit_temp_degC
+#    chown system system/sys/module/alessa_thermal/parameters/poll_ms
     chmod 0664 /sys/module/cpu_boost/parameters/input_boost_ms
     chmod 0664 /sys/devices/system/cpu/cpufreq/lisi/enable_prediction
-    chmod 0664 /sys/module/alessa_thermal/parameters/enabled
-    chmod 0664 /sys/module/alessa_thermal/vdd_restriction/enabled
-    chmod 0664 /sys/module/alessa_thermal/parameters/core_limit_temp_degC
-    chmod 0664 /sys/module/alessa_thermal/parameters/poll_ms
+#    chmod 0664 /sys/module/alessa_thermal/parameters/enabled
+#    chmod 0664 /sys/module/alessa_thermal/vdd_restriction/enabled
+#    chmod 0664 /sys/module/alessa_thermal/parameters/core_limit_temp_degC
+#    chmod 0664 /sys/module/alessa_thermal/parameters/poll_ms
 
 # Configure input boost only addison support this moved to performance_profiles
 #    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1401600 1:1401600 2:1401600 3:1401600 4:1401600 5:1401600 6:1401600 7:1401600"
 #    write /sys/module/cpu_boost/parameters/input_boost_ms 150
 
 # Set Lisi and optimize it 652Mhz
-    write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpufreq/lisi/go_hispeed_load 85
-    write /sys/devices/system/cpu/cpufreq/lisi/above_hispeed_delay 19000 2016000:39000
-    write /sys/devices/system/cpu/cpufreq/lisi/timer_rate 20000
-    write /sys/devices/system/cpu/cpufreq/lisi/hispeed_freq 2016000
-    write /sys/devices/system/cpu/cpufreq/lisi/timer_slack 80000
-    write /sys/devices/system/cpu/cpufreq/lisi/target_loads 85 2016000:80
-    write /sys/devices/system/cpu/cpufreq/lisi/min_sample_time 39000
-    write /sys/devices/system/cpu/cpufreq/lisi/ignore_hispeed_on_notif 0
-    write /sys/devices/system/cpu/cpufreq/lisi/boost 0
-    write /sys/devices/system/cpu/cpufreq/lisi/fast_ramp_down 0
-    write /sys/devices/system/cpu/cpufreq/lisi/align_windows 0
-    write /sys/devices/system/cpu/cpufreq/lisi/use_migration_notif 1
-    write /sys/devices/system/cpu/cpufreq/lisi/enable_prediction 1
-    write /sys/devices/system/cpu/cpufreq/lisi/use_sched_load 1
-    write /sys/devices/system/cpu/cpufreq/lisi/max_freq_hysteresis 5900
-    write /sys/devices/system/cpu/cpufreq/lisi/boostpulse_duration 80000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
+#    write /sys/devices/system/cpu/cpu0/online 1
+#    write /sys/devices/system/cpu/cpufreq/lisi/go_hispeed_load 85
+#    write /sys/devices/system/cpu/cpufreq/lisi/above_hispeed_delay 19000 2016000:39000
+#    write /sys/devices/system/cpu/cpufreq/lisi/timer_rate 20000
+#    write /sys/devices/system/cpu/cpufreq/lisi/hispeed_freq 2016000
+#    write /sys/devices/system/cpu/cpufreq/lisi/timer_slack 80000
+#    write /sys/devices/system/cpu/cpufreq/lisi/target_loads 85 2016000:80
+#    write /sys/devices/system/cpu/cpufreq/lisi/min_sample_time 39000
+#    write /sys/devices/system/cpu/cpufreq/lisi/ignore_hispeed_on_notif 0
+#    write /sys/devices/system/cpu/cpufreq/lisi/boost 0
+#    write /sys/devices/system/cpu/cpufreq/lisi/fast_ramp_down 0
+#    write /sys/devices/system/cpu/cpufreq/lisi/align_windows 0
+#    write /sys/devices/system/cpu/cpufreq/lisi/use_migration_notif 1
+#    write /sys/devices/system/cpu/cpufreq/lisi/enable_prediction 1
+#    write /sys/devices/system/cpu/cpufreq/lisi/use_sched_load 1
+#    write /sys/devices/system/cpu/cpufreq/lisi/max_freq_hysteresis 5900
+#    write /sys/devices/system/cpu/cpufreq/lisi/boostpulse_duration 80000
+#    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
 
 # configure Alessa thermal and disable msm thermal
-    write /sys/module/msm_thermal/parameters/enabled 0
-    write /sys/module/alessa_thermal/parameters/enabled 1
-    write /sys/module/alessa_thermal/vdd_restriction/enabled 1
-    write /sys/module/alessa_thermal/parameters/core_limit_temp_degC 75
-    write /sys/module/alessa_thermal/parameters/poll_ms 150
+#    write /sys/module/msm_thermal/parameters/enabled 0
+#    write /sys/module/alessa_thermal/parameters/enabled 1
+#    write /sys/module/alessa_thermal/vdd_restriction/enabled 1
+#    write /sys/module/alessa_thermal/parameters/core_limit_temp_degC 75
+#    write /sys/module/alessa_thermal/parameters/poll_ms 150
 
 
 on property:sys.boot_completed=1
