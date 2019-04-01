@@ -15,6 +15,7 @@ allow untrusted_app fsg_file:dir read;
 allow untrusted_app thermal-engine_exec:file x_file_perms;
 allow untrusted_app vendor_firmware_file:dir getattr;
 allow untrusted_app vendor_file:file getattr;
+allow untrusted_app sysfs_msm_perf:dir search;
 
 allow untrusted_app hal_iop_hwservice:service_manager find;
 get_prop(untrusted_app, camera_prop);
