@@ -143,19 +143,6 @@ on property:sys.boot_completed=1
     # set sync wakee policy tunable
     write /proc/sys/kernel/sched_prefer_sync_wakee_to_waker 1
 
-    # governor settings
-    write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "19000 1401600:39000"
-    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 85
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1401600
-    write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1401600:80"
-    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 39000
-    #write /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor 40000
-    write /proc/sys/kernel/sched_upmigrate_min_nice 19
-
     # Enable sched guided freq control
     write /sys/devices/system/cpu/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpufreq/interactive/use_migration_notif 1
