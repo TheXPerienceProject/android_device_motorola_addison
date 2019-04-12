@@ -454,6 +454,4 @@
     <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
-    <!-- Whether the device has outdated qti-telephony-common.jar -->
-    <bool name="config_oldQtiTelephony">false</bool>
 </resources>
