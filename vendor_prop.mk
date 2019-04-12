@@ -165,13 +165,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.mode=concurrent \
     persist.vendor.data.mode=concurrent
 
-# Testing radio
-PRODUCT_PROPERTY_OVERRIDES += \
-    ril.subscription.types=NV,RUIM \
-    DEVICE_PROVISIONED=1 \
-    ro.telephony.default_network=10,0 \
-    telephony.lteOnCdmaDevice=1
-
 # Radio ims
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.jbims=1 \
