@@ -76,10 +76,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.logging.qxdm=3974 \
-    persist.vendor.cne.rat.wlan.chip.oem=WCN \
-    persist.vendor.dpm.feature=0 \
-    persist.vendor.sys.cnd.iwlan=1
+    persist.cne.feature=1 \
+    persist.cne.logging.qxdm=3974 \
+    persist.cne.rat.wlan.chip.oem=WCN \
+    persist.dpm.feature=0 \
+    persist.sys.cnd.iwlan=1
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -136,17 +137,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0 \
+    persist.radio.apn_delay=5000 \	
+    persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.msgtunnel.start=true \
     persist.vendor.radio.0x9e_not_callname=1 \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.cs_srv_type=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.dfr_mode_set=1 \
     persist.vendor.radio.eri64_as_home=1 \
     persist.vendor.radio.force_get_pref=1 \
     persist.vendor.radio.is_wps_enabled=true \
-    persist.vendor.radio.lte_vrte_ltd=1 \
     persist.vendor.radio.mt_sms_ack=30 \
     persist.vendor.radio.no_wait_for_card=1 \
     persist.vendor.radio.oem_ind_to_both=0 \
@@ -156,7 +156,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.snapshot_enabled=1 \
     persist.vendor.radio.snapshot_timer=22 \
-    persist.vendor.radio.sw_mbn_update=0 \
+    persist.vendor.radio.sw_mbn_update=1 \
+    rild.libargs=-d/dev/smd0 \
     rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.call_ring.multiple=false \
     ro.use_data_netmgrd=true \
