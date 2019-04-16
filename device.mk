@@ -202,6 +202,7 @@ PRODUCT_PACKAGES += \
 #Health
 PRODUCT_PACKAGES += \
    BatteryMod \
+   motorola.hardware.health@1.0 \
    android.hardware.health@2.0-service.addison
 
 # IMS
