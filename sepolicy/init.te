@@ -13,6 +13,8 @@ allow init hal_graphics_allocator_default:fd use;
 allow init hwservicemanager:binder { call transfer };
 allow init input_device:chr_file r_file_perms;
 allow init init:netlink_socket { read write };
+#needed by health
+allow init init:netlink_kobject_uevent_socket r_file_perms;
 allow init ipacm_socket:sock_file rw_file_perms;
 allow init self:netlink_socket { bind create };
 allow init self:netlink_xfrm_socket { bind create };
@@ -36,6 +38,16 @@ allow init servicemanager:binder { call transfer };
 allow init socket_device:sock_file { create setattr unlink };
 allow init sensors_device:chr_file rw_file_perms;
 allow init ssd_device:blk_file write;
+
+# comm="health@2.0-serv" path="/sys/devices/soc/soc:qcom,bcl/power_supply/bcl/type
+allow init sysfs_batteryinfo:file r_file_perms;
+
+# comm="health@2.0-serv" path="/sys/devices/soc/soc:qcom,bcl/power_supply/bcl/type"
+allow init sysfs_usb_supply:file r_file_perms;
+
+#/sys/devices/platform/mods_ap/greybus1/1-3/1-3.1/power_supply/gb_battery/typ
+allow init sysfs_greybus:file r_file_perms;
+
 allow init tee_device:chr_file rw_file_perms;
 allow init thermal_device:chr_file ioctl;
 allow init video_device:chr_file { ioctl write };

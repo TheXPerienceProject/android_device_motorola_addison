@@ -25,7 +25,6 @@
 
 /firmware(/.*)?         u:object_r:firmware_file:s0
 
-
 #Graphics & CPU
 /sys/devices/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model                          u:object_r:sysfs_kgsl:s0
 /sys/devices(/platform)?/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw(/.*)?				u:object_r:sysfs_devfreq:s0
