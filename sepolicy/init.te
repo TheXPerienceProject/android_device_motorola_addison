@@ -14,7 +14,7 @@ allow init hwservicemanager:binder { call transfer };
 allow init input_device:chr_file r_file_perms;
 allow init init:netlink_socket { read write };
 #needed by health
-allow init init:netlink_kobject_uevent_socket r_file_perms;
+allow init init:netlink_kobject_uevent_socket read;
 allow init ipacm_socket:sock_file rw_file_perms;
 allow init self:netlink_socket { bind create };
 allow init self:netlink_xfrm_socket { bind create };
