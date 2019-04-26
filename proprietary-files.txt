@@ -365,11 +365,10 @@ vendor/lib/libscveObjectTracker_stub.so
 vendor/lib/libscvePanorama.so
 vendor/lib/libscvePanorama_lite.so
 
-# Thermal
+# Thermal deen PPK29.68-16-21
 # vendor/bin/thermal-engine
-#vendor/lib/hw/thermal.msm8953.so
+vendor/lib/hw/thermal.msm8953.so
 vendor/lib/libthermalclient.so
-vendor/lib/libthermalioctl.so
 
 # WCNSS
 vendor/etc/wifi/WCNSS_qcom_wlan_nv.bin:vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
