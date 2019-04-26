@@ -194,14 +194,23 @@ vendor/bin/pm-proxy|e12c72d05c764a2c45b2a5d4d1886519cba3fb16
 vendor/bin/pm-service|83fac998bf8f651f2f0cd2385f6e1b7c3eefe5ea
 vendor/lib/libperipheral_client.so|0dabab6dc68748c2b0d3a97a5708ee555b3d5650
 
-# Perf - from LA.UM.7.2.r1-03600-sdm660.0
-lib/vendor.qti.hardware.perf@1.0.so
-#vendor/bin/energy-awareness
-#vendor/bin/msm_irqbalance
-#vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
-vendor/etc/msm_irqbalance.conf
+# Perf - from op3 - PKQ1.181203.001 and deen PPK29.68-16-21
+vendor/bin/energy-awareness
+vendor/bin/msm_irqbalance
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
-vendor/lib/libfeedbackhandler.so
+vendor/etc/msm_irqbalance.conf
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/perf-profile0.conf
+vendor/etc/perf/perf-profile1.conf
+vendor/etc/perf/perf-profile2.conf
+vendor/etc/perf/perf-profile3.conf
+vendor/etc/perf/perf-profile4.conf
+vendor/etc/perf/perf-profile5.conf
+vendor/etc/perf/perf-profile6.conf
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
 vendor/lib/libperfgluelayer.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-perfd-client.so
