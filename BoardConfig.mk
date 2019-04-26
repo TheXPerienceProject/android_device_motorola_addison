@@ -209,7 +209,7 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Shim
 TARGET_LD_SHIM_LIBS := \
-    /vendor/lib/libjustshoot.so|libjustshoot_shim.so \
+    /vendor/lib/libjustshoot.so|libjustshoot_shim.so
 
 # Sensors
 BOARD_USES_MOT_SENSOR_HUB := true
@@ -231,6 +231,9 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_SHIPPING_API_LEVEL := 25 # Shipped with M
 PRODUCT_VENDOR_MOVE_ENABLED := true
 DEVICE_DEFINES_OWN_VNDK := true
+
+#Thermal
+DEVICE_PROVIDES_THERMAL := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
