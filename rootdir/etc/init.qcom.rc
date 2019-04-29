@@ -548,7 +548,6 @@ on charger
     start gbmodinstall
     start thermal-com
     start vendor.charge_only_mode
-    stop bootanim
 
 service vendor.energy-awareness /vendor/bin/energy-awareness
     class main

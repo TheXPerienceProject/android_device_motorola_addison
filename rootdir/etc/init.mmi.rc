@@ -1,6 +1,6 @@
 # Moto USB configuration
 import /vendor/etc/init/hw/init.mmi.usb.rc
-# Moto Mod enable script by klozz Jes�s aka TeamMEX@XDA-Developers
+# Moto Mod enable script by klozz Jesús aka TeamMEX@XDA-Developers
 import /vendor/etc/init/hw/init.mods.rc
 
 on early-boot
@@ -250,7 +250,6 @@ on charger
     trigger early-fs
     trigger fs
     trigger post-fs
-    trigger late-fs
     trigger post-fs-data
     trigger moto-charger
     class_stop main
@@ -263,7 +262,6 @@ on moto-charger
     start vendor.charge_only_mode
     start vendor.thermal-com
     start gbmodinstall
-    stop bootanim
 
 on property:ro.boot.dualsim=true
    setprop persist.radio.multisim.config dsds
