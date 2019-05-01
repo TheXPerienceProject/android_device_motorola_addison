@@ -296,9 +296,8 @@ on post-fs-data
     #Start move_wifi_data service.
     start vendor.move_wifi_data
 
-service vendor.charger /charger
+service vendor.charger /system/bin/charger
     class charger
-    user system
     group system graphics input
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
