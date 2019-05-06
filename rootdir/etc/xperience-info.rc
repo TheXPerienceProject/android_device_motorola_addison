@@ -92,4 +92,15 @@ on property:sys.boot_completed=1
     chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
     chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/governor
 
+
+    # Force power level in the gpu to be the lowest possible idk why but by default always is set 
+    # power level 0
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 8
+    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 8
+    write /sys/class/kgsl/kgsl-3d0/min_clock_mhz 133
+
+    # Force min freq to 652mhz this is always forced to 1.6ghz by the scheduler
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
+
     exec u:r:magisk:s0 root root -- /vendor/bin/init.special_power.sh
+
