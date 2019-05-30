@@ -136,7 +136,8 @@ PRODUCT_COPY_FILES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_images \
+    charge_only_mode
 
 # Display
 PRODUCT_PACKAGES += \
