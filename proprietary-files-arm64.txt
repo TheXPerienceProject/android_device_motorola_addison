@@ -187,7 +187,7 @@ vendor/lib64/libqti-perfd-client.so|1e84aa49a8cff0f69f0261c69dd8843534efd79e
 vendor/lib64/libqti-util.so|0c34c7cbb07197841e9f097925fe961f3226e621
 vendor/lib64/vendor.qti.hardware.perf@1.0.so|f3d180595bdfeac68d13e13ecf704f892e7a52a5
 
-# Qualcomm framework deen PPK29.68-16-21
+# Qualcomm framework
 lib64/libdiag_system.so
 lib64/libqmi_cci_system.so
 vendor/lib64/libdiag.so
@@ -206,9 +206,8 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
-# Radio deen PPK29.68-16-21
+# Radio
 vendor/lib64/libconfigdb.so
-vendor/lib64/libicuuc_vendor.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
@@ -276,7 +275,6 @@ vendor/lib64/lib-rtpsl.so
 vendor/lib64/lib-siputility.so
 vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so
 
