@@ -58,7 +58,6 @@ TARGET_OTA_ASSERT_DEVICE := addison,addison_retail
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 vmalloc=350M loop.max_part=7
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_LZ4C_DT := true
@@ -216,14 +215,9 @@ TARGET_USE_SDCLANG := true
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# Soong
-PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)/libshims
-
 # Shim
 TARGET_LD_SHIM_LIBS := \
-    /vendor/lib/libjustshoot.so|libjustshoot_shim.so \
-    /vendor/lib64/libmdmcutback.so|libshim_ril.so
+    /vendor/lib/libjustshoot.so|libjustshoot_shim.so
 
 # Sensors
 BOARD_USES_MOT_SENSOR_HUB := true
