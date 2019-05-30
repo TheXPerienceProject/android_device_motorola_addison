@@ -134,9 +134,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/ov5693_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov5693_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/ov16860_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov16860_chromatix.xml
 
-# Motorola Charger
+# Charger
 PRODUCT_PACKAGES += \
-    charge_only_mode
+    charger_res_images
 
 # Display
 PRODUCT_PACKAGES += \

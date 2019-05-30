@@ -127,13 +127,3 @@ LOCAL_SRC_FILES    := etc/init.special_power.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
 include $(BUILD_PREBUILT)
 
-# Offmode charging	
-include $(CLEAR_VARS)
-LOCAL_MODULE          := charge_only_mode
-LOCAL_MODULE_OWNER    := motorola
-LOCAL_MODULE_PATH     := $(TARGET_ROOT_OUT_SBIN)
-LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_SBIN_UNSTRIPPED)
-LOCAL_SRC_FILES       := sbin/charge_only_mode
-LOCAL_MODULE_TAGS     := optional
-LOCAL_MODULE_CLASS    := EXECUTABLES
-include $(BUILD_PREBUILT)
