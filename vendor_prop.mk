@@ -156,13 +156,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.snapshot_enabled=1 \
     persist.vendor.radio.snapshot_timer=22 \
-    persist.vendor.radio.sw_mbn_update=0 \
+    persist.vendor.radio.sw_mbn_update=1 \
     rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.call_ring.multiple=false \
-    ro.use_data_netmgrd=true \
     ro.vendor.use_data_netmgrd=true \
     persist.data.netmgrd.qos.enable=true \
-    persist.data.mode=concurrent \
     persist.vendor.data.mode=concurrent
 
 # Testing radio
@@ -171,6 +169,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     ro.telephony.default_network=10,0 \
     telephony.lteOnCdmaDevice=1
+
+# Enable manual network selection function and distinguish 2G/3G/4G
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.rat_on=combine
 
 # Radio ims
 PRODUCT_PROPERTY_OVERRIDES += \
