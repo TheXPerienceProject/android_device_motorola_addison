@@ -1,1 +1,2 @@
 allow nfc system_data_file:file open;
+allow nfc vendor_data_file:dir search;

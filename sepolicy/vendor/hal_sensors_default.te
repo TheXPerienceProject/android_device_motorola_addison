@@ -5,5 +5,5 @@ allow hal_sensors_default sysfs_mmi_laser:dir search;
 allow hal_sensors_default sysfs_mmi_laser:file { read open write };
 allow hal_sensors_default sensors_data_file:file { write read open getattr };
 allow hal_sensors_default sensors_data_file:dir search;
-allow hal_sensors_default sysfs:file write;
-
+#linear_accel_update_rat
+allow hal_sensors_default sysfs:file { open write };
