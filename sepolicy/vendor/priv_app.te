@@ -10,6 +10,7 @@ allow priv_app proc_modules:file rw_file_perms;
 allow priv_app proc_interrupts:dir { read open };
 allow priv_app proc_interrupts:file { read open };
 allow priv_app rfs_system_file:dir getattr;
+allow priv_app sysfs:file open;
 
 # pid=21062 comm="CTION_IDLE_MODE" PID  PPID  VSZ   RSS WCHAN  ADDR S NAME
 allow priv_app sepolicy_file:file getattr;

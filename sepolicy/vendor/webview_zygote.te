@@ -1,0 +1,2 @@
+#allow webview to search theme
+allow webview_zygote theme_data_file:dir search;
