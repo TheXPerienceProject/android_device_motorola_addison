@@ -12,4 +12,3 @@ mot_device_policy                         u:object_r:device_policy_service:s0
 ModService                                u:object_r:mods_service:s0
 panel                                     u:object_r:mot_panel_service:s0
 panel_native                              u:object_r:mot_panel_service:s0
-rcs                                       u:object_r:radio_service:s0

@@ -1,3 +1,0 @@
-allow charger sysfs_battery_supply:file r_file_perms;
-allow charger sysfs_usb_supply:file r_file_perms;
-
