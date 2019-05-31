@@ -157,12 +157,39 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.snapshot_enabled=1 \
     persist.vendor.radio.snapshot_timer=22 \
     persist.vendor.radio.sw_mbn_update=1 \
-    rild.libargs=-d/dev/smd0 \
     rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.call_ring.multiple=false \
-    ro.use_data_netmgrd=true \
+    ro.vendor.use_data_netmgrd=true \
     persist.data.netmgrd.qos.enable=true \
-    persist.data.mode=concurrent
+    persist.vendor.data.mode=concurrent
+
+# Testing radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ril.subscription.types=NV,RUIM \
+    DEVICE_PROVISIONED=1 \
+    ro.telephony.default_network=10,0 \
+    telephony.lteOnCdmaDevice=1
+
+# Enable manual network selection function and distinguish 2G/3G/4G
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.rat_on=combine
+
+# Radio ims
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.jbims=1 \
+    persist.dbg.ims_volte_enable=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.ignore_dom_time=10 \
+    persist.radio.ignore_dom_time=10 \
+    persist.radio.is_wps_enabled=true \
+    persist.radio.videopause.mode=1 \
+    persist.radio.sap_silent_pin=1 \
+    persist.radio.always_send_plmn=true \
+    persist.rcs.supported=1
 
 # set max background services
 PRODUCT_PROPERTY_OVERRIDES += \
