@@ -1,6 +1,11 @@
 allow system_app sysfs_mmi_fp:file rw_file_perms;
 allow system_app sysfs_mmi_fp:dir search;
+<<<<<<< HEAD:sepolicy/system_app.te
 binder_call(system_app, fingerprintd)
+=======
+>>>>>>> 36b9aac... addison: move sepolicy as treble compliant:sepolicy/vendor/system_app.te
 
 #GSI
 allow system_app sysfs_leds:dir search;
+
+binder_call(system_app, fingerprintd)

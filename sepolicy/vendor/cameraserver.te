@@ -1,7 +1,11 @@
 allow cameraserver self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 allow cameraserver self:netlink_kobject_uevent_socket { read bind create setopt };
 allow cameraserver default_android_service:service_manager find;
+<<<<<<< HEAD:sepolicy/cameraserver.te
 allow cameraserver rootfs:lnk_file getattr;
+=======
+allow cameraserver socket_device:sock_file write;
+>>>>>>> 36b9aac... addison: move sepolicy as treble compliant:sepolicy/vendor/cameraserver.te
 allow cameraserver init:unix_dgram_socket { sendto};
 allow cameraserver vendor_file:file getattr;
 

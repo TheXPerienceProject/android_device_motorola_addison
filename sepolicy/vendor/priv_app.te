@@ -1,5 +1,6 @@
 allow priv_app adsprpcd_file:filesystem getattr;
 allow priv_app device:dir r_dir_perms;
+<<<<<<< HEAD:sepolicy/priv_app.te
 allow priv_app device:dir { open read };
 allow priv_app rfs_system_file:dir getattr;
 allow priv_app input_device:chr_file getattr;
@@ -12,6 +13,18 @@ allow priv_app mnt_vendor_file:dir search;
 allow priv_app firmware_file:filesystem getattr;
 allow priv_app sysfs:file read;
 allow priv_app sysfs:dir read;
+=======
+allow priv_app firmware_file:file getattr;
+allow priv_app firmware_file:dir search;
+allow priv_app firmware_file:filesystem getattr;
+allow priv_app input_device:chr_file getattr;
+allow priv_app input_device:dir search;
+allow priv_app mnt_vendor_file:dir search;
+allow priv_app proc_modules:file rw_file_perms;
+allow priv_app proc_interrupts:dir { read open };
+allow priv_app proc_interrupts:file { read open };
+allow priv_app rfs_system_file:dir getattr;
+>>>>>>> 36b9aac... addison: move sepolicy as treble compliant:sepolicy/vendor/priv_app.te
 
 # pid=21062 comm="CTION_IDLE_MODE" PID  PPID  VSZ   RSS WCHAN  ADDR S NAME
 allow priv_app sepolicy_file:file getattr;
@@ -27,4 +40,3 @@ allow priv_app location_exec:file getattr;
 
 #radio
 allow priv_app radio_data_file:dir getattr;
-

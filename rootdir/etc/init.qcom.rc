@@ -297,7 +297,7 @@ on post-fs-data
 
 service vendor.charger /charger
     class charger
-    group log
+    group system graphics input
     seclabel u:r:charger:s0
 
 # Allow usb charging to be disabled peristently
