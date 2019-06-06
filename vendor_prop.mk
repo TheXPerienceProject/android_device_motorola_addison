@@ -89,6 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.enable_fb_ubwc=1 \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
+    debug.sf.latch_unsignaled=1 \
     vendor.gralloc.disable_wb_ubwc=1 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.nohdcp=1 \
@@ -206,6 +207,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.ffs.max_write=524288 \
     sys.usb.ffs.max_read=524288 \
     sys.usb.mtp.device_type=3
+
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.use_fifo_ui=1
 
 #Enable B service adj transition by default
 PRODUCT_PROPERTY_OVERRIDES += \
