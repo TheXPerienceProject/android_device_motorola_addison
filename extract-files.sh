@@ -24,9 +24,9 @@ VENDOR=motorola
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+XPERIENCE_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/aosp/build/tools/extract_utils.sh
+HELPER="$XPERIENCE_ROOT"/vendor/aosp/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -55,10 +55,19 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" false "$CLEAN_VENDOR"
+setup_vendor "$DEVICE" "$VENDOR" "$XPERIENCE_ROOT" false "$CLEAN_VENDOR"
 
 #extract "$MY_DIR"/proprietary-files-addison.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files-arm64.txt "$SRC" "$SECTION"
+
+BLOB_ROOT="$XPERIENCE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+# Load wrapped shim
+patchelf --add-needed libjustshoot_shim.so $BLOB_ROOT/vendor/lib/libjustshoot.so
+
+# Load camera configs from vendor
+CAMERA2_SENSOR_MODULES="$BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
+sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
 
 "$MY_DIR"/setup-makefiles.sh
