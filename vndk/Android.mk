@@ -7,6 +7,7 @@ VNDK_SP_LIBRARIES := \
     android.hardware.renderscript@1.0 \
     android.hidl.memory@1.0 \
     android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
     libRSCpuRef \
     libRSDriver \
     libRS_internal \
@@ -33,7 +34,8 @@ VNDK_SP_LIBRARIES := \
     libutilscallstack \
     libdexfile \
     libsensor \
-    libz
+    libz \
+    vendor.qti.hardware.wifi@1.0.so
 
 EXTRA_VENDOR_LIBRARIES := \
     android.frameworks.sensorservice@1.0 \
@@ -43,6 +45,7 @@ EXTRA_VENDOR_LIBRARIES := \
     android.hardware.wifi.supplicant@1.1 \
     android.hidl.memory@1.0 \
     android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
     libdrm \
     libsensor \
     libaudioroute \
@@ -54,6 +57,7 @@ EXTRA_VENDOR_LIBRARIES := \
     vendor.display.config@1.6 \
     vendor.display.config@1.7 \
     vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.wifi@1.0.so \
     vendor.nxp.nxpese@1.0 \
     vendor.nxp.nxpnfc@1.0 \
     vendor.xperience.power@1.0
