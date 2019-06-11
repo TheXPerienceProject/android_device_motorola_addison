@@ -20,7 +20,7 @@ lib/libadvalgcore.so:vendor/lib/libadvalgcore.so
 lib/libarcsoft_beautyshot.so:vendor/lib/libarcsoft_beautyshot.so
 lib/libfamily_photo.so:vendor/lib/libfamily_photo.so
 lib/libjscore.so:vendor/lib/libjscore.so
-lib/libjustshoot.so:vendor/lib/libjustshoot.so
+lib/libjustshoot.so:vendor/lib/libjustshoot.so|c4078cd0c6dbbbff4690aed80bf6ad17
 lib/libmbs.so:vendor/lib/libmbs.so
 lib/libmorpho_image_stabilizer4.so:vendor/lib/libmorpho_image_stabilizer4.so
 lib/libmot_lux_standardization.so:vendor/lib/libmot_lux_standardization.so
