@@ -216,10 +216,6 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# Shim
-TARGET_LD_SHIM_LIBS := \
-    /vendor/lib/libjustshoot.so|libjustshoot_shim.so
-
 # Sensors
 BOARD_USES_MOT_SENSOR_HUB := true
 MOT_AP_SENSOR_HW_REARPROX := true
