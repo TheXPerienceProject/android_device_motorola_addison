@@ -8,6 +8,7 @@ VNDK_SP_LIBRARIES := \
     android.hidl.memory@1.0 \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
+    libbinder \
     libRSCpuRef \
     libRSDriver \
     libRS_internal \
@@ -46,9 +47,10 @@ EXTRA_VENDOR_LIBRARIES := \
     android.hidl.memory@1.0 \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
-    libdrm \
-    libsensor \
     libaudioroute \
+    libdrm \
+    libcutils \
+    libsensor \
     vendor.display.config@1.1 \
     vendor.display.config@1.2 \
     vendor.display.config@1.3 \
