@@ -104,7 +104,7 @@ endef
 $(foreach lib,$(VNDK_SP_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-sp-gen,$(vndk_sp_dir),)))
 $(foreach lib,$(VNDK_SP_EXT_LIBRARIES),\
-    $(eval $(call define-vndk-lib,$(lib),vndk-sp-ext-gen,$(vndk_sp_dir),true)))
+    $(eval $(call define-vndk-lib,$(lib),vndk-sp-ext-gen,$(vndk-sp),true)))
 $(foreach lib,$(EXTRA_VENDOR_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,,true)))
 
