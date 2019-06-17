@@ -441,6 +441,7 @@ vendor/lib/libtime_genoff.so
 #etc/wfdconfigsink.xml
 #-framework/WfdCommon.jar
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/extractors/libmmparser.so
 lib/libFileMux.so
 lib/libmmparser_lite.so
