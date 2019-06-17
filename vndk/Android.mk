@@ -61,6 +61,7 @@ EXTRA_VENDOR_LIBRARIES := \
     vendor.display.config@1.7 \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.wifi@1.0 \
+    vendor.qti.hardware.wifi.supplicant@2.0 \
     vendor.nxp.nxpese@1.0 \
     vendor.nxp.nxpnfc@1.0 \
     vendor.xperience.power@1.0
