@@ -84,6 +84,16 @@ on early-boot
     # Permission for vibrator amplitude
     chown system system /sys/class/timed_output/vibrator/voltage_level
 
+    # vendor.health-hal needs to be able to RW
+    chown system system /sys/devices/soc/qpnp-fg-18/cycle_counts_bins
+    # HardwareInfo needs to be able to read CC bins
+    chmod 644 /sys/devices/soc/qpnp-fg-18/cycle_counts_bins
+
+    # dumpstate needs to read, vendor.health-hal needs to be able to RW
+    chown system system /sys/devices/soc/qpnp-fg-18/power_supply/bms/charge_full
+    # HardwareInfo needs to be able to read charge_full
+    chmod 644 /sys/devices/soc/qpnp-fg-18/power_supply/bms/charge_full
+
 on boot
 
     # Mark the copy complete flag to not completed
@@ -242,16 +252,6 @@ on post-fs-data
 
     # Create directory for modem_config
     mkdir /data/vendor/modem_config 0570 radio root
-
-    # vendor.health-hal needs to be able to RW
-    chown system system /sys/devices/soc/qpnp-fg-18/cycle_counts_bins
-    # HardwareInfo needs to be able to read CC bins
-    chmod 644 /sys/devices/soc/qpnp-fg-18/cycle_counts_bins
-
-    # dumpstate needs to read, vendor.health-hal needs to be able to RW
-    chown system system /sys/devices/soc/qpnp-fg-18/power_supply/bms/charge_full
-    # HardwareInfo needs to be able to read charge_full
-    chmod 644 /sys/devices/soc/qpnp-fg-18/power_supply/bms/charge_full
 
     #Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
