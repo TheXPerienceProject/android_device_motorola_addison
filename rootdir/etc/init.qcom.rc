@@ -78,6 +78,9 @@ on early-boot
     # Motorola uses external sensorhub, do not boot the slpi
     # write /sys/kernel/boot_slpi/boot 1
 
+    # Permission for vibrator amplitude
+    chown system system /sys/class/timed_output/vibrator/voltage_level
+
 on boot
 
     # Mark the copy complete flag to not completed
@@ -98,9 +101,6 @@ on boot
     chmod 0660 /data/vendor/radio/db_check_done
 
     start vendor.rmt_storage
-
-    # Permission for vibrator amplitude
-    chown system system /sys/class/timed_output/vibrator/voltage_level
 
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
