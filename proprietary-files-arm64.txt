@@ -24,7 +24,7 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Display (Sdm)- from deen PPK29.68-16-3
+# Display (Sdm)- from deen PPK29.68-16-3 and LA.UM.7.5.r1-03700-8x96.0
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libscalar.so
