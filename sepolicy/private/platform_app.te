@@ -1,1 +1,3 @@
 allow platform_app mods_service:service_manager find;
+#allow mod manager to read sysfs
+allow platform_app sysfs:dir read;
