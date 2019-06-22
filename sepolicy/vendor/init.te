@@ -67,4 +67,7 @@ allow init hal_wifi_supplicant_default:process noatsecure;
 # required for alot of things Dx
 allow init { domain -lmkd -crash_dump }:process noatsecure;
 
+#Swappines
+allow init proc:file write;
+
 binder_use(init)

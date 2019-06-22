@@ -1,1 +1,1 @@
-allow time_daemon time_daemon:capability { sys_admin setgid };
+allow time_daemon time_daemon:capability { sys_admin setgid setuid };
