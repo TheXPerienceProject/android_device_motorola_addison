@@ -44,6 +44,7 @@ EXTRA_VENDOR_LIBRARIES := \
     android.hardware.wifi.hostapd@1.0 \
     android.hardware.wifi.supplicant@1.0 \
     android.hardware.wifi.supplicant@1.1 \
+    vendor.qti.hardware.wifi.supplicant@2.0 \
     android.hidl.memory@1.0 \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
@@ -61,7 +62,6 @@ EXTRA_VENDOR_LIBRARIES := \
     vendor.display.config@1.7 \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.wifi@1.0 \
-    vendor.qti.hardware.wifi.supplicant@2.0 \
     vendor.qti.hardware.wifi.hostapd@1.0 \
     vendor.nxp.nxpese@1.0 \
     vendor.nxp.nxpnfc@1.0 \
