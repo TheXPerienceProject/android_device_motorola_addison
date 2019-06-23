@@ -12,3 +12,6 @@ binder_call(hal_camera_default, hal_graphics_allocator_default)
 
 allow hal_camera_default sysfs_mods_camd:dir search;
 allow hal_camera_default sysfs_mods_camd:file r_file_perms;
+
+allow hal_camera_default sysfs_camera:dir { r_dir_perms search };
+allow hal_camera_default sysfs_camera:file { getattr r_file_perms };

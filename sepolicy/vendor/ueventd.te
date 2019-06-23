@@ -4,3 +4,8 @@ allow ueventd sysfs_mmi_touch:file w_file_perms;
 
 allow ueventd sysfs_mmi_touch:dir search;
 allow ueventd self:netlink_kobject_uevent_socket { read };
+<<<<<<< HEAD
+=======
+#allow ueventd sysfs_mods_camd:file rw_file_perms;
+#allow ueventd sysfs_mods_camd:dir rw_dir_perms;
+>>>>>>> 3c34da1... addison: sepolicy updates and cleanups

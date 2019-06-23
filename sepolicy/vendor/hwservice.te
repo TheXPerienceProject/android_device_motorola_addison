@@ -3,3 +3,4 @@ type nxpese_hwservice, hwservice_manager_type;
 
 #Motorola Health
 type hal_motorola_health_hwservice, hwservice_manager_type;
+type hal_modmanager_hwservice, hwservice_manager_type;
