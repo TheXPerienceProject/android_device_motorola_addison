@@ -13,7 +13,7 @@
         <permission name="com.motorola.permission.WRITE_SECURE_SETTINGS" />
         <permission name="com.motorola.mod.permission.PACKET_BUS_PROTOCOL" />
         <permission name="com.motorola.mod.permission.MOD_INTERNAL" />
-        <permission name="com.motorola.mod.permission.MOD_SERVICE" >
+        <permission name="com.motorola.mod.permission.MOD_SERVICE" />
     </privapp-permissions>
 
     <privapp-permissions package="com.motorola.modservice.fmwkwrapper">
