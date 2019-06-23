@@ -1,11 +1,14 @@
 allow hal_health_default sysfs:file r_file_perms;
 allow hal_health_default sysfs_batteryinfo:file rw_file_perms;
+allow hal_health_default mnt_vendor_file:dir search;
 allow hal_health_default persist_battery_file:file create_file_perms;
 allow hal_health_default persist_battery_file:dir rw_dir_perms;
 allow hal_health_default persist_file:dir search;
 allow hal_health_default sysfs_msm_subsys:file { write };
 allow hal_health_default sysfs_batteryinfo:file rw_file_perms;
 allow hal_health_default sysfs_battery_supply:file { read open getattr };
+allow hal_health_default sysfs:file rw_file_perms;
+allow hal_health_default persist_file:file rw_file_perms;
 allow hal_health_default default_android_hwservice:hwservice_manager { add find };
 allow hal_health_default unlabeled:file r_file_perms;
 
