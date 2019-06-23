@@ -7,3 +7,5 @@ allow rfs_access fsg_file:lnk_file read;
 allow rfs_access unlabeled:dir search;
 allow rfs_access unlabeled:file { read open getattr };
 allow rfs_access unlabeled:lnk_file { open read };
+allow rfs_access persist_file:file { create rw_file_perms unlink rename };
+allow rfs_access persist_file:dir { rw_dir_perms setattr };

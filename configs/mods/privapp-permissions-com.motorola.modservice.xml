@@ -4,6 +4,7 @@
 
         <!-- System defined permissions -->
         <permission name="android.permission.INTERACT_ACROSS_USERS" />
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL" />
         <permission name="android.permission.MANAGE_USB" />
         <permission name="android.permission.MANAGE_USERS" />
         <permission name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS" />
