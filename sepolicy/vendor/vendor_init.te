@@ -31,3 +31,6 @@ allow vendor_init proc_cmdline:file getattr ;
 
 allow vendor_init rootfs:dir setattr;
 allow vendor_init adsprpcd_file:filesystem getattr;
+
+allow vendor_init debugfs:file write;
+allow vendor_init rootfs:dir { add_name create rw_dir_perms setattr };

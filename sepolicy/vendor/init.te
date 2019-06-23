@@ -60,6 +60,7 @@ allow init rpmb_device:blk_file write;
 allow init uio_device:chr_file write;
 
 allow init sysfs:dir write;
+allow init sysfs:file setattr;
 
 #noatsecure sh!ts
 allow init hal_wifi_supplicant_default:process noatsecure;
