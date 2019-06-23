@@ -23,4 +23,5 @@ allow platform_app firmware_file:file { open read };
 allow platform_app gbfirmware_file:lnk_file read;
 #com.motorola.modservice: type=1400 audit(0.0:37745): avc: denied { read } for uid=10203 comm=47726579627573204D6F6E69746F72 name="vendor_string"
 allow platform_app sysfs:file { read open getattr };
+allow platform_app sysfs:dir { read open };
 allow platform_app system_app_data_file:dir { getattr r_dir_perms };

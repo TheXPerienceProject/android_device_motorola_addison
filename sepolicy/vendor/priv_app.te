@@ -32,3 +32,6 @@ allow priv_app radio_data_file:dir getattr;
 
 #privapp io HAL
 allow priv_app hal_iop_hwservice:hwservice_manager find;
+
+#Themes and fonts
+allow priv_app theme_data_file:dir search;
