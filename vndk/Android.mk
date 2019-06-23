@@ -62,6 +62,7 @@ EXTRA_VENDOR_LIBRARIES := \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.wifi@1.0 \
     vendor.qti.hardware.wifi.supplicant@2.0 \
+    vendor.qti.hardware.wifi.hostapd@1.0 \
     vendor.nxp.nxpese@1.0 \
     vendor.nxp.nxpnfc@1.0 \
     vendor.xperience.power@1.0
@@ -110,7 +111,7 @@ $(foreach lib,$(VNDK_SP_LIBRARIES),\
 $(foreach lib,$(VNDK_SP_EXT_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-sp-ext-gen,vndk-sp,true)))
 $(foreach lib,$(EXTRA_VENDOR_LIBRARIES),\
-    $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,xpe,true)))
+    $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,vndk-sp-28,true)))
 
 
 #-------------------------------------------------------------------------------
