@@ -50,9 +50,12 @@ EXTRA_VENDOR_LIBRARIES := \
     android.hidl.manager@1.0 \
     libaudioroute \
     libbinder \
+    libc \
+    libc++ \
     libdrm \
     libcutils \
     libsensor \
+    libpuresoftkeymasterdevice \
     vendor.display.config@1.1 \
     vendor.display.config@1.2 \
     vendor.display.config@1.3 \
@@ -61,6 +64,7 @@ EXTRA_VENDOR_LIBRARIES := \
     vendor.display.config@1.6 \
     vendor.display.config@1.7 \
     vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.display.mapper@1.0 \
     vendor.qti.hardware.wifi@1.0 \
     vendor.qti.hardware.wifi.hostapd@1.0 \
     vendor.nxp.nxpese@1.0 \
