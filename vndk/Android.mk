@@ -52,8 +52,10 @@ EXTRA_VENDOR_LIBRARIES := \
     libbinder \
     libc \
     libc++ \
+    libdisplayconfig \
     libdrm \
     libcutils \
+    libqdMetaData \
     libsensor \
     libpuresoftkeymasterdevice \
     vendor.display.config@1.1 \

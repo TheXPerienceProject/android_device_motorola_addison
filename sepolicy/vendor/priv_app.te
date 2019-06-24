@@ -1,11 +1,11 @@
 allow priv_app adsprpcd_file:filesystem getattr;
 allow priv_app device:dir r_dir_perms;
 allow priv_app firmware_file:file getattr;
-allow priv_app firmware_file:dir search;
+allow priv_app firmware_file:dir { getattr search };
 allow priv_app firmware_file:filesystem getattr;
 allow priv_app input_device:chr_file getattr;
 allow priv_app input_device:dir search;
-allow priv_app mnt_vendor_file:dir search;
+allow priv_app mnt_vendor_file:dir { getattr search };
 allow priv_app proc_modules:file rw_file_perms;
 allow priv_app proc_interrupts:dir { read open };
 allow priv_app proc_interrupts:file { read open };
@@ -35,3 +35,5 @@ allow priv_app hal_iop_hwservice:hwservice_manager find;
 
 #Themes and fonts
 allow priv_app theme_data_file:dir search;
+
+allow priv_app cache_private_backup_file:dir getattr;
