@@ -22,5 +22,6 @@ allow system_app sysfs_batt_mods:dir { r_dir_perms search };
 allow system_app sysfs_rtc:dir { r_dir_perms search };
 
 allow system_app vendor_time_data_file:dir { r_dir_perms search };
+allow system_app vendor_file:file r_file_perms;
 
 get_prop(system_app, vendor_camera_prop);
