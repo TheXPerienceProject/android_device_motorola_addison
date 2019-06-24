@@ -155,6 +155,9 @@ PRODUCT_PACKAGES += \
 
 # Display QTI
 PRODUCT_PACKAGES += \
+    libqdMetaData.system \
+    libqdMetaData \
+    libdisplayconfig \
     vendor.qti.hardware.display.allocator@1.0 \
     vendor.qti.hardware.display.composer@1.0 \
     vendor.display.config@1.4 \
@@ -354,8 +357,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0 \
     librmnetctl \
-    libqdMetaData.system \
-    libqdMetaData \
     libxml2
 
 # Seccomp
