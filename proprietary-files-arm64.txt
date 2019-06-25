@@ -27,12 +27,12 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 # Display (Sdm)- from deen PPK29.68-16-3 and LA.UM.7.5.r1-03700-8x96.0
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libscalar.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
+vendor/lib64/libscalar.so|490cc7447863b3279771ad99e92a5625525db055
+vendor/lib64/libsdm-color.so|9bb3f5147c277eae08c7f918e7de3bd2fccf1f74
+vendor/lib64/libsdm-diag.so|7ab5d2a980029ac9bd20fe68656823b21e483e11
+-vendor/lib64/libsdm-disp-vndapis.so|6ae24866bbd413ed112778650c8fd7a2631cb1a9
+vendor/lib64/libsdmextension.so|e91aaf852df780e42bb083c3089f5b42c87c49f7
+vendor/lib64/libtinyxml2_1.so|b743b93bbb47bb2d80322fcfb985b7b8c696fa1b
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
@@ -107,30 +107,29 @@ vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
 
-# Graphics - from griffin OPL27.76-71-2-3
-vendor/lib64/egl/eglSubDriverAndroid.so|13952992a54300c02ba8302f899b4285bc231180
-vendor/lib64/egl/libEGL_adreno.so|60375ff06520aaee699771e2c5ce03943c665290
-vendor/lib64/egl/libGLESv1_CM_adreno.so|f82b3e4b5b13258654957328b7b8ad6a55270718
-vendor/lib64/egl/libGLESv2_adreno.so|835bfa05280754a73f436dd4127fb1a51e76d868
-vendor/lib64/egl/libq3dtools_adreno.so|ed700e0cafafad66293e1406d9a189e41b5fcba7
-vendor/lib64/egl/libq3dtools_esx.so|6dfda8bce7e171ba7faa8408ac233ad9c619d207
-vendor/lib64/egl/libQTapGLES.so|5842caa7a0c8e04c3a9900cd3178971fe47ec55e
-vendor/lib64/hw/vulkan.msm8996.so:vendor/lib64/hw/vulkan.msm8953.so|d84a24c0329da6e9efa45e002b2a1d35b57bddf5
-vendor/lib64/libadreno_utils.so|df34a647e6e381c8474f9961d1e45b0f33ea9b78
-vendor/lib64/libbccQTI.so|c36e32319958be18e58afd8bde511e39cf5c0f9c
-vendor/lib64/libC2D2.so|12f97946eb0e201e10128f7cf483bf97de604fea
-vendor/lib64/libc2d30-a5xx.so|7c93d41e945a7bc9855bb754c4f95d89c2d9a94b
-vendor/lib64/libc2d30_bltlib.so|5c1625ce6618f39a779ed05fb6c803a0d2b2619f
-vendor/lib64/libCB.so|7bfbd1a82ae4ed4e5193b9779859b9182e9af821
+# Graphics - from LA.UM.7.5.r1-03700-8x96.0
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so
+vendor/lib64/egl/libQTapGLES.so
+vendor/lib64/egl/libq3dtools_adreno.so
+vendor/lib64/hw/vulkan.msm8953.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libCB.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libRSDriver_adreno.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libbccQTI.so
+vendor/lib64/libc2d30_bltlib.so
+vendor/lib64/libgsl.so
+vendor/lib64/libhdr_tm.so
+vendor/lib64/libllvm-glnext.so
+vendor/lib64/libllvm-qcom.so
+vendor/lib64/libmm-hdcpmgr.so
+vendor/lib64/librs_adreno.so
+vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libgpustats.so|73df05fdbd9490d35721b5c928ad6634a6b86a65
-vendor/lib64/libgsl.so|1c38dbcb7c28d5c2f5e111a91649e6a8abbd33b0
-vendor/lib64/libllvm-glnext.so|2b7179ead3d4c378cad01ac1170bbb885aad5fa3
-vendor/lib64/libllvm-qcom.so|1690a094879cba171e6be5a4bdd778d462bd2bc0
-vendor/lib64/libllvm-qgl.so|b1f1954d20f0c609c6edee0ced511c22430f202f
-vendor/lib64/libOpenCL.so|eae487ec35aa44b075ebbfc5b306387ca55f01bb
-vendor/lib64/librs_adreno_sha1.so|546b2978f60f553425f18270571b3dbd71dfef98
-vendor/lib64/librs_adreno.so|25a9a431fb34c32344f1b706224b46747667e130
-vendor/lib64/libRSDriver_adreno.so|ce053ca364d1021fc91002368f73c726cc912575
 
 # Ipacm
 vendor/bin/ipacm-diag

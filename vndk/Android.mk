@@ -50,8 +50,6 @@ EXTRA_VENDOR_LIBRARIES := \
     android.hidl.manager@1.0 \
     libaudioroute \
     libbinder \
-    libc \
-    libc++ \
     libdisplayconfig \
     libdrm \
     libcutils \
@@ -117,7 +115,7 @@ $(foreach lib,$(VNDK_SP_LIBRARIES),\
 $(foreach lib,$(VNDK_SP_EXT_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-sp-ext-gen,vndk-sp,true)))
 $(foreach lib,$(EXTRA_VENDOR_LIBRARIES),\
-    $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,vndk-sp-28,true)))
+    $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,,true)))
 
 
 #-------------------------------------------------------------------------------

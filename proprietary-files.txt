@@ -45,12 +45,12 @@ vendor/firmware/cpp_firmware_v1_10_0.fw
 -framework/com.qti.snapdragon.sdk.display.jar
 -vendor/app/colorservice/colorservice.apk
 etc/permissions/com.qti.snapdragon.sdk.display.xml
-vendor/lib/libscalar.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
-vendor/lib/libtinyxml2_1.so
+vendor/lib/libscalar.so|cad128a6e71195b4ad38494bc0382bf80e1fb0b2
+vendor/lib/libsdm-color.so|b13ab5f965f5bb8f40207879415cb1adbb55da42
+vendor/lib/libsdm-diag.so|e2e3a0fba39190c58bafa0568e8cd51b391b71b6
+-vendor/lib/libsdm-disp-vndapis.so|6c4233ea3676643bc9658c25cfad7edd45c49362
+vendor/lib/libsdmextension.so|a8659e7e0df5f1e20266ede1331da0660e0fe260
+vendor/lib/libtinyxml2_1.so|3882fddae942997be6ad6af789cf209fa45e61b3
 vendor/lib/vendor.display.color@1.0.so
 vendor/lib/vendor.display.postproc@1.0.so
 
@@ -142,29 +142,30 @@ vendor/lib/vendor.qti.gnss@2.0.so
 vendor/lib/vendor.qti.gnss@2.1.so
 
 # Graphics - from addison OPNS27.76-12-22-9
-vendor/lib/egl/eglSubDriverAndroid.so|b804817e616d88693ca1049adc7bff7e6c96fded
-vendor/lib/egl/libEGL_adreno.so|8b38ac69411ffde3d9cc1141966a5e7500e331a5
-vendor/lib/egl/libGLESv1_CM_adreno.so|da5847883a6775773aea369895a7de0b131f92c0
-vendor/lib/egl/libGLESv2_adreno.so|5e09bb3b00c690b2b6acea7dab63373fe965dfff
-vendor/lib/egl/libq3dtools_adreno.so|183dd67f1a9de33b1b4279660e1f63ceffe16890
-vendor/lib/egl/libq3dtools_esx.so|e9404727c72b560114b2c9628f69d08ca14328f6
-vendor/lib/egl/libQTapGLES.so|f7906adba14c5d69093df3aff74c9e02e967d471
-vendor/lib/hw/vulkan.msm8953.so|58d03a5762c0f562c17af93ecd1534ba08201fcf
-vendor/lib/libadreno_utils.so|a9d404faae1dac4809289884dd0871f717f9de61
-vendor/lib/libbccQTI.so|a4e7fdc13f25f519810e757ed88b84ba36ea1001
-vendor/lib/libC2D2.so|9953e8024ae8844945c7b4e3fd6554e7ec5ebca7
-vendor/lib/libc2d30-a5xx.so|4ba1c7c6abf6fb3f52a6b3e8f7f5dbbf6a036aa1
-vendor/lib/libc2d30_bltlib.so|5004a11e294b45a55c54d37a9e753a623e124412
-vendor/lib/libCB.so|255cc7536bdeebb54c420659692129738a431e65
+lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
+lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libQTapGLES.so
+vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/hw/vulkan.msm8953.so
+vendor/lib/libC2D2.so
+vendor/lib/libCB.so
+vendor/lib/libOpenCL.so
+vendor/lib/libRSDriver_adreno.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libbccQTI.so
+vendor/lib/libc2d30_bltlib.so
+vendor/lib/libgsl.so
+vendor/lib/libhdr_tm.so
+vendor/lib/libllvm-glnext.so
+vendor/lib/libllvm-qcom.so
+vendor/lib/libmm-hdcpmgr.so
+vendor/lib/librs_adreno.so
+vendor/lib/librs_adreno_sha1.so
 vendor/lib/libgpustats.so|35f7f116e4efbcc0de91a609b3e8d58bec28eee6
-vendor/lib/libgsl.so|3dd8c6d89064f09df99e60d8a0180f7cc9eac82a
-vendor/lib/libllvm-glnext.so|3dc9823e077cddeae0691a7ce7c02f4e2e4e5203
-vendor/lib/libllvm-qcom.so|23221bf3da09dda726f1ba4d35298c50014a06e1
-vendor/lib/libllvm-qgl.so|cb85c0ffabb592ff7e59484659b8178bf42ac81c
-vendor/lib/libOpenCL.so|0d244cd1abbbc176967b465e17c6e300e402ca57
-vendor/lib/librs_adreno_sha1.so|4979e97d95d28745cb14a0420d09ebf6280efa91
-vendor/lib/librs_adreno.so|efa004af0bf547cf443f8cbb4a132aafb7678dba
-vendor/lib/libRSDriver_adreno.so|1d074f4a39a2b116d492df4c954bde6a3167d3bb
 
 # Graphics firmware - from addison OPNS27.76-12-22-9
 vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
