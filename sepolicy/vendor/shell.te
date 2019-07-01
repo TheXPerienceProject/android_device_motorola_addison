@@ -1,6 +1,9 @@
 #allow lshal to read android.hidl.base@1.0::IBase/mods_camera/0 does not exist, or no permission to connect.
 allow shell hal_camera_hwservice:hwservice_manager find;
 
+#dmesg
+allow shell kernel:system syslog_read;
+
 allow shell sysfs:file getattr;
 allow shell sysfs:lnk_file getattr;
 allow shell sysfs_greybus:dir { open read search };
