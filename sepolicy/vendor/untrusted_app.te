@@ -2,7 +2,6 @@ allow untrusted_app sysfs_zram:dir search;
 allow untrusted_app sysfs_zram:file { getattr open read };
 allow untrusted_app proc_iomem:file getattr;
 allow untrusted_app proc_sysrq:file getattr;
-allow untrusted_app sysfs:file { getattr open read };
 allow untrusted_app rootfs:dir read;
 allow untrusted_app self:udp_socket ioctl;
 allow untrusted_app unlabeled:dir rw_dir_perms;
@@ -12,11 +11,6 @@ allow untrusted_app sysfs_usb_supply:dir search;
 allow untrusted_app sysfs_usb_supply:file { open getattr read };
 allow untrusted_app storage_stub_file:dir getattr;
 allow untrusted_app fsg_file:dir read;
-allow untrusted_app thermal-engine_exec:file x_file_perms;
-<<<<<<< HEAD
-=======
-allow untrusted_app theme_data_file:file { read };
->>>>>>> 425cdfd... addison: fix WFD add missing libs builded from OSS
 allow untrusted_app vendor_firmware_file:dir getattr;
 allow untrusted_app vendor_file:file getattr;
 allow untrusted_app sysfs_msm_perf:dir search;

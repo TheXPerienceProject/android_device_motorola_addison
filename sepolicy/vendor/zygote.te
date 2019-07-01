@@ -1,5 +1,4 @@
 allow zygote self:capability sys_nice;
-allow zygote device:file open;
 allow zygote init:unix_stream_socket { getattr listen };
 allow zygote proc_cmdline:file r_file_perms;
 allow zygote vendor_file:file getattr;

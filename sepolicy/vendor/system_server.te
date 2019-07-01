@@ -5,18 +5,8 @@ allow system_server socket_device:sock_file write;
 allow system_server sysfs_sensors:file write;
 allow system_server default_android_service:service_manager find;
 allow system_server kernel:process setsched;
-#allow system_server persist_file:dir { read write };
 allow system_server rild:binder transfer;
-<<<<<<< HEAD
-=======
-# allow system_server rild:unix_dgram_socket sendto;
-#allow system_server sysfs_mods_camd:dir rw_dir_perms;
-#allow system_server sysfs_mods_camd:file rw_file_perms;
->>>>>>> 3c34da1... addison: sepolicy updates and cleanups
 allow system_server unlabeled:file unlink;
-
-allow system_server display_vendor_data_file:dir rw_dir_perms;
-allow system_server display_vendor_data_file:file rw_file_perms;
 
 allow system_server init:unix_stream_socket { read write };
 
@@ -36,11 +26,7 @@ allow system_server vendor_camera_prop:file { open read };
 #"/sys/devices/soc/qpnp-smbcharger-17/power_supply/battery/charge_rate"
 allow system_server sysfs_battery_supply:file { open getattr read };
 
-#sys/devices/soc/qpnp-rtc-8/rtc/rtc0/hctosys
-allow system_server sysfs:file { read open getattr };
-
 allow system_server hal_motorola_health_hwservice:hwservice_manager find;
-allow system_server default_android_hwservice:hwservice_manager find;
 
 # allow system_server to access IOP HAL service
 hal_client_domain(system_server, hal_iop)

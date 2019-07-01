@@ -1,20 +1,14 @@
 allow hal_health_default sysfs:file r_file_perms;
 allow hal_health_default sysfs_batteryinfo:file rw_file_perms;
-allow hal_health_default mnt_vendor_file:dir search;
+allow hal_health_default mnt_vendor_file:dir { r_file_perms search };
 allow hal_health_default persist_battery_file:file create_file_perms;
 allow hal_health_default persist_battery_file:dir rw_dir_perms;
 allow hal_health_default persist_file:dir search;
 allow hal_health_default sysfs_msm_subsys:file { write };
-allow hal_health_default sysfs_batteryinfo:file rw_file_perms;
-<<<<<<< HEAD
-=======
-allow hal_health_default sysfs_greybus:dir search;
-allow hal_health_default sysfs_greybus:file rw_file_perms;
->>>>>>> 3c34da1... addison: sepolicy updates and cleanups
 allow hal_health_default sysfs_battery_supply:file { read open getattr };
 allow hal_health_default sysfs:file rw_file_perms;
 allow hal_health_default persist_file:file rw_file_perms;
-allow hal_health_default default_android_hwservice:hwservice_manager { add find };
+allow hal_health_default hal_motorola_health_hwservice:hwservice_manager { add find };
 allow hal_health_default unlabeled:file r_file_perms;
 
 r_dir_file(hal_health_default, sysfs_batteryinfo)

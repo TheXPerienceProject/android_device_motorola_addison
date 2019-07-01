@@ -1,3 +1,0 @@
-#path="/sys/kernel/debug/kgsl/proc/28413/mem"
-allow hal_memtrack_default debugfs:file { read open getattr };
-

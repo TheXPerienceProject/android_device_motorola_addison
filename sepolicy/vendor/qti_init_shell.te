@@ -1,4 +1,3 @@
 allow qti_init_shell proc_kernel_sched:file { open write };
-allow qti_init_shell sysfs_devices_system_cpu:dir write;
 
 set_prop(qti_init_shell, vendor_default_prop);

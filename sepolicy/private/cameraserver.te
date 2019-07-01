@@ -1,2 +1,1 @@
 allow cameraserver rootfs:lnk_file getattr;
-allow cameraserver mods_service:service_manager find;

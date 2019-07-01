@@ -23,7 +23,6 @@ allow init modem_efs_partition_device:blk_file write;
 allow init netd:unix_stream_socket connectto;
 allow init netd_socket:sock_file write;
 allow init platform_app:binder { call transfer };
-
 allow init property_socket:sock_file write;
 allow init qdsp_device:chr_file ioctl;
 allow init rmnet_device:chr_file write;
@@ -45,14 +44,10 @@ allow init sysfs_batteryinfo:file r_file_perms;
 # comm="health@2.0-serv" path="/sys/devices/soc/soc:qcom,bcl/power_supply/bcl/type"
 allow init sysfs_usb_supply:file r_file_perms;
 
-#/sys/devices/platform/mods_ap/greybus1/1-3/1-3.1/power_supply/gb_battery/typ
-allow init sysfs_greybus:file r_file_perms;
-
 allow init tee_device:chr_file rw_file_perms;
 allow init thermal_device:chr_file ioctl;
-allow init video_device:chr_file { ioctl write };
+allow init video_device:chr_file { ioctl write read open };
 allow init wcnss_device:chr_file write;
-allow init sysfs_devices_system_cpu:file write;
 allow init system_server:fd use;
 allow init system_server:binder { call transfer };
 allow init system_server:unix_stream_socket { read write };
@@ -60,16 +55,10 @@ allow init ion_device:chr_file { ioctl read write };
 allow init rpmb_device:blk_file write;
 allow init uio_device:chr_file write;
 
-allow init sysfs:dir write;
-allow init sysfs:file setattr;
-
 #noatsecure sh!ts
 allow init hal_wifi_supplicant_default:process noatsecure;
 
 # required for alot of things Dx
 allow init { domain -lmkd -crash_dump }:process noatsecure;
-
-#Swappines
-allow init proc:file write;
 
 binder_use(init)
