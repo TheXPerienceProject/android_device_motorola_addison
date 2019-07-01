@@ -20,13 +20,13 @@
 
 #Binaries for mods
 /(vendor|system/vendor)/bin/init\.gbmods\.sh 				                            u:object_r:gbmodinstall_exec:s0
-/system/bin/batt_health                                    				 				u:object_r:batt_health_exec:s0
 
 #binder to fix camera daemon
 /dev/binder(/.*)?                                                                       u:object_r:binder_device:s0
 
 # Motorola services
 /data/chargeonlymode(/.*)?                              								u:object_r:chargeonly_data_file:s0
+/data/vendor/chargeonlymode(/.*)?                                                                                       u:object_r:chargeonly_data_file:s0
 
 /firmware(/.*)?         u:object_r:firmware_file:s0
 

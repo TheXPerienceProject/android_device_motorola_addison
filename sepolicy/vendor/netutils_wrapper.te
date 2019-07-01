@@ -1,3 +1,2 @@
-allow netutils_wrapper netmgrd:socket rw_socket_perms;
+allow netutils_wrapper netmgrd:socket { read getattr write setattr lock append bind getopt setopt shutdown };
 allow netutils_wrapper vendor_file:file getattr;
-allow netutils_wrapper netutils_wrapper:capability sys_admin;

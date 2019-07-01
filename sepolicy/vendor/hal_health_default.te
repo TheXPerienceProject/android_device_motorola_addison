@@ -11,7 +11,6 @@ allow hal_health_default sysfs_greybus:file rw_file_perms;
 allow hal_health_default sysfs_battery_supply:file { read open getattr };
 allow hal_health_default sysfs:file rw_file_perms;
 allow hal_health_default persist_file:file rw_file_perms;
-allow hal_health_default default_android_hwservice:hwservice_manager { add find };
 allow hal_health_default hal_motorola_health_hwservice:hwservice_manager { add find };
 allow hal_health_default unlabeled:file r_file_perms;
 
