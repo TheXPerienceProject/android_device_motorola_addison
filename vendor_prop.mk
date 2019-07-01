@@ -8,7 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 qemu.hw.mainkeys=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.version.qcom=LA.UM.6.6.r1-04400-89xx.0
+    ro.build.version.qcom=LA.UM.7.6.2.r1-09100-89xx.0
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -72,7 +72,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.dcvs.extra-buff-count=2 \
     vidc.enc.disable_bframes=1 \
     vidc.enc.disable_pframes=1 \
-    persist.camera.HAL3.enabled=1
+    persist.camera.HAL3.enabled=0
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
