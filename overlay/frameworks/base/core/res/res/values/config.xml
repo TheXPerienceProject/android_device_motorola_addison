@@ -441,6 +441,8 @@
         <item>"/system/framework/boot-core-libart.vdex"</item>
         <item>"/system/framework/boot-QPerformance.vdex"</item>
         <item>"/system/framework/boot-Uxformance.vdex"</item>
+        <item>"/system/framework/arm64/boot-QPerformance.oat"</item>
+        <item>"/system/framework/arm64/boot-UxPerformance.oat"</item>
     </string-array>
 
     <!-- Should the pinner service pin the Home application? -->
