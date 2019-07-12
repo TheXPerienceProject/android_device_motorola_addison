@@ -20,8 +20,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.support.v14.preference.PreferenceFragment;
-import android.support.v7.preference.PreferenceCategory;
+
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceFragment;
 
 import com.android.internal.hardware.AmbientDisplayConfiguration;
 
