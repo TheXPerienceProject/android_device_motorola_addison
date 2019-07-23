@@ -59,7 +59,7 @@ TARGET_OTA_ASSERT_DEVICE := addison,addison_retail
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 vmalloc=350M loop.max_part=7
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_KERNEL_IMAGE_NAME := Image.lz4
 BOARD_KERNEL_LZ4C_DT := true
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -67,7 +67,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := addison_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
-LZMA_RAMDISK_TARGETS := recovery
+LZMA_RAMDISK_TARGETS := recovery,boot
 
 # Audio
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
@@ -239,8 +239,8 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_SHIPPING_API_LEVEL := 25 # Shipped with M
 PRODUCT_VENDOR_MOVE_ENABLED := true
-#BOARD_VNDK_VERSION := current
-DEVICE_DEFINES_OWN_VNDK := true
+BOARD_VNDK_VERSION := current
+#DEVICE_DEFINES_OWN_VNDK := true
 
 #Thermal
 DEVICE_PROVIDES_THERMAL := true
