@@ -206,8 +206,8 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0.vendor \
     android.hidl.manager@1.1.vendor \
-    android.hidl.memory@1.1.vendor \
-    android.hidl.allocator@1.1.vendor \
+    android.hidl.memory@1.0.vendor \
+    android.hidl.allocator@1.0.vendor \
     android.hidl.manager-V1.0-java
 
 #Health
