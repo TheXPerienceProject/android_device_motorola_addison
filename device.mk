@@ -161,7 +161,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator@1.0 \
     vendor.qti.hardware.display.composer@1.0 \
     vendor.display.config@1.4 \
-    vendor.qti.hardware.display.mapper@1.0
+    vendor.display.config@1.7.vendor \
+    vendor.qti.hardware.display.mapper@1.0 \
+    libvulkan
 
 # Display Calibration
 PRODUCT_COPY_FILES += \
@@ -204,6 +206,8 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0.vendor \
     android.hidl.manager@1.1.vendor \
+    android.hidl.memory@1.1.vendor \
+    android.hidl.allocator@1.1.vendor \
     android.hidl.manager-V1.0-java
 
 #Health
@@ -429,9 +433,6 @@ PRODUCT_PACKAGES += \
 # Vibrator HAL
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service.addison
-
-PRODUCT_PACKAGES += \
-    vndk-sp
 
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
