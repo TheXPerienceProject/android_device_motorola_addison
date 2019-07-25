@@ -27,6 +27,8 @@
 
 # Motorola services
 /data/chargeonlymode(/.*)?                              								u:object_r:chargeonly_data_file:s0
+/data/vendor/chargeonlymode(/.*)?                              								u:object_r:chargeonly_data_file:s0
+/data/vendor/chargeonly(/.*)?                              								u:object_r:chargeonly_data_file:s0
 
 /firmware(/.*)?         u:object_r:firmware_file:s0
 
@@ -143,3 +145,7 @@ system/etc/firmware/music_detector.sound_model                                  
 /(vendor|system/vendor)/bin/perfd                                   u:object_r:perfd_exec:s0
 /data/misc/perfd(/.*)?                                              u:object_r:perfd_data_file:s0
 /data/system/perfd(/.*)?                                            u:object_r:perfd_data_file:s0
+
+# Sepolicy for  camera Hack
+/vendor/lib/xpe/libbinder\.so                                                             u:object_r:system_file:s0
+/vendor/lib/xpe/libcutils\.so                                                             u:object_r:system_file:s0

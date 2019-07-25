@@ -181,6 +181,10 @@ on late-fs
     write /dev/cpuset/application/background/cpus 0-3
     write /dev/cpuset/application/cpus 0-3
 
+    #Hack for camera blobs (Oreo blobs)
+    mount none /vendor/lib/xpe/libbinder.so /system/lib/vndk-28/libbinder.so bind
+    mount none /vendor/lib/xpe/libcutils.so /system/lib/vndk-sp-28/libcutils.so bind
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /persist/data/sfs 0700 system system
