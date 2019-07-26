@@ -25,6 +25,10 @@
 #binder to fix camera daemon
 /dev/binder(/.*)?                                                                       u:object_r:binder_device:s0
 
+# LineageActions
+/sys/homebutton/enable                                    u:object_r:sysfs_homebutton:s0
+/sys/homebutton/enable_wakeup                             u:object_r:sysfs_homebutton:s0
+
 # Motorola services
 /data/chargeonlymode(/.*)?                              								u:object_r:chargeonly_data_file:s0
 /data/vendor/chargeonlymode(/.*)?                              								u:object_r:chargeonly_data_file:s0
@@ -103,6 +107,7 @@
 
 # Partitions
 /dev/block/platform/soc/7824900.sdhci/by-name/frp                                       u:object_r:frp_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/oem                                       u:object_r:block_device:s0
 
 # data
 /data/\.fps(/.*)?                                                                       u:object_r:fingerprintd_data_file:s0
