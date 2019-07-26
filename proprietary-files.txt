@@ -483,5 +483,5 @@ vendor/lib/libwfdmmservice.so
 vendor/lib/libwfdmodulehdcpsession.so
 
 #Hack for camera
-vendor/lib/xpe/libbinder.so|026bf54990337fe48079e11a0169a6c4
-vendor/lib/xpe/libcutils.so|39e28f61f57b9e6b27cb75cf0e70c7ff
+vendor/lib/vndk/libbinder.so|026bf54990337fe48079e11a0169a6c4
+vendor/lib/vndk-sp/libcutils.so|39e28f61f57b9e6b27cb75cf0e70c7ff
