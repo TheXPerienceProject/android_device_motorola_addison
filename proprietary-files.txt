@@ -234,6 +234,10 @@ vendor/lib/libqti-iopd-client.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 
+# Qualcomm AT from deen PPKS29.68-16-34-5
+etc/perf/whitelistedapps.xml
+lib/libqti-at.so
+
 # QMI
 etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
