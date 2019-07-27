@@ -154,12 +154,25 @@ vendor/lib64/libOmxWmaDec.so
 # Peripheral manager - from tissot - OPR1.170623.026
 vendor/lib64/libperipheral_client.so|d6db5efd4667ae3e831403f4e313fa38a5ae7bc8
 
-# Perf - from op3 - PKQ1.181203.001
+# Perf - deen PPKS29.68-16-34-5
+lib64/libqti_performance.so
+lib64/libqti-perfd-client_system.so
+lib64/vendor.qti.hardware.perf@1.0.so
 vendor/lib64/libperfgluelayer.so|627a324616de86ba90889a7c8dd7a05c46a30aaa
 vendor/lib64/libqti-perfd.so|68c995a76cad4c8b0af1c4743a5157b70dad1dd1
 vendor/lib64/libqti-perfd-client.so|1e84aa49a8cff0f69f0261c69dd8843534efd79e
 vendor/lib64/libqti-util.so|0c34c7cbb07197841e9f097925fe961f3226e621
 vendor/lib64/vendor.qti.hardware.perf@1.0.so|f3d180595bdfeac68d13e13ecf704f892e7a52a5
+
+#IOP deen PPKS29.68-16-34-5
+lib64/libqti-util_system.so
+lib64/libqti-iopd-client_system.so
+lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.iop@2.0.so
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib64/libqti-iopd-client.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so
+vendor/lib64/vendor.qti.hardware.iop@1.0.so
 
 # Qualcomm framework
 lib64/libdiag_system.so

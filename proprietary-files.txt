@@ -197,12 +197,16 @@ vendor/bin/pm-proxy|e12c72d05c764a2c45b2a5d4d1886519cba3fb16
 vendor/bin/pm-service|83fac998bf8f651f2f0cd2385f6e1b7c3eefe5ea
 vendor/lib/libperipheral_client.so|0dabab6dc68748c2b0d3a97a5708ee555b3d5650
 
-# Perf - from op3 - PKQ1.181203.001 and deen PPK29.68-16-21
+# Perf - from deen PPKS29.68-16-34-5
+lib/libqti_performance.so
+lib/vendor.qti.hardware.perf@1.0.so
+lib/libqti-perfd-client_system.so
 vendor/bin/energy-awareness
 vendor/bin/msm_irqbalance
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
 vendor/etc/msm_irqbalance.conf
+vendor/etc/msm_irqbalance_little_big.conf
 vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/perf-profile0.conf
 vendor/etc/perf/perf-profile1.conf
@@ -219,6 +223,16 @@ vendor/lib/libqti-perfd.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-util.so
 vendor/lib/vendor.qti.hardware.perf@1.0.so
+
+# IOP deen PPKS29.68-16-34-5
+lib/libqti-iopd-client_system.so
+lib/libqti-util_system.so
+lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.iop@2.0.so
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib/libqti-iopd-client.so
+vendor/lib/vendor.qti.hardware.iop@2.0.so
+vendor/lib/vendor.qti.hardware.iop@1.0.so
 
 # QMI
 etc/permissions/qti_libpermissions.xml
