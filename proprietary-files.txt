@@ -75,10 +75,10 @@ vendor/lib/librpmb.so|f2a5b3ffb4ce0b3e77a6da546b8c0397df64f542
 vendor/lib/libssd.so|7bc0ab9363ef968c023c2929666e77475e0a4631
 vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so|5f4ddfed113aad160f1d49e996d49332faa78abb
 
-# Widevine - DRM
+# Widevine - DRM from deen PPKS29.68-16-34-5
 # vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 # vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/mediadrm/libwvdrmengine.so|7ed3122542a6bc87e9c56bae1760b69
 
 # Fingerprint - from addison OPNS27.76-12-22-9
 lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so|9cf09e5093f60bb1cdc5aabbc94434e8ac415489
