@@ -337,10 +337,6 @@ PRODUCT_PACKAGES += \
 
 # Perf configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/gamedwhitelist.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/gamedwhitelist.xml \
-    $(LOCAL_PATH)/configs/perf/gamedwhitelist.xml:system/etc/gamedwhitelist.xml \
-    $(LOCAL_PATH)/configs/perf/whitelistedapps.xml:system/etc/perf/whitelistedapps.xml \
-    $(LOCAL_PATH)/configs/perf/whitelistedapps.xml:system/etc/whitelistedapps.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
 
