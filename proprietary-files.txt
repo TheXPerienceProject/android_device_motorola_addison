@@ -169,15 +169,15 @@ vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libgpustats.so|35f7f116e4efbcc0de91a609b3e8d58bec28eee6
 
-# Graphics firmware - from addison OPNS27.76-12-22-9
-vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
-vendor/firmware/a530_pfp.fw|448f9db8271fefb08348cbc50409e8e95bd93f78
-vendor/firmware/a530_pm4.fw|5741a28752355b478d455635bab008028ff7e1c6
-vendor/firmware/a530v1_pfp.fw|0864291b99bed712edfcffa94be7b4595d3af306
-vendor/firmware/a530v1_pm4.fw|6a82a4fb4035fa2a933c1a26b5535d7ec7c0ac4c
-vendor/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
-vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
-vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
+# Graphics firmware - from addison OPNS27.76-12-22-9 and deen PPKS29.68-16-34-5
+vendor/firmware/a530_gpmu.fw2
+vendor/firmware/a530_pfp.fw|b3408df164884705f3874c7e57954917
+vendor/firmware/a530_pm4.fw|68d56e5b64604195d68ae26108e37da8
+vendor/firmware/a530v1_pfp.fw
+vendor/firmware/a530v1_pm4.fw
+vendor/firmware/a530v2_seq.fw2
+vendor/firmware/a530v3_gpmu.fw2
+vendor/firmware/a530v3_seq.fw2
 
 # Media
 vendor/lib/libAlacSwDec.so
