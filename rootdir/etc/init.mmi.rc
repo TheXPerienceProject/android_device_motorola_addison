@@ -281,7 +281,7 @@ service vendor.mmi-boot-sh /vendor/bin/init.mmi.boot.sh
 service vendor.mmi-laser-sh /vendor/bin/init.mmi.laser.sh
     class core
     user root
-    group root oem_5004
+    group root
     oneshot
 
 # Start Sensor daemon
