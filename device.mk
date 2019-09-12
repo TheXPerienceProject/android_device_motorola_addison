@@ -271,12 +271,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
 #MODS
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libiio \
     ModPermsFix
 
 #Moto mods permissions
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mods/com.motorola.aov.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.aov.xml \
     $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.modservice.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-com.motorola.modservice.xml \
     $(LOCAL_PATH)/configs/mods/privapp-permissions-com.motorola.projectormod.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-com.motorola.projectormod.xml \
@@ -367,7 +367,7 @@ PRODUCT_PACKAGES += \
     init.performance_profiles.rc
 
 #Ramdisk motomods
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     init.gbmods.sh \
     init.mods.rc
 
@@ -405,7 +405,7 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     services-ext
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # TextClassifier
