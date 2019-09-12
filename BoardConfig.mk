@@ -208,7 +208,7 @@ DISABLE_IPA_FROM_VENDOR_SOURCE := true
 LOCAL_CFLAGS += -DOEM_HOOK_DISABLED
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := dsp firmware persist misc
+BOARD_ROOT_EXTRA_FOLDERS := firmware persist misc
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 
 #Runtime Resource Overlays
