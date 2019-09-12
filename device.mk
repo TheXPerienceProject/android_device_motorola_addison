@@ -102,7 +102,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@5.0 \
     android.hardware.audio.effect@5.0-impl \
     audiod \
-    audio_amplifier.msm8953 \
     audio.a2dp.default \
     audio.primary.msm8953 \
     audio.r_submix.default \
@@ -227,7 +226,7 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager
 
 # IPA Manager
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
     libipanat \
@@ -253,7 +252,7 @@ PRODUCT_PACKAGES += \
     lights.msm8953
 
 # LineageActions
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     LineageActions
 
 # Media
@@ -299,7 +298,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.1
 
 # NFC
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
 PRODUCT_COPY_FILES += \
@@ -424,8 +423,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
-    ThermalController
+    android.hardware.thermal@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
