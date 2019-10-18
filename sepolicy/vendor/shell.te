@@ -6,9 +6,6 @@ allow shell kernel:system syslog_read;
 
 allow shell sysfs:file getattr;
 allow shell sysfs:lnk_file getattr;
-allow shell sysfs_greybus:dir { open read search };
-allow shell sysfs_greybus:file getattr;
-allow shell sysfs_greybus:lnk_file { getattr read };
 allow shell thermal-engine_exec:file r_file_perms;
 
 # for libjustshoot

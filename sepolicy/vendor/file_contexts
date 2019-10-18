@@ -11,7 +11,7 @@
 /(vendor|system/vendor)/bin/init\.qcom\.ril\.sh                                         u:object_r:qcom_ril_exec:s0
 /(vendor|system/vendor)/bin/wlan_carrier_bin\.sh                                        u:object_r:init_wifi_exec:s0
 /(vendor|system/vendor)/bin/motosh                                                      u:object_r:sensor_hub_exec:s0
-/(vendor|system/vendor)/bin/mods_camd                    								u:object_r:mods_camd_exec:s0
+
 /sbin/charge_only_mode										                        	u:object_r:charge_only_exec:s0
 /(vendor|system/vendor)/lib(64)?/libchromatix.*											u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/bin/hw/motorola\.hardware\.health@1\.0-service		            u:object_r:hal_health_default_exec:s0
@@ -19,7 +19,6 @@
 /system/bin/move_wifi_data\.sh                                                          u:object_r:qti_init_shell_exec:s0
 
 #Binaries for mods
-/(vendor|system/vendor)/bin/init\.gbmods\.sh 				                            u:object_r:gbmodinstall_exec:s0
 /system/bin/batt_health                                    				 				u:object_r:batt_health_exec:s0
 
 #binder to fix camera daemon
@@ -38,59 +37,6 @@
 
 /persist/battery(/.*)?                                   u:object_r:persist_battery_file:s0
 
-# Greybus (Mods)
-/sys/bus/greybus(/.*)?                     				                                u:object_r:sysfs_greybus:s0
-/sys/class/i2c-adapter/i2c-2/2-002d/enable                                              u:object_r:sysfs_greybus:s0
-/sys/class/power_supply/usb/usb_priority                     							u:object_r:sysfs_greybus:s0
-/sys/devices/soc/soc:muc_svc@0(/.*)?                     								u:object_r:sysfs_greybus:s0
-/sys/devices/soc/soc:muc_svc@0/mods_interfaces(/.*)?     								u:object_r:sysfs_greybus:s0
-/sys/devices/soc/soc:muc_svc@0/mods_interfaces/3/hotplug 								u:object_r:sysfs_greybus:s0
-/sys/devices/platform/mods_ap(/.*)?                    									u:object_r:sysfs_greybus:s0
-/sys/devices/soc/0\.apba_ctrl(/.*)?                                                     u:object_r:sysfs_greybus:s0
-/sys/module/qpnp_smbcharger_mmi/parameters(/.*)?                     					u:object_r:sysfs_greybus:s0
-/sys/devices/platform/mods_codec\.0(/.*)?                    							u:object_r:sysfs_greybus:s0
-/sys/devices/virtual/video4linux                     									u:object_r:sysfs_greybus:s0
-/sys/class/vendor/mod0(/.*)?                               								u:object_r:sysfs_greybus:s0
-/sys/devices/soc/soc:muc(/.*)?                               							u:object_r:sysfs_greybus:s0
-/sys/devices/soc/6a00000.*/power_supply/usb/usb_priority                                u:object_r:sysfs_greybus:s0
-/sys/devices/platform/mods_ap/greybus1/1-3/1-3.1/power_supply/gb_ptp(/.*)?              u:object_r:sysfs_greybus:s0
-/sys/devices/platform/mods_ap/greybus1/1-3/1-3.1/power_supply/gb_battery(/.*)?          u:object_r:sysfs_greybus:s0
-/sys/devices/platform/mods_ap/greybus1/1-3/1-3.1/power_supply/gb_battery/type           u:object_r:sysfs_greybus:s0
-/sys/devices/platform/mods_ap/greybus1/1-3/1-3.1/state                                  u:object_r:sysfs_greybus:s0
-/sys/devices/platform/mods_ap/greybus1/1-3/1-3.2/state                                  u:object_r:sysfs_greybus:s0
-/sys/devices/platform/mods_ap/greybus1/1-3(/.*)?                                        u:object_r:sysfs_greybus:s0
-/sys/class/power_supply/gb_ptp                                                          u:object_r:sysfs_greybus:s0
-/sys/devices/virtual/hwmon/hwmon41/subsystem(/.*)?                                      u:object_r:sysfs_greybus:s0
-/sys/devices/virtual/hwmon/hwmon41/subsystem                                            u:object_r:sysfs_greybus:s0
-/data/gbfirmware(/.*)?                               									u:object_r:gbfirmware_file:s0
-/dev/gbraw[0-9]*                               											u:object_r:greybus_raw_device:s0
-/sys/devices/soc/soc:mod_uart/uart_stats		                                        u:object_r:sysfs_greybus:s0
-/sys/devices/platform/soc/soc:mod_uart/uart_stats		                                u:object_r:sysfs_greybus:s0
-/dev/muc[0-9]*		                                                                    u:object_r:mod_service_device:s0
-
-/dev/mot_camera_ext[0-9]*                                   							u:object_r:mods_camd_device:s0
-/sys/devices/soc/(.+)hsusb(.+)/uevent                               					u:object_r:sysfs_mods_camd:s0
-/sys/devices/soc/(.+)ssusb/power_supply/usb/type                               			u:object_r:sysfs_mods_camd:s0
-/sys/devices/soc/(.+)ssusb/power_supply/usb/online                               		u:object_r:sysfs_mods_camd:s0
-/sys/devices/soc/(.+)fd/video4linux/video([0-9])+/name                               	u:object_r:sysfs_mods_camd:s0
-/sys/devices/soc/(.+)msm-cam/video4linux/video([0-9])+/name                             u:object_r:sysfs_mods_camd:s0
-/sys/devices/soc/(.+)cci/(.+)/video4linux/video([0-9])+/name                            u:object_r:sysfs_mods_camd:s0
-/sys/devices/soc/(.+)hsusb(.+)/video4linux/video([0-9])+/name                           u:object_r:sysfs_mods_camd:s0
-
-/sys/module/usb3813_hub/parameters/ignore_typec                               			u:object_r:sysfs_mods_camd:s0
-
-/dev/v4l2-hal-ctrl                               										u:object_r:video_device:s0
-/dev/v4l-subdev[0-9]*  u:object_r:video_device:s0
-
-/sys/devices/virtual/video4linux/mot_camera_ext([0-9])+/name   							u:object_r:sysfs_mods_camd:s0
-/sys/devices/virtual/video4linux/mot_camera_ext([0-9])+/uevent 							u:object_r:sysfs_greybus:s0
-/sys/devices/virtual/video4linux/mot_camera_ext([0-9])+/open_mode      					u:object_r:sysfs_v4l2_openmode:s0
-
-/sys/devices/virtual/video4linux/video([0-9])+/name                               		u:object_r:sysfs_mods_camd:s0
-/sys/devices/virtual/video4linux/video([0-9])+/uevent                               	u:object_r:sysfs_greybus:s0
-/sys/devices/virtual/video4linux/video([0-9])+/open_mode                                u:object_r:sysfs_v4l2_openmode:s0
-/sys/module/qpnp_smbcharger_mmi(/.*)?                               					u:object_r:sysfs_batt_mods:s0
-
 #Graphics & CPU
 /sys/devices/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model                          u:object_r:sysfs_kgsl:s0
 /sys/devices(/platform)?/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw(/.*)?				u:object_r:sysfs_devfreq:s0
@@ -101,9 +47,6 @@
 
 #lights
 /sys/devices/soc/leds-atc-20/leds/white/brightness                                      u:object_r:sysfs_leds:s0
-
-# NFC
-#/data/vendor/nfc(/.*)?                                                                  u:object_r:nfc_data_file:s0
 
 # Partitions
 /dev/block/platform/soc/7824900.sdhci/by-name/frp                                       u:object_r:frp_block_device:s0
@@ -139,17 +82,9 @@
 
 /(vendor|system/vendor)/usr/keylayout(/.*)?		u:object_r:vendor_keylayout_file:s0
 
-#misc
-system/etc/firmware/music_detector.sound_model                                          u:object_r:firmware_file:s0
-
 # CPU tunable for EAS
 /sys/devices/system/cpu/cpu[0-7]/cpufreq/schedutil(/.*)?            u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/system/cpu/cpu[0-7]/cpufreq/schedalessa(/.*)?            u:object_r:sysfs_devices_system_cpu:s0
-
-# perfd
-/(vendor|system/vendor)/bin/perfd                                   u:object_r:perfd_exec:s0
-/data/misc/perfd(/.*)?                                              u:object_r:perfd_data_file:s0
-/data/system/perfd(/.*)?                                            u:object_r:perfd_data_file:s0
 
 # Sepolicy for  camera Hack
 /vendor/lib/xpe/libbinder\.so                                                             u:object_r:system_file:s0

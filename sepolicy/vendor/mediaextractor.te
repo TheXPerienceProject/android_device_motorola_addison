@@ -1,3 +1,0 @@
-allow mediaextractor sdcardfs:file { getattr read };
-allow mediaextractor fuse:file { getattr read};
-allow mediaextractor vfat:file r_file_perms;

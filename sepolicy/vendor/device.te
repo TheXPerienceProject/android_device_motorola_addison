@@ -1,6 +1,1 @@
 type laser_device, dev_type;
-
-#mods
-type greybus_raw_device, dev_type, mlstrustedobject;
-type mods_camd_device, dev_type, mlstrustedobject;
-type mod_service_device, dev_type, mlstrustedobject;

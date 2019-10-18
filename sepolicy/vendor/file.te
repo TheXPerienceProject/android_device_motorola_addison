@@ -20,17 +20,9 @@ type sysfs_homebutton, fs_type, sysfs_type;
 type sysfs_mmi_fp, fs_type, sysfs_type;
 type sysfs_mmi_laser, fs_type, sysfs_type;
 type sysfs_mmi_touch, fs_type, sysfs_type;
-type sysfs_mods_camd, fs_type, sysfs_type;
 type sysfs_wcnsscore, fs_type, sysfs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_camera, sysfs_type, file_type;
-
-# Greybus
-type sysfs_greybus, fs_type, sysfs_type, mlstrustedobject;
-type sysfs_greybus_media, fs_type, sysfs_type, mlstrustedobject;
-type gbfirmware_file, file_type, data_file_type, core_data_file_type, mlstrustedobject;
-type sysfs_v4l2_openmode, fs_type, sysfs_type, mlstrustedobject;
-type sysfs_batt_mods, fs_type, sysfs_type, mlstrustedobject;
 
 type vendor_keylayout_file, file_type, vendor_file_type;
 

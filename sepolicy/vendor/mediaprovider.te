@@ -1,3 +1,0 @@
-allow mediaprovider unlabeled:dir rw_dir_perms;
-allow mediaprovider unlabeled:file rw_file_perms;
-allow mediaprovider unlabeled:filesystem getattr;

@@ -1,5 +1,0 @@
-# Allow module requests
-allow netd self:capability sys_module;
-allow netd vendor_file:file getattr;
-allow netd kernel:system module_request;
-allow netd dnsmasq:process noatsecure;

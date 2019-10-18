@@ -1,1 +1,0 @@
-allow fsck vendor_file:file getattr;

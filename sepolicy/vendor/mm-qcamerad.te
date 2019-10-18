@@ -14,8 +14,6 @@ allow mm-qcamerad sysfs_graphics:dir search;
 allow mm-qcamerad sysfs_graphics:file rw_file_perms;
 set_prop(mm-qcamerad, debug_prop);
 
-allow mm-qcamerad sysfs_mods_camd:file rw_file_perms;
-allow mm-qcamerad sysfs_mods_camd:dir rw_dir_perms;
 allow mm-qcamerad laser_device:chr_file { ioctl open read write };
 allow mm-qcamerad sysfs_leds:dir search;
 allow mm-qcamerad sysfs_leds:lnk_file r_file_perms;
