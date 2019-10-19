@@ -14,6 +14,13 @@ vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 
+# ANT+ - from LA.UM.7.5.r1-04000-8x96.0
+-lib/libantradio.so|4f03cc258ec1806ddb7100252e2b8e6433693027
+lib64/com.qualcomm.qti.ant@1.0.so|f764999a53054c78f9e8a6f1d1bfcad3d446fb02
+-lib64/libantradio.so|247bf6302abcbc55e0006aa7032097069a7a2f96
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|f764999a53054c78f9e8a6f1d1bfcad3d446fb02
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|8ce47bae3b903a56697c69b416927e569d7e7b80
+
 # Bluetooth
 lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so
@@ -24,7 +31,7 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Display (Sdm)- from deen PPK29.68-16-3 and LA.UM.7.5.r1-03700-8x96.0
+# Display (Sdm) - from deen PPK29.68-16-3 and LA.UM.7.5.r1-03700-8x96.0
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libscalar.so|490cc7447863b3279771ad99e92a5625525db055
