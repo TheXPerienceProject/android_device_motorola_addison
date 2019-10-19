@@ -15,8 +15,6 @@ allow untrusted_app_25 fingerprintd_data_file:dir getattr;
 allow untrusted_app_25 firmware_file:dir { open read };
 allow untrusted_app_25 firmware_file:file { getattr read };
 allow untrusted_app_25 firmware_file:lnk_file read;
-allow untrusted_app_25 gbfirmware_file:dir getattr;
-allow untrusted_app_25 gbmodinstall_exec:file { read open getattr };
 allow untrusted_app_25 hal_camera_default_exec:file getattr;
 allow untrusted_app_25 hwservice_contexts_file:file getattr;
 allow untrusted_app_25 init_exec:file getattr;

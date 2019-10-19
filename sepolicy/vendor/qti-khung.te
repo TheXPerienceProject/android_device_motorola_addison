@@ -1,1 +1,0 @@
-allow qti-khung vendor_file:file getattr;

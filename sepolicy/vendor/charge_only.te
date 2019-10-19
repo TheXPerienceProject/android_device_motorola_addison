@@ -29,7 +29,6 @@ allow charge_only system_data_file:dir { write add_name };
 
 allow charge_only sysfs_batteryinfo:file r_file_perms;
 
-allow charge_only sysfs_greybus:file { read open write };
 allow charge_only sysfs_leds:file { read open write };
 allow charge_only sysfs_usb:file write;
 allow charge_only sysfs_usb_supply:dir search;

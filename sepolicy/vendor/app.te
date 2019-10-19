@@ -1,6 +1,2 @@
 #iop
 allow appdomain vendor_iop_prop:file r_file_perms;
-
-# Allow appdomain to get vendor_camera_prop
-get_prop(appdomain, vendor_camera_prop)
-get_prop(system_app, vendor_camera_prop);

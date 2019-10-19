@@ -24,8 +24,6 @@ type sysfs_wcnsscore, fs_type, sysfs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_camera, sysfs_type, file_type;
 
-type vendor_keylayout_file, file_type, vendor_file_type;
-
 # Power
 type perfd_data_file, file_type, data_file_type, core_data_file_type;
 type proc_irq, fs_type, proc_type;
@@ -33,7 +31,7 @@ type proc_kernel_sched, fs_type, proc_type;
 type sysfs_power_management, sysfs_type, fs_type;
 
 #sensors
-#type sensors_data_file, file_type, data_file_type;
+type sensors_data_file, file_type, data_file_type;
 
 #Battery
 type persist_battery_file, file_type;
