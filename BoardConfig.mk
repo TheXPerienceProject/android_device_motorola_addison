@@ -22,6 +22,8 @@ BOARD_VENDOR := motorola-qcom
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+
 # AIDs and CAPS
 TARGET_FS_CONFIG_GEN := \
     $(DEVICE_PATH)/fs_config/mot_aids.txt \
@@ -54,6 +56,8 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
+
+BUILD_BROKEN_PHONY_TARGETS := true
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := addison,addison_retail
@@ -137,6 +141,8 @@ endif
 # PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 TARGET_FLATTEN_APEX := true
+
+BUILD_BROKEN_DUP_RULES := true
 
 # Display
 BOARD_USES_ADRENO := true
