@@ -337,7 +337,7 @@ PRODUCT_COPY_FILES += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
-     android.hardware.power@1.1-service-qti
+     android.hardware.power@1.2-service
 
 # Perf configuration
 PRODUCT_COPY_FILES += \
@@ -368,11 +368,6 @@ PRODUCT_PACKAGES += \
     init.xperience.postboot.sh \
     init.special_power.sh \
     init.performance_profiles.rc
-
-#Ramdisk motomods
-#PRODUCT_PACKAGES += \
-    init.gbmods.sh \
-    init.mods.rc
 
 # RCS
 PRODUCT_PACKAGES += \

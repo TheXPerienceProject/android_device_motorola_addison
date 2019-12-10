@@ -37,7 +37,6 @@ vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libscalar.so|490cc7447863b3279771ad99e92a5625525db055
 vendor/lib64/libsdm-color.so|9bb3f5147c277eae08c7f918e7de3bd2fccf1f74
 vendor/lib64/libsdm-diag.so|7ab5d2a980029ac9bd20fe68656823b21e483e11
--vendor/lib64/libsdm-disp-vndapis.so|6ae24866bbd413ed112778650c8fd7a2631cb1a9
 vendor/lib64/libsdmextension.so|e91aaf852df780e42bb083c3089f5b42c87c49f7
 vendor/lib64/libtinyxml2_1.so|b743b93bbb47bb2d80322fcfb985b7b8c696fa1b
 vendor/lib64/vendor.display.color@1.0.so
