@@ -211,6 +211,17 @@ vendor/firmware/libpn548ad_fw.so:vendor/lib/libpn548ad_fw.so
 # Sensors
 vendor/etc/firmware/sensorhubfw.bin
 
+# Sensors - from pie build PKQ
+vendor/bin/motosh
+vendor/lib/hw/sensors.msm8953.so
+vendor/lib/hw/sensorhub.msm8953.so
+vendor/lib/libsensorhub.so
+vendor/lib/sensors.iio.so
+vendor/lib64/hw/sensors.msm8953.so
+vendor/lib64/hw/sensorhub.msm8953.so
+vendor/lib64/libsensorhub.so
+vendor/lib64/sensors.iio.so
+
 # WCNSS
 vendor/etc/wifi/WCNSS_qcom_wlan_nv.bin:vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 vendor/etc/wifi/WCNSS_qcom_wlan_nv_Argentina.bin:vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Argentina.bin
