@@ -32,6 +32,10 @@ PRODUCT_BRAND := motorola
 BOARD_VENDOR := motorola
 PRODUCT_MANUFACTURER := motorola
 
+# Encryption
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.model \
     ro.product.vendor.model
