@@ -214,7 +214,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    motorola.hardware.health@1.0 \
    motorola.hardware.health-V1.0-java \
-   android.hardware.health@2.0-service.addison
+   android.hardware.health@2.0-service
 
 # IMS
 PRODUCT_PACKAGES += \
