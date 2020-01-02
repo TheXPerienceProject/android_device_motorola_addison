@@ -164,7 +164,11 @@ TARGET_PROVIDES_KEYMASTER := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 #Manifest
+ifeq ($(IS_LINEAGE), true)
+DEVICE_MANIFEST_FILE := device/motorola/addison/manifest_los.xml
+else
 DEVICE_MANIFEST_FILE := device/motorola/addison/manifest.xml
+endif
 DEVICE_MATRIX_FILE := device/motorola/addison/compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := device/motorola/addison/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/vendor_framework_compatibility_matrix.xml
