@@ -32,6 +32,14 @@ PRODUCT_BRAND := motorola
 BOARD_VENDOR := motorola
 PRODUCT_MANUFACTURER := motorola
 
+#needed to build hidl base and manager for oreo blobs
+IS_LINEAGE := true
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0_system
+
 # Encryption
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
