@@ -36,6 +36,8 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
+SELINUX_IGNORE_NEVERALLOWS := true
+
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.model \
     ro.product.vendor.model
