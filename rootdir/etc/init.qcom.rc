@@ -223,11 +223,11 @@ on post-fs-data
     mkdir /data/vendor/wifi/wigig_hostapd 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
-    # add legacy paths this should fix wifi issue in GSI's
+    # add legacy paths this should fix wifi issue in GSI's for backward compatibility
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    # Add a symlink
+    # Add a symlink for backward compatibility
     symlink /data/vendor/wifi/wpa/wpa_supplicant.conf /data/misc/wifi/wpa_supplicant.conf
     mkdir /data/misc/dhcp 0750 dhcp system
 
