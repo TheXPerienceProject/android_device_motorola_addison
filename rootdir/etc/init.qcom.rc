@@ -301,7 +301,7 @@ service vendor.charger /charger
     user system
     group system graphics input
     capabilities SYS_BOOT
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
