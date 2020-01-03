@@ -125,7 +125,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     libjustshoot_shim \
-    MotCamera
+    Camera2
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8953_mot_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8953_mot_camera.xml \
