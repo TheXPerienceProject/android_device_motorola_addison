@@ -1,3 +1,9 @@
+#
+# Copyright (C) 2019-2020 The XPerience Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
 ifeq ($(BOARD_VNDK_VERSION),)
 $(warning ************* BOARD VNDK is not enabled - compiling vndk-sp ***************************)
 VNDK_SP_LIBRARIES := \

@@ -11,14 +11,13 @@ Chipset | Qualcomm MSM8953 Snapdragon 625
 GPU     | Adreno 506
 Memory  | 3 GB RAM
 Shipped Android Version | 6.0.1
+Finished Android Version | 8.0
 Storage | 32 GB
 MicroSD | Up to 256 GB
 Battery | Li-Ion 3510mAh battery
 Display | 1080 x 1920 pixels, 5.5 inches (~403 ppi pixel density)
 Camera  | 16 MP, 4608 x 3456 pixels, laser focus, dual flash LED
 
-Copyright 2016 - The CyanogenMod Project.
-
-Copyright 2017 - The LineageOS Project.
+Copyright 2020 - The XPerience Project
 
 ![Moto Z Play](https://raw.githubusercontent.com/LineageOS/lineage_wiki/master/images/devices/addison.png "Moto Z Play")

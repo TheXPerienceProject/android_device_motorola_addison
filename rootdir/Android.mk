@@ -1,3 +1,9 @@
+#
+# Copyright (C) 2019-2020 The XPerience Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
 LOCAL_PATH:= $(call my-dir)
 
 # Configuration scripts
