@@ -259,9 +259,9 @@ on moto-charger
     setprop ro.board.platform msm8953
     load_system_props
     trigger firmware_mounts_complete
-    start vendor.charge_only_mode
+    start vendor.charger
     start vendor.thermal-com
-    start gbmodinstall
+#    start gbmodinstall
 
 on property:ro.boot.dualsim=true
    setprop persist.radio.multisim.config dsds
