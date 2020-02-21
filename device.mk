@@ -486,3 +486,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.soc.manufacturer=Qualcomm \
 	ro.soc.model=MSM8953
+
+# Fix network traffic monitor
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.bpf.disabled=1
