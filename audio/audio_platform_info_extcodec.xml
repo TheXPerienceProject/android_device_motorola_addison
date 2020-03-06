@@ -91,6 +91,7 @@
 </backend_names>
 
 <config_params>
+  <param key="native_audio_mode" value="src"/>
 	<param key="input_mic_max_count" value="3"/>
 </config_params>
 

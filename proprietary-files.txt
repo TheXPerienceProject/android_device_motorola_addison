@@ -16,12 +16,12 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
 # Audio - from  deen 10 QPK30.54-22 6
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libaudcal.so
-vendor/lib/libaudioparsers.so
+vendor/lib/libacdb-fts.so|2c6ae252272c705708f97edcaebab83d9ca98fe5
+vendor/lib/libacdbloader.so|313c9f4637b7f6adf2db0a6bcb0471cf77fd6f11
+vendor/lib/libacdbrtac.so|2072fa1579843115dd3c0eab3b9a806dd77242bc
+vendor/lib/libadiertac.so|9b19b5ed70a93b9f6047edb89d499d42bd961daa
+vendor/lib/libaudcal.so|547166de11311e4a8f6a0155ce19ca1ab75d6a8d
+vendor/lib/libaudioparsers.so|fd30fd087109d10aa0adafb9bebc7bdce57c86f9
 
 # Bluetooth
 lib/vendor.qti.hardware.fm@1.0.so
@@ -408,16 +408,16 @@ vendor/lib/libxml.so
 vendor/lib/libwms.so
 
 # SCVE - from deen 10-QPK30.54-22-6add-release-keys
-vendor/lib/libscveBlobDescriptor.so
-vendor/lib/libscveBlobDescriptor_stub.so
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
-vendor/lib/libscvePanorama.so
-vendor/lib/libscvePanorama_lite.so
+vendor/lib/libscveBlobDescriptor.so|d96089083fd2407aaf285b0f5ba6f0e5bb6cb146
+vendor/lib/libscveBlobDescriptor_stub.so|2d09472749cc25aaf333558f21aad84b36eb54ef
+vendor/lib/libscveCommon.so|9e25a1c8092de4d2882922de1bd190acefdf15dd
+vendor/lib/libscveCommon_stub.so|e6c80344721668630bff2674eddc41fec5360123
+vendor/lib/libscveObjectSegmentation.so|bf2952af1563d4fd1dc5b494c4b552d1dde1d896
+vendor/lib/libscveObjectSegmentation_stub.so|4aef9b403bbff02665da785bc56a49bac7eb76b2
+vendor/lib/libscveObjectTracker.so|5bed281e6bc51246d36c54c01779079fe0b99307
+vendor/lib/libscveObjectTracker_stub.so|e8d672339ca9750b41a103c5bcf093adc04635e3
+vendor/lib/libscvePanorama.so|f6a774cc150b70179d7de0f92a9ff16880dca0f6
+vendor/lib/libscvePanorama_lite.so|e0b9f96166a3848bd20060b6ca4a98637bd7482b
 
 # Thermal deen PPK29.68-16-21
 # vendor/bin/thermal-engine
