@@ -16,9 +16,7 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libaudioparsers.so
 
 # ANT+ - from LA.UM.7.5.r1-04000-8x96.0
--lib/libantradio.so|4f03cc258ec1806ddb7100252e2b8e6433693027
 lib64/com.qualcomm.qti.ant@1.0.so|f764999a53054c78f9e8a6f1d1bfcad3d446fb02
--lib64/libantradio.so|247bf6302abcbc55e0006aa7032097069a7a2f96
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|f764999a53054c78f9e8a6f1d1bfcad3d446fb02
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|8ce47bae3b903a56697c69b416927e569d7e7b80
 
