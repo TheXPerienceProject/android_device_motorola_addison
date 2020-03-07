@@ -146,8 +146,8 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     vendor.qti.hardware.display.allocator@1.0 \
     vendor.qti.hardware.display.composer@1.0 \
-    vendor.display.config@1.9 \
-    vendor.display.config@1.9.vendor \
+    vendor.display.config@1.4 \
+    vendor.display.config@1.7.vendor \
     vendor.qti.hardware.display.mapper@1.0 \
     libvulkan
 
