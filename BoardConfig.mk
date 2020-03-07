@@ -218,7 +218,10 @@ LOCAL_CFLAGS += -DOEM_HOOK_DISABLED
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist misc
-BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
+BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp \
+    /mnt/vendor/persist:/persist \
+    /vendor/firmware:/firmware \
+    /vendor/firmware/image:firmware/image
 
 #Runtime Resource Overlays
 ifneq ($(PRODUCT_ENFORCE_RRO_TARGETS),)
