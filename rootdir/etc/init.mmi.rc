@@ -186,6 +186,7 @@ on boot
    chown audio audio /sys/kernel/aov/trigger
    chown audio audio /sys/kernel/aov/register
    chown audio audio /sys/kernel/aov/event
+   chown system audio /dev/snd/hwC0D1000
 
    # Allow RunIn (factory test app) to control charging state
    chown system system /sys/class/power_supply/battery/charging_enabled
