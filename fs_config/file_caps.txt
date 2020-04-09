@@ -182,7 +182,19 @@ user: AID_RADIO
 group: AID_RADIO
 caps: BLOCK_SUSPEND NET_ADMIN NET_RAW
 
+[vendor/firmware_mnt/image/*]
+mode: 0771
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: 0
+
 [firmware/]
+mode: 0771
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: 0
+
+[firmware/image/*]
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
