@@ -213,10 +213,13 @@ vendor/etc/firmware/sensorhubfw.bin
 
 # Sensors - from pie build PKQ
 vendor/bin/motosh|b0996fdec695e410660f08cf26ceea6066b05a3f
+vendor/etc/init/android.hardware.sensors@1.0-service.rc|fbf89910dfdfa37ac360c8f0368465bb5d7819f7
+vendor/lib/hw/android.hardware.sensors@1.0-impl.so|cdec623f223f05f5e8620c5730e1c13bdc4d00f4
 vendor/lib/hw/sensors.msm8953.so|befec292d7ec23ed09bf692343e60845036ab130
 vendor/lib/hw/sensorhub.msm8953.so|54dca5f6fd83dad6fb4232a217afab448a6d3fbb
 vendor/lib/libsensorhub.so|65ed16698900b2173b4ad8183810d64a0bf23e8f
 vendor/lib/sensors.iio.so|4d7689a6ccbba5962f16286808f8a7b3f4b5d457
+vendor/lib64/hw/android.hardware.sensors@1.0-impl.so|481e3218d2cc570d87132352726c9b7bc485d6fe
 vendor/lib64/hw/sensors.msm8953.so|3e612d7c52b985ed0b00843bb8af6037e4dff283
 vendor/lib64/hw/sensorhub.msm8953.so|e5bb5abe012ae1213e332ec2778e7bedf132cd50
 vendor/lib64/libsensorhub.so|3d4b76c7931a17c2fcadafa716f3ff8345dbc33d

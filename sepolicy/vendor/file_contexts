@@ -10,7 +10,7 @@
 /(vendor|system/vendor)/bin/init\.mmi\.laser\.sh                                        u:object_r:mmi_laser_exec:s0
 /(vendor|system/vendor)/bin/init\.qcom\.ril\.sh                                         u:object_r:qcom_ril_exec:s0
 /(vendor|system/vendor)/bin/wlan_carrier_bin\.sh                                        u:object_r:qti_init_shell_exec:s0
-/(vendor|system/vendor)/bin/motosh                                                      u:object_r:sensor_hub_exec:s0
+/(vendor|system/vendor)/bin/motosh                                                      u:object_r:sensors_exec:s0
 
 /sbin/charge_only_mode										                        	u:object_r:charge_only_exec:s0
 /(vendor|system/vendor)/lib(64)?/libchromatix.*											u:object_r:same_process_hal_file:s0
@@ -19,7 +19,7 @@
 /system/bin/move_wifi_data\.sh                                                          u:object_r:qti_init_shell_exec:s0
 
 #Binaries for mods
-/system/bin/batt_health                                    				 				u:object_r:batt_health_exec:s0
+/system/bin/batt_health                                    	u:object_r:batt_health_exec:s0
 
 #binder to fix camera daemon
 /dev/binder(/.*)?                                                                       u:object_r:binder_device:s0
@@ -29,9 +29,9 @@
 /sys/homebutton/enable_wakeup                             u:object_r:sysfs_homebutton:s0
 
 # Motorola services
-/data/chargeonlymode(/.*)?                              								u:object_r:chargeonly_data_file:s0
-/data/vendor/chargeonlymode(/.*)?                              								u:object_r:chargeonly_data_file:s0
-/data/vendor/chargeonly(/.*)?                              								u:object_r:chargeonly_data_file:s0
+/data/chargeonlymode(/.*)?                              	u:object_r:chargeonly_data_file:s0
+/data/vendor/chargeonlymode(/.*)?                              	u:object_r:chargeonly_data_file:s0
+/data/vendor/chargeonly(/.*)?                              	u:object_r:chargeonly_data_file:s0
 
 # Root links
 /bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
@@ -62,19 +62,19 @@
 /data/vendor/misc/cutback(/.*)?                                                         u:object_r:cutback_data_file:s0
 
 # Sensors
-/dev/laser                                              								u:object_r:laser_device:s0
-/dev/mmi_sys_temp                                        								u:object_r:thermal_device:s0
-/dev/motosh                                              								u:object_r:sensors_device:s0
-/dev/motosh_as                                           								u:object_r:sensors_device:s0
-/dev/motosh_ms                                           								u:object_r:sensors_device:s0
-/data/misc/sensorhub(/.*)?                                 						        u:object_r:sensors_data_file:s0
-/sys/bus/iio(/.*)?																		u:object_r:sysfs_sensors:s0
-/sys/devices/iio:device[0-9]+(/.*)?														u:object_r:sysfs_sensors:s0
-/sys/devices/virtual/motosh/motosh_as/gravity_update_rate                               u:object_r:sysfs_vibrator:s0
+/dev/laser                                              			u:object_r:laser_device:s0
+/dev/mmi_sys_temp                                        			u:object_r:thermal_device:s0
+/dev/motosh                                              			u:object_r:sensors_device:s0
+/dev/motosh_as                                           			u:object_r:sensors_device:s0
+/dev/motosh_ms                                           			u:object_r:sensors_device:s0
+/data/misc/sensorhub(/.*)?                                 			u:object_r:sensors_data_file:s0
+/sys/bus/iio(/.*)?								u:object_r:sysfs_sensors:s0
+/sys/devices/iio:device[0-9]+(/.*)?						u:object_r:sysfs_sensors:s0
+/sys/devices/virtual/motosh/motosh_as/gravity_update_rate                       u:object_r:sysfs_vibrator:s0
 
 # Sockets
-/dev/socket/adspdsock                                    								u:object_r:adspd_socket:s0
-/dev/socket/cutback                                      								u:object_r:cutback_socket:s0
+/dev/socket/adspdsock                                    			u:object_r:adspd_socket:s0
+/dev/socket/cutback                                      			u:object_r:cutback_socket:s0
 
 #libs
 /(vendor|system/vendor)/lib(64)?/libQSEEComAPI\.so                                      u:object_r:tee_exec:s0
@@ -90,5 +90,6 @@
 /sys/devices/system/cpu/cpu[0-7]/cpufreq/schedalessa(/.*)?            u:object_r:sysfs_devices_system_cpu:s0
 
 # Sepolicy for  camera Hack
-/vendor/lib/xpe/libbinder\.so                                                             u:object_r:system_file:s0
-/vendor/lib/xpe/libcutils\.so                                                             u:object_r:system_file:s0
+/vendor/lib/vndk/libbinder\.so                     u:object_r:same_process_hal_file:s0
+/vendor/lib/vndk/libcutils\.so                     u:object_r:same_process_hal_file:s0
+/vendor/lib64/vndk/libandroid\.so                  u:object_r:same_process_hal_file:s0
