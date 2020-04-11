@@ -35,7 +35,7 @@ start_copying_prebuilt_qcril_db()
         echo "qcril.db's owner is $qcril_db_owner"
         if [ $qcril_db_owner != "radio" ]; then
             echo "reset owner to radio for qcril.db"
-            chown -h radio.radio/data/vendor/radio/qcril.db
+            chown -h radio.radio /data/vendor/radio/qcril.db
         fi
     fi
 }
