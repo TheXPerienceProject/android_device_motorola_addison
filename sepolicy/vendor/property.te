@@ -1,10 +1,10 @@
-type adspd_prop, property_type;
-type motosh_prop, property_type;
-type hw_rev_prop, property_type;
-type touch_prop, property_type;
-type diag_prop, property_type;
-type thermal_prop, property_type;
-type qti_telephony_prop, property_type;
-type moto_boot_prop, property_type;
-type power_prop, property_type;
-type rmnet_prop, property_type;
+vendor_internal_prop(adspd_prop)
+vendor_internal_prop(motosh_prop)
+vendor_internal_prop(hw_rev_prop)
+vendor_internal_prop(touch_prop)
+vendor_internal_prop(diag_prop)
+vendor_internal_prop(thermal_prop)
+vendor_internal_prop(qti_telephony_prop)
+vendor_internal_prop(moto_boot_prop)
+vendor_internal_prop(power_prop)
+vendor_internal_prop(rmnet_prop)
