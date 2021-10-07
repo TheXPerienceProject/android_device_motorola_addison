@@ -242,7 +242,8 @@ PRODUCT_COPY_FILES += \
 
 # Net
 PRODUCT_PACKAGES += \
-    libnl
+    libnl \
+    android.system.net.netd@1.1.vendor
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -438,7 +439,9 @@ PRODUCT_PACKAGES += \
 # libstdc++: camera.msm8953
 PRODUCT_PACKAGES += \
     libstdc++.vendor 
-   
+
+$(foreach target, $(shell cat $(LOCAL_PATH)/vndk.txt), $(eval PRODUCT_PACKAGES += $(target).vendor))
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service.addison
