@@ -27,7 +27,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER="${ANDROID_ROOT}/vendor/xperience/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -79,7 +79,7 @@ function blob_fixup() {
     vendor/lib/lib_mottof.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
         sed -i "s/libgui/libwui/" "${2}"
         ;;
-            
+
     vendor/lib/libcamerabgprocservice.so)
         patchelf --remove-needed libcamera_client.so "${2}"
         ;;
