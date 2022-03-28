@@ -23,7 +23,7 @@ $(call inherit-product, device/motorola/addison/full_addison.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk) 
+$(call inherit-product, vendor/xperience/config/common.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -32,7 +32,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := addison
-PRODUCT_NAME := aicp_addison
+PRODUCT_NAME := xperience_addison
 PRODUCT_BRAND := Motorola
 PRODUCT_MODEL := Moto Z Play
 PRODUCT_MANUFACTURER := Motorola
@@ -45,8 +45,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="addison_retail-user 8.0.0 OPNS27.76-12-22-9 10 release-keys" \
-    PRODUCT_NAME="Moto Z Play" \
-    DEVICE_MAINTAINERS="marcost2"
+    PRODUCT_NAME="Moto Z Play"
 
 
 PRODUCT_OVERRIDE_INFO := true

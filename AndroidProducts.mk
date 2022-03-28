@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aicp_addison.mk
+    $(LOCAL_DIR)/xperience_addison.mk
