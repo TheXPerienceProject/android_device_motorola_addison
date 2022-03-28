@@ -389,7 +389,9 @@ PRODUCT_PACKAGES += \
     libcutils_shim
 
 # Soong
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH) \
+    vendor/qcom/opensource/commonsys-intf/display/libdisplayconfig \
+    vendor/qcom/opensource/commonsys-intf/display/libqdmetadata
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
@@ -458,3 +460,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 
+TARGET_BOARD_PLATFORM := msm8953
