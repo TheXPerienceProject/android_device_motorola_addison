@@ -168,7 +168,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_C_INCLUDES += $(LOCAL_PATH)/$(SH_PATH)
         LOCAL_C_INCLUDES += external/zlib
 
-        LOCAL_C_INCLUDES += system/core/base/include
+        LOCAL_C_INCLUDES += system/libbase/include
 
         LOCAL_HEADER_LIBRARIES += generated_kernel_headers
 
