@@ -27,3 +27,65 @@ cc_library_shared {
         "-Wno-unused-parameter",
     ],
 }
+
+//###############################################################################
+//# iio_genxml ##################################################################
+cc_binary {
+
+    name: "iio_genxml",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+    ],
+
+    srcs: ["src/tests/iio_genxml.c"],
+    shared_libs: ["libiio"],
+
+}
+
+//###############################################################################
+//# iio_info ####################################################################
+cc_binary {
+
+    name: "iio_info",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+    ],
+
+    srcs: ["src/tests/iio_info.c"],
+    shared_libs: ["libiio"],
+
+}
+
+//###############################################################################
+//# iio_readdev #################################################################
+cc_binary {
+
+    name: "iio_readdev",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+    ],
+
+    srcs: ["src/tests/iio_readdev.c"],
+    shared_libs: ["libiio"],
+
+}
+
+//###############################################################################
+//# iio_reg #####################################################################
+cc_binary {
+
+    name: "iio_reg",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+    ],
+
+    srcs: ["src/tests/iio_reg.c"],
+    shared_libs: ["libiio"],
+
+}
