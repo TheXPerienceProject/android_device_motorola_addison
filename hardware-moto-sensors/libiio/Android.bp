@@ -41,6 +41,8 @@ cc_binary {
 
     srcs: ["src/tests/iio_genxml.c"],
     shared_libs: ["libiio"],
+    header_libs: ["libiio.vendor_headers"],
+
 
 }
 
@@ -56,6 +58,7 @@ cc_binary {
 
     srcs: ["src/tests/iio_info.c"],
     shared_libs: ["libiio"],
+    header_libs: ["libiio.vendor_headers"],
 
 }
 
@@ -72,6 +75,7 @@ cc_binary {
 
     srcs: ["src/tests/iio_readdev.c"],
     shared_libs: ["libiio"],
+    header_libs: ["libiio.vendor_headers"],
 
 }
 
@@ -87,5 +91,6 @@ cc_binary {
 
     srcs: ["src/tests/iio_reg.c"],
     shared_libs: ["libiio"],
+    header_libs: ["libiio.vendor_headers"],
 
 }
