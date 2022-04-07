@@ -457,3 +457,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+
+#for internal debug we can remove this
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.secure=0 \
+   ro.adb.secure=0 \
+   ro.debuggable=1 \
+   persist.service.adb.enable=1 \
+   security.perf_harden=0
