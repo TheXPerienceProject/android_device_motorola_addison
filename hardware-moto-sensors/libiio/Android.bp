@@ -37,6 +37,8 @@ cc_binary {
         "-Wall",
         "-Wextra",
         "-Wno-unused-parameter",
+        "-Wno-int-conversion",
+        "-Wno-implicit-function-declaration",
     ],
 
     srcs: ["src/tests/iio_genxml.c"],
@@ -54,6 +56,8 @@ cc_binary {
     cflags: [
         "-Wall",
         "-Wextra",
+        "-Wno-implicit-function-declaration",
+        "-Wno-int-conversion",
     ],
 
     srcs: ["src/tests/iio_info.c"],
@@ -71,6 +75,8 @@ cc_binary {
         "-Wall",
         "-Wextra",
         "-Wno-unused-parameter",
+        "-Wno-implicit-function-declaration",
+        "-Wno-int-conversion",
     ],
 
     srcs: ["src/tests/iio_readdev.c"],
