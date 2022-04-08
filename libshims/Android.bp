@@ -21,6 +21,6 @@ cc_library {
 cc_library_shared {
     name: "libshim_gpumaper",
     srcs: ["libshim_gpumaper.cpp"],
-    compile_multilib: "64",
+    compile_multilib: "32",
     vendor: true,
 }

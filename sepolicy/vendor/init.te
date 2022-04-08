@@ -58,3 +58,6 @@ allow init sysfs_fpc:file { rw_file_perms setattr };
 allow init sysfs_capsense:file setattr;
 
 allow init vendor_file:file { execute };
+
+# cgroup
+allow init sysfs:dir {create};
