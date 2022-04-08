@@ -392,7 +392,8 @@ PRODUCT_PACKAGES += \
     libqsapshim \
     libjustshoot_shim \
     libmemset_shim \
-    libcutils_shim
+    libcutils_shim \
+    libshim_gpumaper
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)

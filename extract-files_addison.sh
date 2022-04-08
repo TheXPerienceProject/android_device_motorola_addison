@@ -96,6 +96,10 @@ function blob_fixup() {
         sed -i "s|service.bootanim.exit|service.bootanim.hold|g" "${2}"
         ;;
 
+    vendor/lib/libmot_gpu_mapper.so)
+        patchelf --add-needed libshim_gpumaper.so "${2}"
+        ;;
+
     vendor/lib64/hw/fingerprint.msm8953.so | vendor/lib/hw/fingerprint.msm8953.so)
         "${PATCHELF}" --set-soname fingerprint.msm8953.so "${2}"
         ;;
