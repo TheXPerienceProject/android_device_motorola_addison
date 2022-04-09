@@ -11,7 +11,7 @@ system/etc/acdbdata/Headset_cal.acdb:vendor/etc/acdbdata/Headset_cal.acdb
 system/etc/acdbdata/Speaker_cal.acdb:vendor/etc/acdbdata/Speaker_cal.acdb
 
 # Audio (Prebuilt Audio HAL)
-vendor/lib/hw/audio.primary.msm8953.so|15672483b31756858fdf172c37bc7bd503886700
+# vendor/lib/hw/audio.primary.msm8953.so|15672483b31756858fdf172c37bc7bd503886700
 
 # Audio (Prebuilt Audio HAL) from Albus
 vendor/lib/libmotaudioutils.so|3821a99a4dbdfea937434e5ef4a637fb24e705f2
@@ -199,12 +199,12 @@ etc/firmware/cpp_firmware_v1_8_0.fw:vendor/firmware/cpp_firmware_v1_8_0.fw
 etc/firmware/cpp_firmware_v1_10_0.fw:vendor/firmware/cpp_firmware_v1_10_0.fw
 
 # DTV
--vendor/app/DTVPlayer/DTVPlayer.apk
--vendor/app/DTVService/DTVService.apk
-vendor/etc/permissions/com.motorola.hardware.dtv.xml
-vendor/etc/permissions/mot_dtv_permissions.xml
-vendor/lib64/libdtvhal.so|f2ac1307ed9dbe3da1b3a1da5b947da1b085b62c
-vendor/lib64/libdtvtuner.so|1667ff29c199f9ae9abe1d57f9a43300ab594b07
+# -vendor/app/DTVPlayer/DTVPlayer.apk
+# -vendor/app/DTVService/DTVService.apk
+# vendor/etc/permissions/com.motorola.hardware.dtv.xml
+# vendor/etc/permissions/mot_dtv_permissions.xml
+# vendor/lib64/libdtvhal.so|f2ac1307ed9dbe3da1b3a1da5b947da1b085b62c
+# vendor/lib64/libdtvtuner.so|1667ff29c199f9ae9abe1d57f9a43300ab594b07
 
 # Fingerprint from Griffin OPL27.76-71-2
 lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
