@@ -474,3 +474,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
    ro.debuggable=1 \
    persist.service.adb.enable=1 \
    security.perf_harden=0
+
+# SoC
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.soc.manufacturer=Qualcomm \
+	ro.soc.model=MSM8953
