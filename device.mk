@@ -327,7 +327,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
+    libvndfwk_detect_jni.qti.vendor \
+    vndfwk.detect
 
 # Qualcomm
 PRODUCT_COPY_FILES += \
