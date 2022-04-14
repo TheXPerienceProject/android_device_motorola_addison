@@ -26,4 +26,7 @@ allow mods_app sysfs_usb_supply:{ file lnk_file} r_file_perms;
 
 allow mods_app mods_camd_device:chr_file rw_file_perms;
 
+allow mods_app app_data_file:dir search;
+allow mods_app app_data_file:file open;
+
 get_prop(mods_app, moto_boot_prop)

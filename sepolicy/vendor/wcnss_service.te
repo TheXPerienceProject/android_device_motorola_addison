@@ -3,3 +3,4 @@ get_prop(wcnss_service, diag_prop);
 allowxperm wcnss_service self:udp_socket ioctl priv_sock_ioctls;
 
 allow wcnss_service sysfs:file rw_file_perms;
+allow wcnss_service system_prop { read open };
