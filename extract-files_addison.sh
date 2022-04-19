@@ -29,8 +29,8 @@ ANDROID_ROOT="${MY_DIR}/../../.."
 
 HELPER="${ANDROID_ROOT}/vendor/xperience/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
-    echo "Unable to find helper script at ${HELPER}"
-    exit 1
+  echo "Unable to find helper script at ${HELPER}"
+  exit 1
 fi
 source "${HELPER}"
 
@@ -41,90 +41,101 @@ KANG=
 SECTION=
 
 while [ "$1" != "" ]; do
-    case "$1" in
-        -n | --no-cleanup )     CLEAN_VENDOR=false
-                                ;;
-        -k | --kang)            KANG="--kang"
-                                ;;
-        -s | --section )        shift
-                                SECTION="$1"
-                                CLEAN_VENDOR=false
-                                ;;
-        * )                     SRC="$1"
-                                ;;
-    esac
+  case "$1" in
+  -n | --no-cleanup)
+    CLEAN_VENDOR=false
+    ;;
+  -k | --kang)
+    KANG="--kang"
+    ;;
+  -s | --section)
     shift
+    SECTION="$1"
+    CLEAN_VENDOR=false
+    ;;
+  *)
+    SRC="$1"
+    ;;
+  esac
+  shift
 done
 
 if [ -z "${SRC}" ]; then
-    SRC=adb
+  SRC=adb
 fi
 
-
 function blob_fixup() {
-    case "${1}" in
+  case "${1}" in
 
-    vendor/lib/libjustshoot.so)
-        "${PATCHELF}" --add-needed libjustshoot_shim.so "${2}"
-        ;;
+  vendor/lib/libjustshoot.so)
+    "${PATCHELF}" --add-needed libjustshoot_shim.so "${2}"
+    ;;
 
-    vendor/lib/libmmcamera2_sensor_modules.so)
-        sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
-        ;;
+  vendor/lib/libmmcamera2_sensor_modules.so)
+    sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
+    ;;
 
-    vendor/lib/libmmcamera_vstab_module.so)
-        patchelf --remove-needed libandroid.so "${2}"
-        ;;
+  vendor/lib/libmmcamera_vstab_module.so)
+    patchelf --remove-needed libandroid.so "${2}"
+    ;;
 
-    vendor/lib/lib_mottof.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
-        sed -i "s/libgui/libwui/" "${2}"
-        ;;
+  vendor/lib/lib_mottof.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
+    sed -i "s/libgui/libwui/" "${2}"
+    ;;
 
-    vendor/lib/libcamerabgprocservice.so)
-        patchelf --remove-needed libcamera_client.so "${2}"
-        ;;
+  vendor/lib/libcamerabgprocservice.so)
+    patchelf --remove-needed libcamera_client.so "${2}"
+    ;;
 
-    vendor/lib/libjustshoot.so | vendor/lib/libjscore.so)
-        "${PATCHELF}" --remove-needed libstagefright.so "${2}"
-        ;;
-    # Patch libcutils dep into audio HAL
-    vendor/lib/hw/audio.primary.msm8953.so)
-        patchelf --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
-        ;;
+  vendor/lib/libjustshoot.so | vendor/lib/libjscore.so)
+    "${PATCHELF}" --remove-needed libstagefright.so "${2}"
+    ;;
+  # Patch libcutils dep into audio HAL
+  vendor/lib/hw/audio.primary.msm8953.so)
+    patchelf --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
+    ;;
 
-    vendor/lib/hw/camera.msm8953.so)
-        sed -i "s|service.bootanim.exit|service.bootanim.hold|g" "${2}"
-        ;;
+  vendor/lib/hw/camera.msm8953.so)
+    sed -i "s|service.bootanim.exit|service.bootanim.hold|g" "${2}"
+    ;;
 
-    vendor/lib/libmot_gpu_mapper.so)
-        patchelf --add-needed libshim_gpumaper.so "${2}"
-        ;;
+  vendor/lib/libmot_gpu_mapper.so)
+    patchelf --add-needed libshim_gpumaper.so "${2}"
+    ;;
 
-    vendor/lib64/hw/fingerprint.msm8953.so | vendor/lib/hw/fingerprint.msm8953.so)
-        "${PATCHELF}" --set-soname fingerprint.msm8953.so "${2}"
-        ;;
+  vendor/lib64/hw/fingerprint.msm8953.so | vendor/lib/hw/fingerprint.msm8953.so)
+    "${PATCHELF}" --set-soname fingerprint.msm8953.so "${2}"
+    ;;
 
-    vendor/lib64/lib_fpc_tac_shared.so)
-        sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
-        ;;
+  vendor/lib64/lib_fpc_tac_shared.so)
+    sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
+    ;;
 
-    # memset shim
-    vendor/bin/charge_only_mode)
-        for  LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
-            "${PATCHELF}" --add-needed "libmemset_shim.so" "$LIBMEMSET_SHIM"
-        done
-        ;;
+  # memset shim
+  vendor/bin/charge_only_mode)
+    for LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
+      "${PATCHELF}" --add-needed "libmemset_shim.so" "$LIBMEMSET_SHIM"
+    done
+    ;;
 
-    vendor/lib/libmmcamera2_mct.so)
-        sed -i "s/\x09\x91\x01\x68\x07\x91\x40\x68/\x09\x91\x4f\xf0\x10\x01\x40\x68/g" "${2}"
-        sed -i "s/\xf2\xf7\x96\xef\x02\xa9\x06\x20/\xf2\xf7\x96\xef\x02\xa9\x10\x20/g" "${2}"
-        ;;
+  vendor/lib/libmmcamera2_mct.so)
+    sed -i "s/\x09\x91\x01\x68\x07\x91\x40\x68/\x09\x91\x4f\xf0\x10\x01\x40\x68/g" "${2}"
+    sed -i "s/\xf2\xf7\x96\xef\x02\xa9\x06\x20/\xf2\xf7\x96\xef\x02\xa9\x10\x20/g" "${2}"
+    ;;
 
-    vendor/lib/libmmcamera2_stats_modules.so
-        sed -i "s/\x53\x46\x03\x30\xcc\x90/\x53\x46\x05\x30\xcc\x90/g" "${2}"
-        ;;
+  vendor/lib/libmmcamera2_stats_modules.so)
+    sed -i "s/\x53\x46\x03\x30\xcc\x90/\x53\x46\x05\x30\xcc\x90/g" "${2}"
+    ;;
 
-    esac
+  system_ext/etc/permissions/qcrilhook.xml)
+    sed -i "s|/product/framework/|/system_ext/framework/|g" "${2}"
+    ;;
+
+  system_ext/etc/permissions/telephonyservice.xml)
+    sed -i "s|/system/product/framework/|/system_ext/framework/|g" "${2}"
+    ;;
+
+  esac
 }
 
 # Initialize the helper
