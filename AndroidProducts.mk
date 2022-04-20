@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_addison.mk
+    $(LOCAL_DIR)/xperience_addison.mk
